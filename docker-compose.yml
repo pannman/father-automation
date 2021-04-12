@@ -1,0 +1,14 @@
+version: "3"
+services:
+  chrome_driver:
+    image: selenium/standalone-chrome:4.0.0-beta-1-prerelease-20201208
+    ports:
+      - '4444:4444'
+    volumes:
+      - '/dev/shm:/dev/shm'
+  selenium:
+    build: .
+    ports:
+      - '2222:8888'
+    volumes:
+      - './automation/:/work/'
