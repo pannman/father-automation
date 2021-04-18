@@ -11,53 +11,54 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 #関数一覧
-def return_r_sub_total_file(zone):
-    if zone == "日中":
-        return r_day_sub_total
-    if zone == "前場":
-        return r_before_sub_total
-    if zone == "後場":
-        return r_after_sub_total
+# def return_r_sub_total_file(zone):
+#     if zone == "日中":
+#         return r_day_sub_total
+#     if zone == "前場":
+#         return r_before_sub_total
+#     if zone == "後場":
+#         return r_after_sub_total
 
-def return_r_main_total_file(zone):
-    if zone == "日中":
-        return r_day_main_total
-    if zone == "前場":
-        return r_before_main_total
-    if zone == "後場":
-        return r_after_main_total
+# def return_r_main_total_file(zone):
+#     if zone == "日中":
+#         return r_day_main_total
+#     if zone == "前場":
+#         return r_before_main_total
+#     if zone == "後場":
+#         return r_after_main_total
 
-def return_w_sub_total_file(zone):
-    if zone == "日中":
-        return w_day_sub_total
-    if zone == "前場":
-        return w_before_sub_total
-    if zone == "後場":
-        return w_after_sub_total
+# def return_w_sub_total_file(zone):
+#     if zone == "日中":
+#         return w_day_sub_total
+#     if zone == "前場":
+#         return w_before_sub_total
+#     if zone == "後場":
+#         return w_after_sub_total
 
-def return_w_main_total_file(zone):
-    if zone == "日中":
-        return w_day_main_total
-    if zone == "前場":
-        return w_before_main_total
-    if zone == "後場":
-        return w_after_main_total
+# def return_w_main_total_file(zone):
+#     if zone == "日中":
+#         return w_day_main_total
+#     if zone == "前場":
+#         return w_before_main_total
+#     if zone == "後場":
+#         return w_after_main_total
 
-def return_yes_hour(zone):
-    if zone == "日中":
-        return day_yes_hour
-    if zone == "前場":
-        return before_yes_hour
-    if zone == "後場":
-        return after_yes_hour
 
-def return_yes_minute(zone):
+def return_will_hour(zone):
     if zone == "日中":
-        return day_yes_minute
+        return day_will_hour
     if zone == "前場":
-        return before_yes_minute
+        return before_will_hour
     if zone == "後場":
-        return after_yes_minute
+        return after_will_hour
+
+def return_will_minute(zone):
+    if zone == "日中":
+        return day_will_minute
+    if zone == "前場":
+        return before_will_minute
+    if zone == "後場":
+        return after_will_minute
 
 def all_delete(ele):
     ele.send_keys(Keys.CONTROL,"a")
@@ -77,36 +78,39 @@ driver.implicitly_wait(10)
 driver.set_window_size('1200', '1000')
 
 #時間取得
-yes_date = datetime.datetime.now() + datetime.timedelta(days = 1)
-yes_year = str(yes_date.year)
-yes_month = str(yes_date.month)
-yes_day = str(yes_date.day)
+# will_date = datetime.datetime.now() + datetime.timedelta(days = 2)
+will_year = CONFIG.reserve_year()  #str(will_date.year)
+will_month = CONFIG.reserve_month() #str(will_date.month)
+will_day = CONFIG.reserve_day() #str(will_date.day)
 
-day_yes_hour = "6"
-before_yes_hour = "6"
-after_yes_hour = "12"
+day_will_hour = "6"
+before_will_hour = "6"
+after_will_hour = "12"
 
-day_yes_minute = "30"
-before_yes_minute = "35"
-after_yes_minute = "00"
+day_will_minute = "30"
+before_will_minute = "35"
+after_will_minute = "00"
 
-yes_second = "00"
+will_second = "00"
 
 # 日中累計読み込み
-r_day_main_total = open('day_main_total.txt', 'r').read()
-r_day_sub_total = open('day_sub_total.txt', 'r').read()
-w_day_main_total = open('day_main_total.txt', 'w')
-w_day_sub_total = open('day_sub_total.txt', 'w')
+# r_day_main_total = open('day_main_total.txt', 'r').read()
+# r_day_sub_total = open('day_sub_total.txt', 'r').read()
+# w_day_main_total = open('day_main_total.txt', 'w')
+# w_day_sub_total = open('day_sub_total.txt', 'w')
+
 # 前場累計読み込み
-r_before_main_total = open('before_main_total.txt', 'r').read()
-r_before_sub_total = open('before_sub_total.txt', 'r').read()
-w_before_main_total = open('before_main_total.txt', 'w')
-w_before_sub_total = open('before_sub_total.txt', 'w')
+# r_before_main_total = open('before_main_total.txt', 'r').read()
+# r_before_sub_total = open('before_sub_total.txt', 'r').read()
+# w_before_main_total = open('before_main_total.txt', 'w')
+# w_before_sub_total = open('before_sub_total.txt', 'w')
+
 # 後場累計読み込み
-r_after_main_total = open('after_main_total.txt', 'r').read()
-r_after_sub_total = open('after_sub_total.txt', 'r').read()
-w_after_main_total = open('after_main_total.txt', 'w')
-w_after_sub_total = open('after_sub_total.txt', 'w')
+# r_after_main_total = open('after_main_total.txt', 'r').read()
+# r_after_sub_total = open('after_sub_total.txt', 'r').read()
+# w_after_main_total = open('after_main_total.txt', 'w')
+# w_after_sub_total = open('after_sub_total.txt', 'w')
+
 
 # 時間配列に格納
 zones = ['日中', '前場', '後場']
@@ -134,7 +138,7 @@ try:
 
         #テキスト
         main_text = wait.until(EC.presence_of_element_located((By.ID, "body")))
-        main_text.send_keys(TEXT.fc2_text(zone,CONFIG.sub_sign(zone),CONFIG.main_sign(zone),return_r_sub_total_file(zone),return_r_main_total_file(zone)))
+        main_text.send_keys(TEXT.fc2_text(zone,CONFIG.sub_sign(zone),CONFIG.main_sign(zone),CONFIG.sub_total(zone),CONFIG.main_total(zone)))
 
         #予約ラジオボタン
         reserve_radio = wait.until(EC.presence_of_element_located((By.ID, "entry_property3"))).click()
@@ -150,35 +154,35 @@ try:
         dates = [input_year, input_month, input_day, input_hour, input_minute, input_second]
         for date in dates:
             all_delete(date)
-        input_year.send_keys(yes_year)
-        input_month.send_keys(yes_month)
-        input_day.send_keys(yes_day)
-        input_hour.send_keys(return_yes_hour(zone))
-        input_minute.send_keys(return_yes_minute(zone))
-        input_second.send_keys(yes_second)
+        input_year.send_keys(will_year)
+        input_month.send_keys(will_month)
+        input_day.send_keys(will_day)
+        input_hour.send_keys(return_will_hour(zone))
+        input_minute.send_keys(return_will_minute(zone))
+        input_second.send_keys(will_second)
         
         # input_hour = driver.find_element_by_class_name("entry[hour]")
         buttun = driver.find_element_by_class_name("admin_common_positive_btn").click()
         time.sleep(2)
 
         # 累計読み込み
-        return_w_sub_total_file(zone).write(str(int(return_r_sub_total_file(zone)) - int(CONFIG.sub_sign(zone))))
-        return_w_main_total_file(zone).write(str(int(return_r_main_total_file(zone)) - int(CONFIG.main_sign(zone))))
+        # return_w_sub_total_file(zone).write(str(int(return_r_sub_total_file(zone)) - int(CONFIG.sub_sign(zone))))
+        # return_w_main_total_file(zone).write(str(int(return_r_main_total_file(zone)) - int(CONFIG.main_sign(zone))))
 
-        print(TEXT.fc2_text(zone,CONFIG.sub_sign(zone),CONFIG.main_sign(zone),return_r_sub_total_file(zone),return_r_main_total_file(zone)))
+        print(TEXT.fc2_text(zone,CONFIG.sub_sign(zone),CONFIG.main_sign(zone),CONFIG.sub_total(zone),CONFIG.main_total(zone)))
 
 except Exception as e:
     print(e)
 
     # 日中累計書き込み
-    w_day_sub_total.write(r_day_sub_total)
-    w_day_main_total.write(r_day_main_total)
-    # 前場累計書き込み
-    w_before_sub_total.write(r_before_sub_total)
-    w_before_main_total.write(r_before_main_total)
-    # 後場累計書き込み
-    w_after_sub_total.write(r_after_sub_total)
-    w_after_main_total.write(r_after_main_total)
+    # w_day_sub_total.write(r_day_sub_total)
+    # w_day_main_total.write(r_day_main_total)
+    # # 前場累計書き込み
+    # w_before_sub_total.write(r_before_sub_total)
+    # w_before_main_total.write(r_before_main_total)
+    # # 後場累計書き込み
+    # w_after_sub_total.write(r_after_sub_total)
+    # w_after_main_total.write(r_after_main_total)
 
     driver.quit()
 finally:
