@@ -1,0 +1,67 @@
+from ..config import login_config as LOGIN
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
+
+def all_delete(ele):
+    ele.send_keys(Keys.CONTROL,"a")
+    ele.send_keys(Keys.DELETE)
+
+class Fc2:
+
+    def __init__(self,driver):
+        self.driver = driver
+
+    #fc2ログイン
+    def login_fc2(self):
+        wait = WebDriverWait(self.driver, 10)
+        self.driver.get(LOGIN.FC2_URL['LOGIN'])
+        print(self.driver.current_url)
+        mail = wait.until(EC.presence_of_element_located((By.ID, "id")))
+        password = wait.until(EC.presence_of_element_located((By.ID, "pass")))
+        login_btn = wait.until(EC.presence_of_element_located((By.NAME, "image")))
+        mail.send_keys(self.login_id())
+        password.send_keys(self.login_pass())
+        login_btn.click()
+        print(self.driver.current_url)
+
+    #ブログ投稿
+    def blog_post(self,zone,buy,sub_sign,main_sign,sub_total,main_total,will_year,will_month,will_day,will_second):
+        print(zone,buy,sub_sign,main_sign,sub_total,main_total,will_year,will_month,will_day,will_second)
+        wait = WebDriverWait(self.driver, 10)
+        self.driver.get(LOGIN.FC2_URL['BLOG'])
+        print(self.driver.current_url)
+
+        #タイトル
+        title = wait.until(EC.presence_of_element_located((By.ID, "entry_title")))
+        title.send_keys(self.get_titile(zone))
+
+        #テキスト
+        main_text = wait.until(EC.presence_of_element_located((By.ID, "body")))
+        main_text.send_keys(self.get_text(zone,buy,sub_sign,main_sign,sub_total,main_total))
+
+        #予約ラジオボタン
+        reserve_radio = wait.until(EC.presence_of_element_located((By.ID, "entry_property3"))).click()
+
+        #予約時間
+        input_year = self.driver.find_element_by_name("entry[year]")
+        input_month = self.driver.find_element_by_name("entry[month]")
+        input_day = self.driver.find_element_by_name("entry[day]")
+        input_hour = self.driver.find_element_by_name("entry[hour]")
+        input_minute = self.driver.find_element_by_name("entry[minute]")
+        input_second = self.driver.find_element_by_name("entry[second]")
+        dates = [input_year, input_month, input_day, input_hour, input_minute, input_second]
+        for date in dates:
+            all_delete(date)
+        input_year.send_keys(will_year)
+        input_month.send_keys(will_month)
+        input_day.send_keys(will_day)
+        input_hour.send_keys(self.return_will_hour(zone))
+        input_minute.send_keys(self.return_will_minute(zone))
+        input_second.send_keys(will_second)
+        
+        buttun = self.driver.find_element_by_class_name("admin_common_positive_btn").click()
+        time.sleep(2)
+        print(self.get_text(zone,buy,sub_sign,main_sign,sub_total,main_total))
