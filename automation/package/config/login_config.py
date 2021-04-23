@@ -11,6 +11,10 @@ YUMEWOGENZITUNI_LOGIN = {
 	'PASS': 'f20011018'
 }
 ARAKASEGI_LOGIN = {
-	'ID': 'robbery225@gmail.com ',
+	'ID': 'robbery225@gmail.com',
+	'PASS': 'f20011018'
+}
+SAKUSESUNIKKI_LOGIN = {
+	'ID': 'ooya73@yahoo.co.jp',
 	'PASS': 'f20011018'
 }

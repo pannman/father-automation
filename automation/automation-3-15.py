@@ -33,7 +33,7 @@ try:
 
     #サクセス
     sakusesunikki = Sakusesunikki(driver)
-    sakusesu.automation()
+    sakusesunikki.automation(3)
 
 except Exception as e:
     print(e)

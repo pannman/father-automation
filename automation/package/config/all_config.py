@@ -27,7 +27,10 @@ def nikkei_mini_result(zone):
         return "40"
     if zone == "オーバーナイト2":
         return "40"
-
+    if zone == "c"
+        return "20"
+    if zone == "d"
+        return "20"
 #先物日経サブサイン
 def sakimononikkei_sub(zone):
     if zone == "日中":
@@ -85,8 +88,61 @@ def yumewogenzituni_main_buy_result(zone):
     if zone == "オーバーナイト2":
         return "売"
 
+#サクセス日記
+def sakusesunikki_sub(zone):
+    if zone == "日中":
+        return "勝ち"
+    if zone == "ナイトセッション":
+        return "負け"
+    if zone == "オーバーナイト2":
+        return "負け"
+#多分これ今日の予想
+def sakusesunikki_sub_buy_result(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "ナイトセッション":
+        return "売り"
+    if zone == "オーバーナイト2":
+        return "買い"
+#先物日経メインサイン
+def sakusesunikki_main(zone):
+    if zone == "日中":
+        return "負け"
+    if zone == "ナイトセッション":
+        return "勝ち"
+    if zone == "オーバーナイト2":
+        return "勝ち"
+def sakusesunikki_main_buy_result(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "ナイトセッション":
+        return "売り"
+    if zone == "オーバーナイト2":
+        return "買い"
 
 
+#ミニ投資法
+# investing
+# a　前場
+# b　後場
+# c
+# d
+
+# メイン
+# 勝ち組
+# 幸運の女神
+# 優雅な生活
+# 素晴らしき人生
+# 投資日記
+# 億万長者
+# 薔薇の人生
+# 未来への挑戦
+
+
+# fx
+
+# 仮想通貨
+# 先物
 
 
 
