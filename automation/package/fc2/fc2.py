@@ -1,6 +1,7 @@
 from ..config import login_config as LOGIN
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
@@ -28,24 +29,23 @@ class Fc2:
         print(self.driver.current_url)
 
     #ブログ投稿
-    def blog_post(self,zone,buy,sub_sign,main_sign,sub_total,main_total,will_year,will_month,will_day,will_second):
-        print(zone,buy,sub_sign,main_sign,sub_total,main_total,will_year,will_month,will_day,will_second)
+    def blog_post(self,blog_name,zone,will_year,will_month,will_day,will_second):
         wait = WebDriverWait(self.driver, 10)
         self.driver.get(LOGIN.FC2_URL['BLOG'])
         print(self.driver.current_url)
 
-        #タイトル
+        # #タイトル
         title = wait.until(EC.presence_of_element_located((By.ID, "entry_title")))
-        title.send_keys(self.get_titile(zone))
-
-        #テキスト
+        title.send_keys(blog_name.blog_title())
+        # #テキスト
         main_text = wait.until(EC.presence_of_element_located((By.ID, "body")))
-        main_text.send_keys(self.get_text(zone,buy,sub_sign,main_sign,sub_total,main_total))
+        main_text.send_keys(blog_name.blog_text())
 
-        #予約ラジオボタン
+        self.driver.maximize_window()
+        
+        # #予約ラジオボタン
         reserve_radio = wait.until(EC.presence_of_element_located((By.ID, "entry_property3"))).click()
-
-        #予約時間
+        # #予約時間
         input_year = self.driver.find_element_by_name("entry[year]")
         input_month = self.driver.find_element_by_name("entry[month]")
         input_day = self.driver.find_element_by_name("entry[day]")
@@ -64,4 +64,4 @@ class Fc2:
         
         buttun = self.driver.find_element_by_class_name("admin_common_positive_btn").click()
         time.sleep(2)
-        print(self.get_text(zone,buy,sub_sign,main_sign,sub_total,main_total))
+        print(blog_name.blog_text())
