@@ -30,6 +30,7 @@ class Fc2:
 
     #ブログ投稿
     def blog_post(self,blog_name,zone,will_year,will_month,will_day,will_second):
+        print(blog_name,zone,will_year,will_month,will_day,will_second)
         wait = WebDriverWait(self.driver, 10)
         self.driver.get(LOGIN.FC2_URL['BLOG'])
         print(self.driver.current_url)
