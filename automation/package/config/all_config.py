@@ -4,7 +4,7 @@ def result_year():
 def result_month():
     return 4
 def result_day():
-    return 16
+    return 23
 
 #投稿日
 def reserve_year():
@@ -12,32 +12,31 @@ def reserve_year():
 def reserve_month():
     return 4
 def reserve_day():
-    return 27
+    return 26
 
 
 #日経ミニ
 def nikkei_mini_result(zone):
     if zone == "日中":
-        return "10"
+        return "95"
     if zone == "前場":
-        return "10"
+        return "100"
     if zone == "後場":
         return "10"
     if zone == "ナイトセッション":
         return "40"
     if zone == "オーバーナイト2":
         return "40"
-    if zone == "c"
+    if zone == "c":
         return "20"
-    if zone == "d"
+    if zone == "d":
         return "20"
-
 #サブサイン売買
 def sakimononikkei_sub_buy_result(zone):
     if zone == "日中":
         return "買い"
     if zone == "前場":
-        return "売り"
+        return "買い"
     if zone == "後場":
         return "買い"
 #先物日経サブサイン
@@ -45,25 +44,25 @@ def sakimononikkei_sub(zone):
     if zone == "日中":
         return "勝ち"
     if zone == "前場":
-        return "負け"
+        return "勝ち"
     if zone == "後場":
-        return "負け"
+        return "勝ち"
 # メインサイン売買
 def sakimononikkei_main_buy_result(zone):
     if zone == "日中":
-        return "買い"
+        return "売り"
     if zone == "前場":
         return "売り"
     if zone == "後場":
-        return "買い"
+        return "売り"
 #先物日経メインサイン
 def sakimononikkei_main(zone):
     if zone == "日中":
         return "負け"
     if zone == "前場":
-        return "勝ち"
+        return "負け"
     if zone == "後場":
-        return "勝ち"
+        return "負け"
 
 
 #夢を現実に
@@ -72,7 +71,7 @@ def yumewogenzituni_main_buy_result(zone):
     if zone == "日中":
         return "買"
     if zone == "前場":
-        return "売"
+        return "買"
     if zone == "後場":
         return "買"
     if zone == "ナイトセッション":
@@ -84,9 +83,9 @@ def yumewogenzituni_main(zone):
     if zone == "日中":
         return "勝ち"
     if zone == "前場":
-        return "引き分け"
+        return "勝ち"
     if zone == "後場":
-        return "負け"
+        return "勝ち"
     if zone == "ナイトセッション":
         return "勝ち"
     if zone == "オーバーナイト2":
@@ -99,7 +98,7 @@ def sakusesunikki_sub_buy_result(zone):
     if zone == "日中":
         return "買い"
     if zone == "ナイトセッション":
-        return "売り"
+        return "買い"
     if zone == "オーバーナイト2":
         return "買い"
 # サブシグナル
@@ -107,7 +106,7 @@ def sakusesunikki_sub(zone):
     if zone == "日中":
         return "勝ち"
     if zone == "ナイトセッション":
-        return "負け"
+        return "勝ち"
     if zone == "オーバーナイト2":
         return "負け"
 # メインシグナル売買
