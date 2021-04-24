@@ -13,8 +13,8 @@ class YumewogenzituniText():
             self.zone_name = ""
         if self.zone == "前場":
             self.zone_name = "前場"
-        if self.zone == "後場"
-            self.zone_name = "前場":
+        if self.zone == "後場":
+            self.zone_name = "後場"
     def blog_title(self):
         return str(CONFIG.result_month()) + "月" + str(CONFIG.result_day()) + "日 〜" + self.zone_name +"結果報告〜"
     def blog_text(self):
