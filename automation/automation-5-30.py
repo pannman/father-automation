@@ -3,6 +3,7 @@ import time
 from package.fc2.sakimononikkei import Sakimononikkei
 from package.fc2.yumewogenzituni import Yumewogenzituni
 from package.fc2.sakusesunikki import Sakusesunikki
+# from package.fc2.arakasegi import Arakasegi
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -18,17 +19,13 @@ try:
     driver.implicitly_wait(10)
     driver.set_window_size('300', '300')
 
-    #先物日経
-    # sakimononikkei = Sakimononikkei(driver)
-    # sakimononikkei.automation()
-
     #夢を現実に
-    # yumewogenzituni = Yumewogenzituni(driver)
-    # yumewogenzituni.automation(3)
+    yumewogenzituni = Yumewogenzituni(driver)
+    yumewogenzituni.automation(5)
 
     #サクセス
-    sakusesunikki = Sakusesunikki(driver)
-    sakusesunikki.automation(3)
+    # sakusesunikki = Sakusesunikki(driver)
+    # sakusesunikki.automation(5)
 
 except Exception as e:
     print(e)

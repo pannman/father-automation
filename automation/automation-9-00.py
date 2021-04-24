@@ -18,17 +18,13 @@ try:
     driver.implicitly_wait(10)
     driver.set_window_size('300', '300')
 
-    #先物日経
-    # sakimononikkei = Sakimononikkei(driver)
-    # sakimononikkei.automation()
-
     #夢を現実に
-    # yumewogenzituni = Yumewogenzituni(driver)
-    # yumewogenzituni.automation(3)
+    yumewogenzituni = Yumewogenzituni(driver)
+    yumewogenzituni.automation(9)
 
     #サクセス
-    sakusesunikki = Sakusesunikki(driver)
-    sakusesunikki.automation(3)
+    # sakusesunikki = Sakusesunikki(driver)
+    # sakusesunikki.automation(9)
 
 except Exception as e:
     print(e)
