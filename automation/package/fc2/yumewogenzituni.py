@@ -117,10 +117,10 @@ class Yumewogenzituni(Fc2):
             open('other_txt/yumewogenzituni/yumewogenzituni_nightsession_lose_total.txt', 'w').write(str(self.lose_total))
             open('other_txt/yumewogenzituni/yumewogenzituni_nightsession_draw_total.txt', 'w').write(str(self.draw_total))
         if zone == "オーバーナイト":
-            open('other_txt/yumewogenzituni/yumewogenzituni_overnight_main_total.txt', 'w').write(str(self.main_total))
-            open('other_txt/yumewogenzituni/yumewogenzituni_overnight_win_total.txt', 'w').write(str(self.win_total))
-            open('other_txt/yumewogenzituni/yumewogenzituni_overnight_lose_total.txt', 'w').write(str(self.lose_total))
-            open('other_txt/yumewogenzituni/yumewogenzituni_overnight_draw_total.txt', 'w').write(str(self.draw_total))
+            open('other_txt/yumewogenzituni/yumewogenzituni_overnight2_main_total.txt', 'w').write(str(self.main_total))
+            open('other_txt/yumewogenzituni/yumewogenzituni_overnight2_win_total.txt', 'w').write(str(self.win_total))
+            open('other_txt/yumewogenzituni/yumewogenzituni_overnight2_lose_total.txt', 'w').write(str(self.lose_total))
+            open('other_txt/yumewogenzituni/yumewogenzituni_overnight2_draw_total.txt', 'w').write(str(self.draw_total))
 
     def __init__(self,driver):
         super().__init__(driver)
