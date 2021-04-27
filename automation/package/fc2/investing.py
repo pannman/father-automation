@@ -134,6 +134,8 @@ class Investing(Fc2):
         c_main_total = int(open('other_txt/investing/investing_c_main_total.txt', 'r').read())
         d_main_total = int(open('other_txt/investing/investing_d_main_total.txt', 'r').read())
         self.all_main_total = str(a_main_total + b_main_total + c_main_total + d_main_total)
+        if int(self.all_main_total) > 0:
+            self.all_main_total = "+" + self.all_main_total
 
     def __init__(self,driver):
         super().__init__(driver)
@@ -155,10 +157,13 @@ class Investing(Fc2):
         self.will_second = "00"
     
     def automation(self,num):
+        print("日経225先物mini投資法")
         if num == 3:
+            print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()
             zones = ["前場","後場"]
             for zone in zones:
+                print(zone)
                 self.set_all_total_win()
                 self.set_all_total_lose()
                 self.set_all_total_draw()
@@ -169,9 +174,11 @@ class Investing(Fc2):
                 self.blog_post(investing_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
                 self.save_total_file(zone)
         if num == 5:
+            print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()
             zones = ["c","d"]
             for zone in zones:
+                print(zone)
                 self.set_all_total_win()
                 self.set_all_total_lose()
                 self.set_all_total_draw()

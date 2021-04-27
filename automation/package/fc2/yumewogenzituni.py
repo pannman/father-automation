@@ -144,26 +144,34 @@ class Yumewogenzituni(Fc2):
         self.will_second = "00"
     
     def automation(self,num):
+        print("夢を現実に!")
         if num == 3:
+            print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()
             zones = ["日中","前場","後場"]
             for zone in zones:
+                print(zone)
                 self.get_total_file(zone)
                 self.count_win_or_lose_total(zone)
                 yumewogenzituni_text = YumewogenzituniText(zone,CONFIG.yumewogenzituni_main_buy_result(zone),self.get_main_result(zone),self.main_total,self.win_total,self.lose_total,self.draw_total)
                 self.blog_post(yumewogenzituni_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
                 self.save_total_file(zone)
+
         if num == 5:
+            print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()
             zone = "ナイトセッション"
+            print(zone)
             self.get_total_file(zone)
             self.count_win_or_lose_total(zone)
             yumewogenzituni_text = YumewogenzituniText(zone,CONFIG.yumewogenzituni_main_buy_result(zone),self.get_main_result(zone),self.main_total,self.win_total,self.lose_total,self.draw_total)
             self.blog_post(yumewogenzituni_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_total_file(zone)
         if num == 9:
+            print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()
             zone = "オーバーナイト2"
+            print(zone)
             self.get_total_file(zone)
             self.count_win_or_lose_total(zone)
             yumewogenzituni_text = YumewogenzituniText(zone,CONFIG.yumewogenzituni_main_buy_result(zone),self.get_main_result(zone),self.main_total,self.win_total,self.lose_total,self.draw_total)

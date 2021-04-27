@@ -8,7 +8,8 @@ class SakimononikkeiText():
         self.main_sign = main_sign
         self.sub_total = sub_total
         self.main_total = main_total
-        
+        print("メイン   "+main_sign+"   " + str(CONFIG.result_month()) + "月累計   " + main_total)
+        print("サブ     "+sub_sign+"   " + str(CONFIG.result_month()) + "月累計   " + sub_total)
     def blog_title(self):
         return "本日の" + self.zone + "サブナイン!"
     def blog_text(self):

@@ -19,21 +19,19 @@ class Fc2:
     def login_fc2(self):
         wait = WebDriverWait(self.driver, 10)
         self.driver.get(LOGIN.FC2_URL['LOGIN'])
-        print(self.driver.current_url)
+        # print(self.driver.current_url)
         mail = wait.until(EC.presence_of_element_located((By.ID, "id")))
         password = wait.until(EC.presence_of_element_located((By.ID, "pass")))
         login_btn = wait.until(EC.presence_of_element_located((By.NAME, "image")))
         mail.send_keys(self.login_id())
         password.send_keys(self.login_pass())
         login_btn.click()
-        print(self.driver.current_url)
+        # print(self.driver.current_url)
 
     #ブログ投稿
     def blog_post(self,blog_name,zone,will_year,will_month,will_day,will_second):
-        print(blog_name,zone,will_year,will_month,will_day,will_second)
         wait = WebDriverWait(self.driver, 10)
         self.driver.get(LOGIN.FC2_URL['BLOG'])
-        print(self.driver.current_url)
 
         # #タイトル
         title = wait.until(EC.presence_of_element_located((By.ID, "entry_title")))
@@ -65,4 +63,3 @@ class Fc2:
         
         buttun = self.driver.find_element_by_class_name("admin_common_positive_btn").click()
         time.sleep(2)
-        print(blog_name.blog_text())

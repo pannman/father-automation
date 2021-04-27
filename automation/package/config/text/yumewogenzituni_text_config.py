@@ -19,6 +19,8 @@ class YumewogenzituniText():
             self.zone_name = "ナイトセッション"
         if self.zone == "オーバーナイト2":
             self.zone_name = "オーバーナイト"
+        print("メイン   "+main_sign+"   "+ str(CONFIG.result_month()) + "月累計   " + main_total)
+        print('メイン   ' + str(self.win_total) + '勝' + str(self.lose_total) +'敗'+ str(self.draw_total) + '分')
     def blog_title(self):
         return str(CONFIG.result_month()) + "月" + str(CONFIG.result_day()) + "日 〜" + self.zone_name +"結果報告〜"
     def blog_text(self):

@@ -116,9 +116,11 @@ class Sakimononikkei(Fc2):
         self.will_second = "00"
     
     def automation(self):
+        print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
         self.login_fc2()
         zones = ["日中","前場","後場"]
         for zone in zones:
+            print(zone)
             self.get_main_total_file(zone)
             self.get_sub_total_file(zone)
             sakimononikkei_text = SakimononikkeiText(zone,CONFIG.sakimononikkei_sub_buy_result(zone),self.get_sub_result(zone),self.get_main_result(zone),self.sub_total,self.main_total)

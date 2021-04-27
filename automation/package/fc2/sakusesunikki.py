@@ -115,9 +115,12 @@ class Sakusesunikki(Fc2):
         self.will_second = "00"
     
     def automation(self,num):
+        print("日経225miniサクセス日記")
         if num == 3:
+            print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()
             zone = "日中"
+            print(zone)
             self.get_main_total_file(zone)
             self.get_sub_total_file(zone)
             sakusesunikki_text = SakusesunikkiText(zone,CONFIG.sakusesunikki_sub_buy_result(zone),self.get_sub_result(zone),self.get_main_result(zone),self.sub_total,self.main_total)
@@ -125,8 +128,10 @@ class Sakusesunikki(Fc2):
             self.save_main_total_file(zone)
             self.save_sub_total_file(zone)
         if num == 5:
+            print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()
             zone = "ナイトセッション"
+            print(zone)
             self.get_main_total_file(zone)
             self.get_sub_total_file(zone)
             sakusesunikki_text = SakusesunikkiText(zone,CONFIG.sakusesunikki_sub_buy_result(zone),self.get_sub_result(zone),self.get_main_result(zone),self.sub_total,self.main_total)
@@ -134,8 +139,10 @@ class Sakusesunikki(Fc2):
             self.save_main_total_file(zone)
             self.save_sub_total_file(zone)
         if num == 9:
+            print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()
             zone = "オーバーナイト2"
+            print(zone)
             self.get_main_total_file(zone)
             self.get_sub_total_file(zone)
             sakusesunikki_text = SakusesunikkiText(zone,CONFIG.sakusesunikki_sub_buy_result(zone),self.get_sub_result(zone),self.get_main_result(zone),self.sub_total,self.main_total)
