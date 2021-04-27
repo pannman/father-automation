@@ -89,11 +89,6 @@ class Yumewogenzituni(Fc2):
             self.lose_total = int(open('other_txt/yumewogenzituni/yumewogenzituni_overnight2_lose_total.txt', 'r').read())
             self.draw_total = int(open('other_txt/yumewogenzituni/yumewogenzituni_overnight2_draw_total.txt', 'r').read())
             self.main_total = 0 if self.main_total == "±0" else int(self.main_total)
-        if datetime.datetime.now().day == 1:
-            self.main_total = 0
-            self.win_total = 0
-            self.main_total = 0
-            self.lose_total = 0
 
     def save_total_file(self,zone):
         if zone == "日中":

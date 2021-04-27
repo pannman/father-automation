@@ -65,8 +65,6 @@ class Sakusesunikki(Fc2):
         if zone == "オーバーナイト2":
             self.main_total = open('other_txt/sakusesunikki/sakusesunikki_overnight2_main_total.txt', 'r').read()
             self.main_total = 0 if self.main_total == "±0" else int(self.main_total)
-        if datetime.datetime.now().day == 1:
-            self.main_total = 0
 
     def get_sub_total_file(self,zone):
         if zone == "日中":
@@ -78,8 +76,6 @@ class Sakusesunikki(Fc2):
         if zone == "オーバーナイト2":
             self.sub_total = open('other_txt/sakusesunikki/sakusesunikki_overnight2_sub_total.txt', 'r').read()
             self.sub_total = 0 if self.sub_total == "±0" else int(self.sub_total)
-        if datetime.datetime.now().day == 1:
-            self.sub_total = 0
     
     def save_main_total_file(self,zone):
         if zone == "日中":
