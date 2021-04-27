@@ -6,6 +6,14 @@ SAKIMONONIKKEI_LOGIN = {
 	'ID': 'yuki.0223.ooya@i.softbank.jp',
 	'PASS': 'f20011018'
 }
+NIGHTSESSION_LOGIN = {
+	'ID': 'naitosessyonn@gmail.com',
+	'PASS': 'f20011018'
+}
+OVERNIGHT1_LOGIN = {
+	'ID': 'sakimono.nikkei@gmail.com',
+	'PASS': 'f20011018'
+}
 YUMEWOGENZITUNI_LOGIN = {
 	'ID': 'yumeogennjituni@yahoo.co.jp',
 	'PASS': 'f20011018'

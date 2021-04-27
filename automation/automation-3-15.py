@@ -21,7 +21,7 @@ try:
 
     #先物日経
     # sakimononikkei = Sakimononikkei(driver)
-    # sakimononikkei.automation()
+    # sakimononikkei.automation(3)
 
     #夢を現実に
     # yumewogenzituni = Yumewogenzituni(driver)
@@ -32,8 +32,8 @@ try:
     # sakusesunikki.automation(3)
 
     #ミニ投資法
-    investing = Investing(driver)
-    investing.automation(3)
+    # investing = Investing(driver)
+    # investing.automation(3)
 
 except Exception as e:
     print(e)

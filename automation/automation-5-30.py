@@ -19,6 +19,10 @@ try:
     driver.implicitly_wait(10)
     driver.set_window_size('300', '300')
 
+    #先物日経
+    sakimononikkei = Sakimononikkei(driver)
+    sakimononikkei.automation(5)
+
     #夢を現実に
     # yumewogenzituni = Yumewogenzituni(driver)
     # yumewogenzituni.automation(5)
