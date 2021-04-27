@@ -18,3 +18,7 @@ SAKUSESUNIKKI_LOGIN = {
 	'ID': 'ooya73@yahoo.co.jp',
 	'PASS': 'f20011018'
 }
+INVESTING_LOGIN = {
+	'ID': 'investingmethod1@yahoo.co.jp',
+	'PASS': 'f20011018'
+}

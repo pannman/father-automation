@@ -4,7 +4,7 @@ def result_year():
 def result_month():
     return 4
 def result_day():
-    return 23
+    return 27
 
 #投稿日
 def reserve_year():
@@ -12,7 +12,7 @@ def reserve_year():
 def reserve_month():
     return 4
 def reserve_day():
-    return 26
+    return 28
 
 
 #日経ミニ
@@ -126,15 +126,28 @@ def sakusesunikki_main(zone):
     if zone == "オーバーナイト2":
         return "勝ち"
 
-
 #ミニ投資法
+# 売買
+def investing_main_buy_result(zone):
+    if zone == "前場":
+        return "買い"
+    if zone == "後場":
+        return "買い"
+    if zone == "c":
+        return "買い"
+    if zone == "d":
+        return "売り"
+#メインサイン
+def investing_main(zone):
+    if zone == "前場":
+        return "勝ち"
+    if zone == "後場":
+        return "勝ち"
+    if zone == "c":
+        return "勝ち"
+    if zone == "d":
+        return "負け"
 
-#ミニ投資法
-# investing
-# a　前場
-# b　後場
-# c
-# d
 
 # メイン
 # 勝ち組
