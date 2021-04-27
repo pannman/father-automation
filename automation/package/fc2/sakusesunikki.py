@@ -17,7 +17,7 @@ class Sakusesunikki(Fc2):
         if zone == "ナイトセッション":
             return self.nightsession_will_hour
         if zone == "オーバーナイト2":
-            return self.overnigh2_will_hour
+            return self.overnight2_will_hour
     
     def return_will_minute(self,zone):
         if zone == "日中":
@@ -62,7 +62,7 @@ class Sakusesunikki(Fc2):
         if zone == "ナイトセッション":
             self.main_total = open('other_txt/sakusesunikki/sakusesunikki_nightsession_main_total.txt', 'r').read()
             self.main_total = 0 if self.main_total == "±0" else int(self.main_total)
-        if zone == "オーバーナイト":
+        if zone == "オーバーナイト2":
             self.main_total = open('other_txt/sakusesunikki/sakusesunikki_overnight2_main_total.txt', 'r').read()
             self.main_total = 0 if self.main_total == "±0" else int(self.main_total)
         if datetime.datetime.now().day == 1:
@@ -106,11 +106,11 @@ class Sakusesunikki(Fc2):
 
         self.day_will_hour = "7"
         self.nightsession_will_hour = "16"
-        # self.overnight2_will_hour = 
+        self.overnight2_will_hour = "22"
 
         self.day_will_minute = "45"
         self.nightsession_will_minute = "15"
-        # self.overnight2_will_minute = 
+        self.overnight2_will_minute = "55"
 
         self.will_second = "00"
     

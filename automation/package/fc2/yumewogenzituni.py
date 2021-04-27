@@ -133,13 +133,13 @@ class Yumewogenzituni(Fc2):
         self.before_will_hour = "7"
         self.after_will_hour = "12"
         self.nightsession_will_hour = "14"
-        # self.overnight2_will_hour = 
+        self.overnight2_will_hour = "21"
 
         self.day_will_minute = "00"
         self.before_will_minute = "05"
         self.after_will_minute = "15"
         self.nightsession_will_minute = "30"
-        # self.overnight2_will_minute =
+        self.overnight2_will_minute = "00"
 
         self.will_second = "00"
     

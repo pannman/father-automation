@@ -3,6 +3,7 @@ import time
 from package.fc2.sakimononikkei import Sakimononikkei
 from package.fc2.yumewogenzituni import Yumewogenzituni
 from package.fc2.sakusesunikki import Sakusesunikki
+from package.fc2.investing import Investing
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -27,8 +28,12 @@ try:
     # yumewogenzituni.automation(3)
 
     #サクセス
-    sakusesunikki = Sakusesunikki(driver)
-    sakusesunikki.automation(3)
+    # sakusesunikki = Sakusesunikki(driver)
+    # sakusesunikki.automation(3)
+
+    #ミニ投資法
+    investing = Investing(driver)
+    investing.automation(3)
 
 except Exception as e:
     print(e)

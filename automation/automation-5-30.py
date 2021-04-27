@@ -3,7 +3,7 @@ import time
 from package.fc2.sakimononikkei import Sakimononikkei
 from package.fc2.yumewogenzituni import Yumewogenzituni
 from package.fc2.sakusesunikki import Sakusesunikki
-# from package.fc2.arakasegi import Arakasegi
+from package.fc2.investing import Investing
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -20,12 +20,16 @@ try:
     driver.set_window_size('300', '300')
 
     #夢を現実に
-    yumewogenzituni = Yumewogenzituni(driver)
-    yumewogenzituni.automation(5)
+    # yumewogenzituni = Yumewogenzituni(driver)
+    # yumewogenzituni.automation(5)
 
     #サクセス
     # sakusesunikki = Sakusesunikki(driver)
     # sakusesunikki.automation(5)
+
+    #ミニ投資法
+    # investing = Investing(driver)
+    # investing.automation(5)
 
 except Exception as e:
     print(e)
