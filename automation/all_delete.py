@@ -73,3 +73,11 @@ open('other_txt/sakimononikkei/sakimononikkei_after_sub_total.txt', 'w').write("
 open('other_txt/sakimononikkei/sakimononikkei_nightsession_sub_total.txt', 'w').write("±0")
 open('other_txt/sakimononikkei/sakimononikkei_overnight1_sub_total.txt', 'w').write("±0")
 open('other_txt/sakimononikkei/sakimononikkei_overnight2_sub_total.txt', 'w').write("±0")
+
+#幸運の女神
+open('other_txt/megami/megami_day_main_total.txt', 'w').write("±0")
+open('other_txt/megami/megami_nightsession_main_total.txt', 'w').write("±0")
+open('other_txt/megami/megami_overnight2_main_total.txt', 'w').write("±0")
+open('other_txt/megami/megami_day_sub_total.txt', 'w').write("±0")
+open('other_txt/megami/megami_nightsession_sub_total.txt', 'w').write("±0")
+open('other_txt/megami/megami_overnight2_sub_total.txt', 'w').write("±0")
