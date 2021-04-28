@@ -33,6 +33,7 @@ def nikkei_mini_result(zone):
         return "20"
     if zone == "d":
         return "20"
+
 #サブサイン売買
 def sakimononikkei_sub_buy_result(zone):
     if zone == "日中":
@@ -176,8 +177,95 @@ def investing_main(zone):
         return "負け"
 
 
+#日経
+def nikkei_result(zone):
+    if zone == "日中":
+        return "95"
+    if zone == "前場":
+        return "100"
+    if zone == "後場":
+        return "10"
+    if zone == "ナイトセッション":
+        return "40"
+    if zone == "オーバーナイト1":
+        return "40"
+    if zone == "オーバーナイト2":
+        return "40"
+    if zone == "c":
+        return "20"
+    if zone == "d":
+        return "20"
+
+#勝ち組
+#サブサイン売買
+def katigumi_sub_buy_result(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "ナイトセッション":
+        return "買い"
+    if zone == "オーバーナイト2":
+        return "買い"
+# サブシグナル
+def katigumi_sub(zone):
+    if zone == "日中":
+        return "勝ち"
+    if zone == "ナイトセッション":
+        return "勝ち"
+    if zone == "オーバーナイト2":
+        return "負け"
+# メインサイン売買
+def katigumi_main_buy_result(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "ナイトセッション":
+        return "売り"
+    if zone == "オーバーナイト2":
+        return "買い"
+#　メインサイン
+def katigumi_main(zone):
+    if zone == "日中":
+        return "負け"
+    if zone == "ナイトセッション":
+        return "勝ち"
+    if zone == "オーバーナイト2":
+        return "勝ち"
+
+#幸運の女神
+#サクセス日記
+#サブシグナル売買
+def megami_sub_buy_result(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "ナイトセッション":
+        return "買い"
+    if zone == "オーバーナイト2":
+        return "買い"
+# サブシグナル
+def megami_sub(zone):
+    if zone == "日中":
+        return "勝ち"
+    if zone == "ナイトセッション":
+        return "勝ち"
+    if zone == "オーバーナイト2":
+        return "負け"
+# メインシグナル売買
+def megami_main_buy_result(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "ナイトセッション":
+        return "売り"
+    if zone == "オーバーナイト2":
+        return "買い"
+#　メインシグナル
+def megami_main(zone):
+    if zone == "日中":
+        return "負け"
+    if zone == "ナイトセッション":
+        return "勝ち"
+    if zone == "オーバーナイト2":
+        return "勝ち"
+
 # メイン
-# 勝ち組
 # 幸運の女神
 # 優雅な生活
 # 素晴らしき人生

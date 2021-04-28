@@ -30,3 +30,11 @@ INVESTING_LOGIN = {
 	'ID': 'investingmethod1@yahoo.co.jp',
 	'PASS': 'f20011018'
 }
+KATIGUMI_LOGIN = {
+	'ID': 'ooya73@gmail.com',
+	'PASS': 'f20011018'
+}
+MEGAMI_LOGIN = {
+	'ID': 'ru_mi63@yahoo.co.jp',
+	'PASS': 'f20011018'
+}
