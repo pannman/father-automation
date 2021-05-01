@@ -89,3 +89,17 @@ open('other_txt/yuga/yuga_overnight2_main_total.txt', 'w').write("±0")
 open('other_txt/yuga/yuga_day_self_money_total.txt', 'w').write("±0")
 open('other_txt/yuga/yuga_nightsession_self_money_total.txt', 'w').write("±0")
 open('other_txt/yuga/yuga_overnight2_self_money_total.txt', 'w').write("±0")
+
+#素晴らしき人生
+open('other_txt/subarashiki/subarashiki_day_main_total.txt', 'w').write("±0")
+open('other_txt/subarashiki/subarashiki_before_main_total.txt', 'w').write("±0")
+open('other_txt/subarashiki/subarashiki_after_main_total.txt', 'w').write("±0")
+open('other_txt/subarashiki/subarashiki_nightsession_main_total.txt', 'w').write("±0")
+open('other_txt/subarashiki/subarashiki_overnight2_main_total.txt', 'w').write("±0")
+
+#投資日記
+open('other_txt/toshi/toshi_day_main_total.txt', 'w').write("±0")
+open('other_txt/toshi/toshi_before_main_total.txt', 'w').write("±0")
+open('other_txt/toshi/toshi_after_main_total.txt', 'w').write("±0")
+open('other_txt/toshi/toshi_nightsession_main_total.txt', 'w').write("±0")
+open('other_txt/toshi/toshi_overnight2_main_total.txt', 'w').write("±0")

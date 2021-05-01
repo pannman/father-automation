@@ -46,3 +46,11 @@ SUBARASHIKI_LOGIN = {
 	'ID': 'subarashikilife@gmail.com',
 	'PASS': 'f20011018'
 }
+SUBARASHIKI_LOGIN = {
+	'ID': 'subarashikilife@gmail.com',
+	'PASS': 'f20011018'
+}
+TOSHI_LOGIN = {
+	'ID': 'toshi870@gmail.com ',
+	'PASS': 'f20011018'
+}
