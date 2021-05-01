@@ -97,7 +97,7 @@ class Sakimononikkei(Fc2):
         if zone == "オーバーナイト2":
             self.main_total = open('other_txt/sakimononikkei/sakimononikkei_overnight2_main_total.txt', 'r').read()
             self.main_total = 0 if self.main_total == "±0" else int(self.main_total)
-            
+
     def get_sub_total_file(self,zone):
         if zone == "日中":
             self.sub_total = open('other_txt/sakimononikkei/sakimononikkei_day_sub_total.txt', 'r').read()
@@ -172,6 +172,7 @@ class Sakimononikkei(Fc2):
         print("日経225ミニ先物ブログ")
         if num == 3:
             print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
+            self.zone = ""
             self.login_fc2()
             zones = ["日中","前場","後場"]
             for zone in zones:
