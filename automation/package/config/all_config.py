@@ -292,11 +292,46 @@ def yuga_self_money(zone):
         return "30"
 
 # 素晴らしき人生
+def subarashiki_main_buy_result(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "前場":
+        return "買い"
+    if zone == "後場":
+        return "買い"
+    if zone == "ナイトセッション":
+        return "買い"
+    if zone == "オーバーナイト2":
+        return "売り"
+#メインサイン
+def subarashiki_main(zone):
+    if zone == "日中":
+        return "勝ち"
+    if zone == "前場":
+        return "勝ち"
+    if zone == "後場":
+        return "勝ち"
+    if zone == "ナイトセッション":
+        return "勝ち"
+    if zone == "オーバーナイト2":
+        return "負け"
+#売買結果金額
+def subarashiki_result_trade_money(zone):
+    if zone == "日中":
+        return "29000"
+    if zone == "前場":
+        return "29000"
+    if zone == "後場":
+        return "29000"
+    if zone == "ナイトセッション":
+        return "29000"
+    if zone == "オーバーナイト2":
+        return "29000"
+    
 
 
 # メイン
-# 優雅な生活
-# 素晴らしき人生
+
 # 投資日記
 # 億万長者
 # 薔薇の人生

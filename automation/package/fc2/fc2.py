@@ -34,6 +34,7 @@ class Fc2:
         if len(self.driver.find_elements_by_id('change_normal_link')) > 0:
             self.driver.execute_script("switchmenu('menu_simple_normal','not');switch_sipmle_normal();return false;")
 
+        # print(self.driver.current_url)
         # #タイトル
         title = wait.until(EC.presence_of_element_located((By.ID, "entry_title")))
         title.send_keys(blog_name.blog_title())
@@ -43,9 +44,10 @@ class Fc2:
 
         self.driver.maximize_window()
 
-        
+
         # #予約ラジオボタン
-        reserve_radio = wait.until(EC.presence_of_element_located((By.ID, "entry_property3"))).click()
+        reserve_radiom= wait.until(EC.presence_of_element_located((By.ID, "entry_property3"))).click()
+        reserve_radiom= wait.until(EC.presence_of_element_located((By.ID, "entry_property3"))).click()
         # #予約時間
         input_year = self.driver.find_element_by_name("entry[year]")
         input_month = self.driver.find_element_by_name("entry[month]")

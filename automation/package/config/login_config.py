@@ -39,6 +39,10 @@ MEGAMI_LOGIN = {
 	'PASS': 'f20011018'
 }
 YUGA_LOGIN = {
-	'ID': 'nori6500@gmail.com ',
+	'ID': 'nori6500@gmail.com',
+	'PASS': 'f20011018'
+}
+SUBARASHIKI_LOGIN = {
+	'ID': 'subarashikilife@gmail.com',
 	'PASS': 'f20011018'
 }
