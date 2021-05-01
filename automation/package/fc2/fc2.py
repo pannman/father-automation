@@ -19,19 +19,20 @@ class Fc2:
     def login_fc2(self):
         wait = WebDriverWait(self.driver, 10)
         self.driver.get(LOGIN.FC2_URL['LOGIN'])
-        # print(self.driver.current_url)
         mail = wait.until(EC.presence_of_element_located((By.ID, "id")))
         password = wait.until(EC.presence_of_element_located((By.ID, "pass")))
         login_btn = wait.until(EC.presence_of_element_located((By.NAME, "image")))
         mail.send_keys(self.login_id())
         password.send_keys(self.login_pass())
         login_btn.click()
-        # print(self.driver.current_url)
 
     #ブログ投稿
     def blog_post(self,blog_name,zone,will_year,will_month,will_day,will_second):
         wait = WebDriverWait(self.driver, 10)
         self.driver.get(LOGIN.FC2_URL['BLOG'])
+
+        if len(self.driver.find_elements_by_id('change_normal_link')) > 0:
+            self.driver.execute_script("switchmenu('menu_simple_normal','not');switch_sipmle_normal();return false;")
 
         # #タイトル
         title = wait.until(EC.presence_of_element_located((By.ID, "entry_title")))
@@ -41,6 +42,7 @@ class Fc2:
         main_text.send_keys(blog_name.blog_text())
 
         self.driver.maximize_window()
+
         
         # #予約ラジオボタン
         reserve_radio = wait.until(EC.presence_of_element_located((By.ID, "entry_property3"))).click()
