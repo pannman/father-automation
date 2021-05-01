@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.select import Select
 import time
 
 def all_delete(ele):
@@ -29,10 +30,13 @@ class Fc2:
     #ブログ投稿
     def blog_post(self,blog_name,zone,will_year,will_month,will_day,will_second):
         wait = WebDriverWait(self.driver, 10)
+
         self.driver.get(LOGIN.FC2_URL['BLOG'])
 
+        #簡易モード解除
         if len(self.driver.find_elements_by_id('change_normal_link')) > 0:
-            self.driver.execute_script("switchmenu('menu_simple_normal','not');switch_sipmle_normal();return false;")
+            self.driver.execute_script("document.getElementById('menu_simple_normal_block').style.display = 'block';")
+    
 
         # print(self.driver.current_url)
         # #タイトル
