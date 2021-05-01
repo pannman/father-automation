@@ -38,3 +38,7 @@ MEGAMI_LOGIN = {
 	'ID': 'ru_mi63@yahoo.co.jp',
 	'PASS': 'f20011018'
 }
+YUGA_LOGIN = {
+	'ID': 'nori6500@gmail.com ',
+	'PASS': 'f20011018'
+}

@@ -265,8 +265,36 @@ def megami_main(zone):
     if zone == "オーバーナイト2":
         return "勝ち"
 
+# 優雅な生活
+# メインシグナル売買
+def yuga_main_buy_result(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "ナイトセッション":
+        return "売り"
+    if zone == "オーバーナイト2":
+        return "買い"
+#　メインシグナル
+def yuga_main(zone):
+    if zone == "日中":
+        return "負け"
+    if zone == "ナイトセッション":
+        return "勝ち"
+    if zone == "オーバーナイト2":
+        return "勝ち"
+#自己結果の金額
+def yuga_self_money(zone):
+    if zone == "日中":
+        return "40"
+    if zone == "ナイトセッション":
+        return "80"
+    if zone == "オーバーナイト2":
+        return "30"
+
+# 素晴らしき人生
+
+
 # メイン
-# 幸運の女神
 # 優雅な生活
 # 素晴らしき人生
 # 投資日記

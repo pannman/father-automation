@@ -81,3 +81,11 @@ open('other_txt/megami/megami_overnight2_main_total.txt', 'w').write("±0")
 open('other_txt/megami/megami_day_sub_total.txt', 'w').write("±0")
 open('other_txt/megami/megami_nightsession_sub_total.txt', 'w').write("±0")
 open('other_txt/megami/megami_overnight2_sub_total.txt', 'w').write("±0")
+
+#優雅な生活
+open('other_txt/yuga/yuga_day_main_total.txt', 'w').write("±0")
+open('other_txt/yuga/yuga_nightsession_main_total.txt', 'w').write("±0")
+open('other_txt/yuga/yuga_overnight2_main_total.txt', 'w').write("±0")
+open('other_txt/yuga/yuga_day_self_money_total.txt', 'w').write("±0")
+open('other_txt/yuga/yuga_nightsession_self_money_total.txt', 'w').write("±0")
+open('other_txt/yuga/yuga_overnight2_self_money_total.txt', 'w').write("±0")
