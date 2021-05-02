@@ -25,9 +25,9 @@ class YugaText():
                 "" + self.main_sign + "\n\n"\
                 "" + str(CONFIG.result_month()) + "月結果＊"+ self.zone_name +"＊\n\n"\
                 "" + self.main_total + "\n\n"\
-                "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "は" + self.buy + "でした。\n\n"\
-                "" + self.self_money + "\n\n"\
+                "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "は" + self.buy + "3枚でした。\n\n"\
+                "" + self.self_money + "万円\n\n"\
                 "" + str(CONFIG.result_month()) + "月自己結果＊"+ self.zone_name +"＊\n\n"\
-                "" + self.self_money_total + "\n\n"\
+                "" + self.self_money_total + "万円\n\n"\
                 "ランキングに参加していますので、ご協力お願いします！\n"\
                 '<p><a href="http://futures.blogmura.com/225/"><img src="http://futures.blogmura.com/225/img/22588_31.gif" width="88" height="31" border="0" alt="にほんブログ村 先物取引ブログ 日経２２５先物へ" /></a>&nbsp;<a href="http://blog.with2.net/link.php?1263648" title="人気ブログランキングへ"><img src="http://image.with2.net/img/banner/banner_23.gif" width="88" height="31" border="0" /></a></p>'

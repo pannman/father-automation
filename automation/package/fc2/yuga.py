@@ -3,6 +3,7 @@ from ..config import all_config as CONFIG
 from ..config.text.yuga_text_config import YugaText
 from .fc2 import Fc2
 import datetime
+import math
 
 class Yuga(Fc2):
     def login_id(self):
@@ -43,17 +44,17 @@ class Yuga(Fc2):
 
     def get_self_money(self,zone):
         if CONFIG.yuga_main(zone) == "勝ち":
-            self.self_money_total+= int(CONFIG.yuga_self_money(zone))
+            self.self_money_total+= math.floor(int(CONFIG.nikkei_result(zone))*0.3)
             self.self_money_total = "+" + str(self.self_money_total) if self.self_money_total > 0 else "±" + str(self.self_money_total) if self.self_money_total == 0 else str(self.self_money_total)
-            return "+" + CONFIG.yuga_self_money(zone)
+            return "+" + str(math.floor(int(CONFIG.nikkei_result(zone))*0.3))
         if CONFIG.yuga_main(zone) == "負け":
-            self.self_money_total-= int(CONFIG.yuga_self_money(zone))
+            self.self_money_total-= math.floor(int(CONFIG.nikkei_result(zone))*0.3)
             self.self_money_total = "+" + str(self.self_money_total) if self.self_money_total > 0 else "±" + str(self.self_money_total) if self.self_money_total == 0 else str(self.self_money_total)
-            return "-" + CONFIG.yuga_self_money(zone)
+            return "-" + str(math.floor(int(CONFIG.nikkei_result(zone))*0.3))
         if CONFIG.yuga_main(zone) == "引き分け":
-            self.self_money_total+= int(CONFIG.yuga_self_money(zone))
+            self.self_money_total+= math.floor(int(CONFIG.nikkei_result(zone))*0.3)
             self.self_money_total = "+" + str(self.self_money_total) if self.self_money_total > 0 else "±" + str(self.self_money_total) if self.self_money_total == 0 else str(self.self_money_total)
-            return "±" + CONFIG.yuga_self_money(zone)
+            return "±" + str(math.floor(int(CONFIG.nikkei_result(zone))*0.3))
 
     def get_main_total_file(self,zone):
         if zone == "日中":
