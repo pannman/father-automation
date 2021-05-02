@@ -103,3 +103,8 @@ open('other_txt/toshi/toshi_before_main_total.txt', 'w').write("±0")
 open('other_txt/toshi/toshi_after_main_total.txt', 'w').write("±0")
 open('other_txt/toshi/toshi_nightsession_main_total.txt', 'w').write("±0")
 open('other_txt/toshi/toshi_overnight2_main_total.txt', 'w').write("±0")
+
+#億万長者
+open('other_txt/okuman/okuman_day_main_total.txt', 'w').write("±0")
+open('other_txt/okuman/okuman_nightsession_main_total.txt', 'w').write("±0")
+open('other_txt/okuman/okuman_overnight2_main_total.txt', 'w').write("±0")

@@ -353,12 +353,32 @@ def toshi_main(zone):
     if zone == "オーバーナイト2":
         return "負け"
 
+# 億万長者
+# メインシグナル売買
+def okuman_main_buy_result(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "ナイトセッション":
+        return "売り"
+    if zone == "オーバーナイト2":
+        return "買い"
+#　メインシグナル
+def okuman_main(zone):
+    if zone == "日中":
+        return "負け"
+    if zone == "ナイトセッション":
+        return "勝ち"
+    if zone == "オーバーナイト2":
+        return "勝ち"
+
+# 億万長者
+
 # メイン
 
-# 投資日記
 # 億万長者
 # 薔薇の人生
 # 未来への挑戦
+#habatake
 
 
 # fx

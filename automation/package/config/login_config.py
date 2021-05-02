@@ -51,6 +51,10 @@ SUBARASHIKI_LOGIN = {
 	'PASS': 'f20011018'
 }
 TOSHI_LOGIN = {
-	'ID': 'toshi870@gmail.com ',
+	'ID': 'toshi870@gmail.com',
 	'PASS': 'f20011018'
+}
+OKUMAN_LOGIN = {
+	'ID': 'abillionaire8@yahoo.co.jp',
+	'PASS': 'k20011018'
 }

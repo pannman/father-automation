@@ -2,7 +2,6 @@ from .. import all_config as CONFIG
 
 class OkumanText():
     def __init__(self,zone,buy,main_sign,day_main_total,nightsession_main_total,overnight2_main_total,total_profit,day_main_sign,day_buy):
-        print("2")
         self.zone = zone
         self.buy = buy
         self.main_sign = main_sign
@@ -12,7 +11,13 @@ class OkumanText():
         self.total_profit = total_profit
         self.day_main_sign = day_main_sign
         self.day_buy = day_buy
-        print("メイン   "+main_sign+"   " + str(CONFIG.result_month()) + "月累計   " + main_total)
+        if self.zone == "日中":
+            self.main_total = day_main_total
+        if self.zone == "ナイトセッション":
+            self.main_total = nightsession_main_total
+        if self.zone == "オーバーナイト2":
+            self.main_total = overnight2_main_total
+        print("メイン   "+main_sign+"   " + str(CONFIG.result_month()) + "月累計   " + self.main_total)
         print("ブログ公開後トータル損益   "+"{:,}".format(self.total_profit))
     def blog_title(self):
         if self.zone == "日中":
