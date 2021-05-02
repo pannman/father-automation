@@ -17,7 +17,7 @@ class YugaText():
             self.zone_name = "夕場"
         if self.zone == "オーバーナイト2":
             self.zone_name = "オーバーナイト"
-        return "今日の" + self.zone + "売買！！"
+        return "今日の" + self.zone_name + "売買！！"
     def blog_text(self):
         return  "今日の" + self.zone_name + "売買！！\n\n"\
                 "" + self.zone_name + "寄付きシグナルを当会員様へメール配信させて頂きました。\n\n"\
