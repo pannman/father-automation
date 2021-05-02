@@ -107,21 +107,42 @@ class Investing(Fc2):
         b_win_total = int(open('other_txt/investing/investing_after_win_total.txt', 'r').read())
         c_win_total = int(open('other_txt/investing/investing_c_win_total.txt', 'r').read())
         d_win_total = int(open('other_txt/investing/investing_d_win_total.txt', 'r').read())
-        self.all_win_total = str(a_win_total + b_win_total + c_win_total + d_win_total)
+        if self.zone == "前場":
+            self.all_win_total = str(self.win_total + b_win_total + c_win_total + d_win_total)
+        if self.zone == "後場":
+            self.all_win_total = str(a_win_total + self.win_total + c_win_total + d_win_total)
+        if self.zone == "c":
+            self.all_win_total = str(a_win_total + b_win_total + self.win_total + d_win_total)
+        if self.zone == "d":
+            self.all_win_total = str(a_win_total + b_win_total + c_win_total + self.win_total)
 
     def set_all_total_lose(self):
         a_lose_total = int(open('other_txt/investing/investing_before_lose_total.txt', 'r').read())
         b_lose_total = int(open('other_txt/investing/investing_after_lose_total.txt', 'r').read())
         c_lose_total = int(open('other_txt/investing/investing_c_lose_total.txt', 'r').read())
         d_lose_total = int(open('other_txt/investing/investing_d_lose_total.txt', 'r').read())
-        self.all_lose_total = str(a_lose_total + b_lose_total + c_lose_total + d_lose_total)
+        if self.zone == "前場":
+            self.all_lose_total = str(self.lose_total + b_lose_total + c_lose_total + d_lose_total)
+        if self.zone == "後場":
+            self.all_lose_total = str(a_lose_total + self.lose_total + c_lose_total + d_lose_total)
+        if self.zone == "c":
+            self.all_lose_total = str(a_lose_total + b_lose_total + self.lose_total + d_lose_total)
+        if self.zone == "d":
+            self.all_lose_total = str(a_lose_total + b_lose_total + c_lose_total + self.lose_total)
     
     def set_all_total_draw(self):
         a_draw_total = int(open('other_txt/investing/investing_before_draw_total.txt', 'r').read())
         b_draw_total = int(open('other_txt/investing/investing_after_draw_total.txt', 'r').read())
         c_draw_total = int(open('other_txt/investing/investing_c_draw_total.txt', 'r').read())
         d_draw_total = int(open('other_txt/investing/investing_d_draw_total.txt', 'r').read())
-        self.all_draw_total = str(a_draw_total + b_draw_total + c_draw_total + d_draw_total)
+        if self.zone == "前場":
+            self.all_draw_total = str(self.draw_total + b_draw_total + c_draw_total + d_draw_total)
+        if self.zone == "後場":
+            self.all_draw_total = str(a_draw_total + self.draw_total + c_draw_total + d_draw_total)
+        if self.zone == "c":
+            self.all_draw_total = str(a_draw_total + b_draw_total + self.draw_total + d_draw_total)
+        if self.zone == "d":
+            self.all_draw_total = str(a_draw_total + b_draw_total + c_draw_total + self.draw_total)
 
     def set_all_main_total(self):
         if self.zone == "前場":
@@ -185,11 +206,11 @@ class Investing(Fc2):
             for zone in zones:
                 print(zone)
                 self.zone = zone
+                self.get_total_file(zone)
+                self.count_win_or_lose_total(zone)
                 self.set_all_total_win()
                 self.set_all_total_lose()
                 self.set_all_total_draw()
-                self.get_total_file(zone)
-                self.count_win_or_lose_total(zone)
                 investing_text = InvestingText(zone,CONFIG.investing_main_buy_result(zone),self.get_main_result(zone),self.main_total,self.win_total,self.lose_total,self.draw_total,self.all_win_total,self.all_lose_total,self.all_draw_total,self.set_all_main_total())
                 self.blog_post(investing_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
                 self.save_total_file(zone)
@@ -200,12 +221,12 @@ class Investing(Fc2):
             for zone in zones:
                 print(zone)
                 self.zone = zone
-                self.set_all_total_win()
-                self.set_all_total_lose()
-                self.set_all_total_draw()
                 self.get_total_file(zone)
                 self.set_all_main_total()
                 self.count_win_or_lose_total(zone)
+                self.set_all_total_win()
+                self.set_all_total_lose()
+                self.set_all_total_draw()
                 investing_text = InvestingText(zone,CONFIG.investing_main_buy_result(zone),self.get_main_result(zone),self.main_total,self.win_total,self.lose_total,self.draw_total,self.all_win_total,self.all_lose_total,self.all_draw_total,self.set_all_main_total())
                 self.blog_post(investing_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
                 self.save_total_file(zone)
