@@ -108,3 +108,9 @@ open('other_txt/toshi/toshi_overnight2_main_total.txt', 'w').write("±0")
 open('other_txt/okuman/okuman_day_main_total.txt', 'w').write("±0")
 open('other_txt/okuman/okuman_nightsession_main_total.txt', 'w').write("±0")
 open('other_txt/okuman/okuman_overnight2_main_total.txt', 'w').write("±0")
+
+#薔薇の人生
+open('other_txt/bara/bara_before_main_total.txt', 'w').write("±0")
+open('other_txt/bara/bara_after_main_total.txt', 'w').write("±0")
+open('other_txt/bara/bara_nightsession_main_total.txt', 'w').write("±0")
+open('other_txt/bara/bara_overnight2_main_total.txt', 'w').write("±0")

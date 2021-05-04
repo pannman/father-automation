@@ -371,11 +371,31 @@ def okuman_main(zone):
     if zone == "オーバーナイト2":
         return "勝ち"
 
-# 億万長者
+# 薔薇の人生
+# 売買
+def bara_main_buy_result(zone):
+    if zone == "前場":
+        return "買い"
+    if zone == "後場":
+        return "売り"
+    if zone == "ナイトセッション":
+        return "買い"
+    if zone == "オーバーナイト2":
+        return "売り"
+#メインサイン
+def bara_main(zone):
+    if zone == "前場":
+        return "勝ち"
+    if zone == "後場":
+        return "負け"
+    if zone == "ナイトセッション":
+        return "勝ち"
+    if zone == "オーバーナイト2":
+        return "負け"
+
 
 # メイン
 
-# 億万長者
 # 薔薇の人生
 # 未来への挑戦
 #habatake

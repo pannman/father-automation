@@ -58,3 +58,7 @@ OKUMAN_LOGIN = {
 	'ID': 'abillionaire8@yahoo.co.jp',
 	'PASS': 'k20011018'
 }
+BARA_LOGIN = {
+	'ID': 'roselife98@gmail.com',
+	'PASS': 'f20011018'
+}
