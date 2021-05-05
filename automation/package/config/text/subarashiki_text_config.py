@@ -16,7 +16,7 @@ class SubarashikiText():
             self.zone_name = "後場"
         if self.zone == "ナイトセッション":
             self.zone_name = "ナイト"
-        if self.zone == "オーバーナイト2":
+        if self.zone == "オーバーナイト1":
             self.zone_name = "オーバーナイト"
         print("メイン   "+main_sign+"   "+ str(CONFIG.result_month()) + "月累計   " + main_total)
         print("売買金額   "+str(self.trade_money) +"    決済金額   " + str(self.settlement_money))

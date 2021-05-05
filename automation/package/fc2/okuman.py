@@ -77,16 +77,25 @@ class Okuman(Fc2):
     def get_total_profit(self,zone):
         if CONFIG.okuman_main(zone) == "勝ち":
             self.total_profit = open('other_txt/okuman/okuman_total_profit.txt', 'r').read()
-            self.total_profit = int(self.total_profit) + int(CONFIG.nikkei_result(zone))*1000
+            self.total_profit = int(self.total_profit) + (int(CONFIG.nikkei_result(zone))*1000) - 692
         if CONFIG.okuman_main(zone) == "負け":
             self.total_profit = open('other_txt/okuman/okuman_total_profit.txt', 'r').read()
-            self.total_profit = int(self.total_profit) - int(CONFIG.nikkei_result(zone))*1000
+            self.total_profit = int(self.total_profit) - (int(CONFIG.nikkei_result(zone))*1000) - 692
         if CONFIG.okuman_main(zone) == "引き分け":
             self.total_profit = open('other_txt/okuman/okuman_total_profit.txt', 'r').read()
-            self.total_profit = int(self.total_profit) + int(CONFIG.nikkei_result(zone))*1000
+            self.total_profit = int(self.total_profit) + (int(CONFIG.nikkei_result(zone))*1000) - 692
     
     def day_main_sign(self):
         zone = "日中"
+        if CONFIG.okuman_main(zone) == "勝ち":
+            return "+" + CONFIG.nikkei_result(zone)
+        if CONFIG.okuman_main(zone) == "負け":
+            return "-" + CONFIG.nikkei_result(zone)
+        if CONFIG.okuman_main(zone) == "引き分け":
+            return "±" + CONFIG.nikkei_result(zone)
+
+    def nightsession_main_sign(self):
+        zone = "ナイトセッション"
         if CONFIG.okuman_main(zone) == "勝ち":
             return "+" + CONFIG.nikkei_result(zone)
         if CONFIG.okuman_main(zone) == "負け":
@@ -123,7 +132,7 @@ class Okuman(Fc2):
             print(zone)
             self.get_main_total_file(zone)
             self.get_total_profit(zone)
-            okuman_text = OkumanText(zone,CONFIG.okuman_main_buy_result(zone),self.get_main_result(zone),self.main_total,self.get_other_main_total("ナイトセッション"),self.get_other_main_total("オーバーナイト2"),self.total_profit,self.day_main_sign(),CONFIG.okuman_main_buy_result("日中"))
+            okuman_text = OkumanText(zone,CONFIG.okuman_main_buy_result(zone),self.get_main_result(zone),self.main_total,self.get_other_main_total("ナイトセッション"),self.get_other_main_total("オーバーナイト2"),self.total_profit,self.day_main_sign(),CONFIG.okuman_main_buy_result("日中"),self.nightsession_main_sign(),CONFIG.okuman_main_buy_result("ナイトセッション"))
             self.blog_post(okuman_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_main_total_file(zone)
             self.save_total_profit()
@@ -134,8 +143,7 @@ class Okuman(Fc2):
             print(zone)
             self.get_main_total_file(zone)
             self.get_total_profit(zone)
-            print(self.get_main_result(zone))
-            okuman_text = OkumanText(zone,CONFIG.okuman_main_buy_result(zone),self.get_main_result(zone),self.get_other_main_total("日中"),self.main_total,self.get_other_main_total("オーバーナイト2"),self.total_profit,self.day_main_sign(),CONFIG.okuman_main_buy_result("日中"))
+            okuman_text = OkumanText(zone,CONFIG.okuman_main_buy_result(zone),self.get_main_result(zone),self.get_other_main_total("日中"),self.main_total,self.get_other_main_total("オーバーナイト2"),self.total_profit,self.day_main_sign(),CONFIG.okuman_main_buy_result("日中"),self.nightsession_main_sign(),CONFIG.okuman_main_buy_result("ナイトセッション"))
             self.blog_post(okuman_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_main_total_file(zone)
             self.save_total_profit()
@@ -146,7 +154,7 @@ class Okuman(Fc2):
             print(zone)
             self.get_main_total_file(zone)
             self.get_total_profit(zone)
-            okuman_text = OkumanText(zone,CONFIG.okuman_main_buy_result(zone),self.get_main_result(zone),self.get_other_main_total("日中"),self.get_other_main_total("ナイトセッション"),self.main_total,self.total_profit,self.day_main_sign(),CONFIG.okuman_main_buy_result("日中"))
+            okuman_text = OkumanText(zone,CONFIG.okuman_main_buy_result(zone),self.get_main_result(zone),self.get_other_main_total("日中"),self.get_other_main_total("ナイトセッション"),self.main_total,self.total_profit,self.day_main_sign(),CONFIG.okuman_main_buy_result("日中"),self.nightsession_main_sign(),CONFIG.okuman_main_buy_result("ナイトセッション"))
             self.blog_post(okuman_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_main_total_file(zone)
             self.save_total_profit()
