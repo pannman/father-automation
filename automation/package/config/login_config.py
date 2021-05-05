@@ -62,3 +62,7 @@ BARA_LOGIN = {
 	'ID': 'roselife98@gmail.com',
 	'PASS': 'f20011018'
 }
+MIRAIE_LOGIN = {
+	'ID': 'miraienotyousenn@yahoo.co.jp',
+	'PASS': 'k20011018'
+}

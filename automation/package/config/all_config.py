@@ -393,10 +393,29 @@ def bara_main(zone):
     if zone == "オーバーナイト2":
         return "負け"
 
+# 未来への挑戦
+#売買結果
+def miraie_main_buy_result(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "ナイトセッション":
+        return "買い"
+#メインサイン
+def miraie_main(zone):
+    if zone == "日中":
+        return "勝ち"
+    if zone == "ナイトセッション":
+        return "勝ち"
+#売買結果金額
+def miraie_result_trade_money(zone):
+    if zone == "日中":
+        return "29000"
+    if zone == "ナイトセッション":
+        return "29000"
+
 
 # メイン
 
-# 薔薇の人生
 # 未来への挑戦
 #habatake
 
