@@ -9,6 +9,8 @@ from package.fc2.yuga import Yuga
 from package.fc2.subarashiki import Subarashiki
 from package.fc2.toshi import Toshi
 from package.fc2.okuman import Okuman
+from package.fc2.bara import Bara
+from package.fc2.habatake import Habatake
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -57,8 +59,17 @@ try:
     # toshi.automation(9)
 
     #億万長者
-    okuman = Okuman(driver)
-    okuman.automation(9)
+    # okuman = Okuman(driver)
+    # okuman.automation(9)
+
+    #薔薇の人生
+    # bara = Bara(driver)
+    # bara.automation()
+
+    #はばたけ未来へ
+    habatake = Habatake(driver)
+    habatake.automation(9)
+
 
 except Exception as e:
     print(e)

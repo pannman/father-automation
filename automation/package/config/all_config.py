@@ -413,10 +413,38 @@ def miraie_result_trade_money(zone):
     if zone == "ナイトセッション":
         return "29000"
 
+#はばたけ未来へ
+def habatake_main_buy_result(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "前場":
+        return "買い"
+    if zone == "後場":
+        return "買い"
+    if zone == "ナイトセッション":
+        return "買い"
+    if zone == "オーバーナイト1":
+        return "買い"
+    if zone == "オーバーナイト2":
+        return "売り"
+#メインサイン
+def habatake_main(zone):
+    if zone == "日中":
+        return "勝ち"
+    if zone == "前場":
+        return "勝ち"
+    if zone == "後場":
+        return "勝ち"
+    if zone == "ナイトセッション":
+        return "勝ち"
+    if zone == "オーバーナイト1":
+        return "買い"
+    if zone == "オーバーナイト2":
+        return "負け"
+
 
 # メイン
 
-# 未来への挑戦
 #habatake
 
 

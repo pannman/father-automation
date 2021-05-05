@@ -66,3 +66,7 @@ MIRAIE_LOGIN = {
 	'ID': 'miraienotyousenn@yahoo.co.jp',
 	'PASS': 'k20011018'
 }
+HABATAKE_LOGIN = {
+	'ID': 'it.can.flutter@gmail.com',
+	'PASS': 'f20011018'
+}

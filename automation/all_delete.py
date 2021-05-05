@@ -118,3 +118,11 @@ open('other_txt/bara/bara_overnight2_main_total.txt', 'w').write("±0")
 #未来への挑戦
 open('other_txt/miraie/miraie_day_main_total.txt', 'w').write("±0")
 open('other_txt/miraie/miraie_nightsession_main_total.txt', 'w').write("±0")
+
+#はばたけ未来へ
+open('other_txt/habatake/habatake_day_main_total.txt', 'w').write("±0")
+open('other_txt/habatake/habatake_before_main_total.txt', 'w').write("±0")
+open('other_txt/habatake/habatake_after_main_total.txt', 'w').write("±0")
+open('other_txt/habatake/habatake_nightsession_main_total.txt', 'w').write("±0")
+open('other_txt/habatake/habatake_overnight1_main_total.txt', 'w').write("±0")
+open('other_txt/habatake/habatake_overnight2_main_total.txt', 'w').write("±0")
