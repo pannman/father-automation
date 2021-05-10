@@ -28,7 +28,7 @@ class Fc2:
         login_btn.click()
 
     #ブログ投稿
-    def blog_post(self,blog_name,zone,will_year,will_month,will_day,will_second):
+    def blog_post(self,category_num,blog_name,zone,will_year,will_month,will_day,will_second):
         wait = WebDriverWait(self.driver, 10)
 
         self.driver.get(LOGIN.FC2_URL['BLOG'])
@@ -36,6 +36,13 @@ class Fc2:
         #簡易モード解除
         if len(self.driver.find_elements_by_id('change_normal_link')) > 0:
             self.driver.execute_script("document.getElementById('menu_simple_normal_block').style.display = 'block';")
+
+        #カテゴリ
+        select_element = self.driver.find_element(By.ID,'cate')
+        select_object = Select(select_element)
+        select_object.select_by_index(category_num)
+
+        
     
 
         # print(self.driver.current_url)
@@ -47,7 +54,6 @@ class Fc2:
         main_text.send_keys(blog_name.blog_text())
 
         self.driver.maximize_window()
-
 
         # #予約ラジオボタン
         reserve_radiom= wait.until(EC.presence_of_element_located((By.ID, "entry_property3"))).click()

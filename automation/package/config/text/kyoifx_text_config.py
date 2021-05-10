@@ -11,8 +11,8 @@ class KyoifxText():
         self.buy_time = buy_time
         self.settlement_time = settlement_time
         self.all_main_total = all_main_total
-        if self.buy_time == "y07:00":
-            self.buy_time = "翌営業日07：00"
+        if self.settlement_time == "y07:00":
+            self.settlement_time = "翌営業日07：00"
         if self.main_sign == "0":
             self.main_sign = "±0"
         print(self.buy + "   "+str(self.zone_dollar)+"   決済    "+ str(self.zone_settlement) +"")

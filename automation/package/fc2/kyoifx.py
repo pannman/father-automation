@@ -101,12 +101,12 @@ class Kyoifx(Fc2):
         self.will_day = CONFIG.reserve_day()
 
         self.pattern1_will_hour = "8"
-        self.pattern2_will_hour = "16"
-        self.pattern3_will_hour = "16"
+        self.pattern2_will_hour = "15"
+        self.pattern3_will_hour = "20"
 
-        self.pattern1_will_minute = "35"
-        self.pattern2_will_minute = "45"
-        self.pattern3_will_minute = "45"
+        self.pattern1_will_minute = "55"
+        self.pattern2_will_minute = "55"
+        self.pattern3_will_minute = "55"
 
         self.will_second = "00"
 

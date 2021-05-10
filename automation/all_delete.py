@@ -132,3 +132,7 @@ open('other_txt/kyoifx/kyoifx_pattern1_main_total.txt', 'w').write("±0")
 open('other_txt/kyoifx/kyoifx_pattern2_main_total.txt', 'w').write("±0")
 open('other_txt/kyoifx/kyoifx_pattern3_main_total.txt', 'w').write("±0")
             
+#サラリーマンFX
+open('other_txt/sararimanfx/sararimanfx_signalA_main_total.txt', 'w').write("±0")
+open('other_txt/sararimanfx/sararimanfx_signalB_main_total.txt', 'w').write("±0")
+open('other_txt/sararimanfx/sararimanfx_signalC_main_total.txt', 'w').write("±0")
