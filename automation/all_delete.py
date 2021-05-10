@@ -126,3 +126,9 @@ open('other_txt/habatake/habatake_after_main_total.txt', 'w').write("±0")
 open('other_txt/habatake/habatake_nightsession_main_total.txt', 'w').write("±0")
 open('other_txt/habatake/habatake_overnight1_main_total.txt', 'w').write("±0")
 open('other_txt/habatake/habatake_overnight2_main_total.txt', 'w').write("±0")
+
+#脅威のFXトレード
+open('other_txt/kyoifx/kyoifx_pattern1_main_total.txt', 'w').write("±0")
+open('other_txt/kyoifx/kyoifx_pattern2_main_total.txt', 'w').write("±0")
+open('other_txt/kyoifx/kyoifx_pattern3_main_total.txt', 'w').write("±0")
+            

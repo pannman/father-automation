@@ -70,3 +70,7 @@ HABATAKE_LOGIN = {
 	'ID': 'it.can.flutter@gmail.com',
 	'PASS': 'f20011018'
 }
+KYOIFX_LOGIN = {
+	'ID': 'wonderfxtrade@yahoo.co.jp',
+	'PASS': 'f20011018'
+}

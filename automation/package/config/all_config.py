@@ -301,7 +301,7 @@ def subarashiki_main_buy_result(zone):
         return "買い"
     if zone == "ナイトセッション":
         return "買い"
-    if zone == "オーバーナイト2":
+    if zone == "オーバーナイト1":
         return "売り"
 #メインサイン
 def subarashiki_main(zone):
@@ -313,7 +313,7 @@ def subarashiki_main(zone):
         return "勝ち"
     if zone == "ナイトセッション":
         return "勝ち"
-    if zone == "オーバーナイト2":
+    if zone == "オーバーナイト1":
         return "負け"
 #売買結果金額
 def subarashiki_result_trade_money(zone):
@@ -323,10 +323,9 @@ def subarashiki_result_trade_money(zone):
         return "29000"
     if zone == "後場":
         return "29000"
-    if zone == "ナイトセッション":
+    if zone == "ナイトセッション" or zone == "オーバーナイト1":
         return "29000"
-    if zone == "オーバーナイト2":
-        return "29000"
+
     
 # 投資日記
 def toshi_main_buy_result(zone):
@@ -442,11 +441,98 @@ def habatake_main(zone):
     if zone == "オーバーナイト2":
         return "負け"
 
+#fxドル(売り)
+def fx_zone_dollar(zone):
+    if zone == "08:00":
+        return 108.905
+    if zone == "08:30":
+        return 108.905
+    if zone == "09:00":
+        return 108.905
+    if zone == "15:00":
+        return 109.338
+    if zone == "15:30":
+        return 108.905
+    if zone == "16:00":
+        return 108.905
+    if zone == "16:30":
+        return 108.905
+    if zone == "20:00":
+        return 108.905
+    if zone == "21:00":
+        return 108.905
+    #翌日
+    if zone == "y07:00":
+        return 108.905
+    if zone == "y08:30":
+        return 108.905
+    if zone == "y09:00":
+        return 108.905    
 
-# メイン
+#fxユーロ(売り)
+def fx_zone_euro(zone):
+    if zone == "08:00":
+        return 108.905
+    if zone == "08:30":
+        return 108.905
+    if zone == "09:00":
+        return 108.905
+    if zone == "15:00":
+        return 108.905
+    if zone == "15:30":
+        return 108.905
+    if zone == "16:00":
+        return 108.905
+    if zone == "16:30":
+        return 108.905
+    if zone == "20:00":
+        return 108.905
+    if zone == "21:00":
+        return 108.905
+     #翌日
+    if zone == "y07:00":
+        return 108.905
+    if zone == "y08:30":
+        return 108.905
+    if zone == "y09:00":
+        return 108.905   
 
-#habatake
+#fxポンド(売り)
+def fx_zone_lb(zone):
+    if zone == "08:00":
+        return 108.905
+    if zone == "08:30":
+        return 108.905
+    if zone == "09:00":
+        return 108.905
+    if zone == "15:00":
+        return 109.338
+    if zone == "15:30":
+        return 108.905
+    if zone == "16:00":
+        return 108.905
+    if zone == "16:30":
+        return 108.905
+    if zone == "20:00":
+        return 108.905
+    if zone == "21:00":
+        return 108.905
+     #翌日
+    if zone == "y07:00":
+        return 108.905
+    if zone == "y08:30":
+        return 108.905
+    if zone == "y09:00":
+        return 108.905   
 
+#脅威のFXトレード
+def kyoifx_main_buy_result(zone):
+    if zone == "パターン1":
+        return "買い"
+    if zone == "パターン2":
+        return "売り"
+    if zone == "パターン3":
+        return "買い"
 
 # fx
 
