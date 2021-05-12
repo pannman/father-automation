@@ -84,5 +84,9 @@ TOSHIJUTUFX_LOGIN = {
 }
 FXTOSHINIKKI_LOGIN = {
 	'ID': 'fxtoshinikki@yahoo.co.jp',
-	'PASS': 'f20011018'
+	'PASS': 'k20011018'
+}
+FXTOSHINIKKI_LOGIN = {
+	'ID': 'abillionaire_fx@yahoo.co.jp',
+	'PASS': 'k20011018'
 }

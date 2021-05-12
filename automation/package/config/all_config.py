@@ -560,9 +560,9 @@ def toshijutufx_main_buy_result(zone):
 
 #FX投資日記
 def fxtoshinikki_main_buy_result(zone):
-    if zone == "fxtoshinikki1":
+    if zone == "FX投資日記1":
         return "買い"
-    if zone == "fxtoshinikki2":
+    if zone == "FX投資日記2":
         return "売り"
 
 
