@@ -142,6 +142,10 @@ open('other_txt/toshijutufx/toshijutufx_timeA_main_total.txt', 'w').write("±0")
 open('other_txt/toshijutufx/toshijutufx_timeB_main_total.txt', 'w').write("±0")
 open('other_txt/toshijutufx/toshijutufx_timeC_main_total.txt', 'w').write("±0")
 
-#FX投資日記def save_total_file(self,zone):
+#FX投資日記
 open('other_txt/fxtoshinikki/fxtoshinikki_fxtoshinikki1_main_total.txt', 'w').write("±0")
 open('other_txt/fxtoshinikki/fxtoshinikki_fxtoshinikki2_main_total.txt', 'w').write("±0")
+
+#億万FX
+open('other_txt/okumanfx/okumanfx_okumanfx1_main_total.txt', 'w').write("±0")
+open('other_txt/okumanfx/okumanfx_okumanfx2_main_total.txt', 'w').write("±0")

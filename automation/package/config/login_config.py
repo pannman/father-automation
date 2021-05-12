@@ -86,7 +86,7 @@ FXTOSHINIKKI_LOGIN = {
 	'ID': 'fxtoshinikki@yahoo.co.jp',
 	'PASS': 'k20011018'
 }
-FXTOSHINIKKI_LOGIN = {
+OKUMANFX_LOGIN = {
 	'ID': 'abillionaire_fx@yahoo.co.jp',
 	'PASS': 'k20011018'
 }

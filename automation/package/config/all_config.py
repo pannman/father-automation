@@ -564,7 +564,13 @@ def fxtoshinikki_main_buy_result(zone):
         return "買い"
     if zone == "FX投資日記2":
         return "売り"
-
+        
+#億万FX
+def okumanfx_main_buy_result(zone):
+    if zone == "09：00　→　16：30":
+        return "買い"
+    if zone == "16：30　→　09：00":
+        return "売り"
 
 # fx
 
