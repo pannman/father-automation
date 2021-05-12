@@ -464,6 +464,8 @@ def fx_zone_dollar(zone):
     #翌日
     if zone == "y07:00":
         return 108.905
+    if zone == "y07:30":
+        return 108.905
     if zone == "y08:30":
         return 108.905
     if zone == "y09:00":
@@ -491,6 +493,8 @@ def fx_zone_euro(zone):
         return 108.905
      #翌日
     if zone == "y07:00":
+        return 108.905
+    if zone == "y07:30":
         return 108.905
     if zone == "y08:30":
         return 108.905
@@ -520,6 +524,8 @@ def fx_zone_lb(zone):
      #翌日
     if zone == "y07:00":
         return 108.905
+    if zone == "y07:30":
+        return 108.905
     if zone == "y08:30":
         return 108.905
     if zone == "y09:00":
@@ -533,6 +539,32 @@ def kyoifx_main_buy_result(zone):
         return "売り"
     if zone == "パターン3":
         return "買い"
+
+#サラリーマンの副業に最適なＦＸ投資
+def sararimanfx_main_buy_result(zone):
+    if zone == "シグナルA":
+        return "買い"
+    if zone == "シグナルB":
+        return "売り"
+    if zone == "シグナルC":
+        return "買い"
+
+#世界の市場時間にあわせたFX投資術
+def toshijutufx_main_buy_result(zone):
+    if zone == "（8：30　⇒　15：30）":
+        return "買い"
+    if zone == "（16：30　⇒　20：00）":
+        return "売り"
+    if zone == "（21：00　⇒　7：30）":
+        return "買い"
+
+#FX投資日記
+def fxtoshinikki_main_buy_result(zone):
+    if zone == "fxtoshinikki1":
+        return "買い"
+    if zone == "fxtoshinikki2":
+        return "売り"
+
 
 # fx
 

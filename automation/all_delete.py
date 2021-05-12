@@ -136,3 +136,8 @@ open('other_txt/kyoifx/kyoifx_pattern3_main_total.txt', 'w').write("±0")
 open('other_txt/sararimanfx/sararimanfx_signalA_main_total.txt', 'w').write("±0")
 open('other_txt/sararimanfx/sararimanfx_signalB_main_total.txt', 'w').write("±0")
 open('other_txt/sararimanfx/sararimanfx_signalC_main_total.txt', 'w').write("±0")
+
+#世界の市場時間にあわせたFX投資術
+open('other_txt/toshijutufx/toshijutufx_timeA_main_total.txt', 'w').write("±0")
+open('other_txt/toshijutufx/toshijutufx_timeB_main_total.txt', 'w').write("±0")
+open('other_txt/toshijutufx/toshijutufx_timeC_main_total.txt', 'w').write("±0")

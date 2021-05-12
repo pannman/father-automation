@@ -74,3 +74,15 @@ KYOIFX_LOGIN = {
 	'ID': 'wonderfxtrade@yahoo.co.jp',
 	'PASS': 'f20011018'
 }
+SARARIMANFX_LOGIN = {
+	'ID': 'sarari_manfx@yahoo.co.jp',
+	'PASS': 'f20011018'
+}
+TOSHIJUTUFX_LOGIN = {
+	'ID': 'fxtradesain@gmail.com',
+	'PASS': 'f20011018'
+}
+FXTOSHINIKKI_LOGIN = {
+	'ID': 'fxtoshinikki@yahoo.co.jp',
+	'PASS': 'f20011018'
+}
