@@ -26,26 +26,30 @@ class Miraie(Fc2):
 
     def get_main_result(self,zone):
         if CONFIG.miraie_main(zone) == "勝ち":
-            self.main_total+= int(CONFIG.nikkei_mini_result(zone))
+            self.main_total+= int(CONFIG.nikkei_result(zone))
             self.main_total = "+" + str(self.main_total) if self.main_total > 0 else "±" + str(self.main_total) if self.main_total == 0 else str(self.main_total)
-            return "+" + CONFIG.nikkei_mini_result(zone)
+            return "+" + CONFIG.nikkei_result(zone)
         if CONFIG.miraie_main(zone) == "負け":
-            self.main_total-= int(CONFIG.nikkei_mini_result(zone))
+            self.main_total-= int(CONFIG.nikkei_result(zone))
             self.main_total = "+" + str(self.main_total) if self.main_total > 0 else "±" + str(self.main_total) if self.main_total == 0 else str(self.main_total)
-            return "-" + CONFIG.nikkei_mini_result(zone)
+            return "-" + CONFIG.nikkei_result(zone)
         if CONFIG.miraie_main(zone) == "引き分け":
-            self.main_total+= int(CONFIG.nikkei_mini_result(zone))
+            self.main_total+= int(CONFIG.nikkei_result(zone))
             self.main_total = "+" + str(self.main_total) if self.main_total > 0 else "±" + str(self.main_total) if self.main_total == 0 else str(self.main_total)
-            return "±" + CONFIG.nikkei_mini_result(zone)
+            return "±" + CONFIG.nikkei_result(zone)
     
     def get_all_main_total(self,zone):
         if zone == "日中":
             other_main_total = open('other_txt/miraie/miraie_nightsession_main_total.txt', 'r').read()
+            if other_main_total == "±0":
+                other_main_total = "0"
             self.all_main_total = int(other_main_total) + int(self.main_total)
             self.all_main_total = "+" + str(self.all_main_total) if self.all_main_total > 0 else "±" + str(self.all_main_total) if self.all_main_total == 0 else str(self.all_main_total)
             return self.all_main_total
         if zone == "ナイトセッション":
             other_main_total = open('other_txt/miraie/miraie_day_main_total.txt', 'r').read()
+            if other_main_total == "±0":
+                other_main_total = "0"
             self.all_main_total = int(other_main_total) + int(self.main_total)
             self.all_main_total = "+" + str(self.all_main_total) if self.all_main_total > 0 else "±" + str(self.all_main_total) if self.all_main_total == 0 else str(self.all_main_total)
             return self.all_main_total
@@ -68,8 +72,11 @@ class Miraie(Fc2):
         if (CONFIG.miraie_main(zone) == "勝ち" and CONFIG.miraie_main_buy_result(zone) == "買い") or (CONFIG.miraie_main(zone) == "負け" and CONFIG.miraie_main_buy_result(zone) == "売り"):
             self.result_settlement_money = str(int(CONFIG.miraie_result_trade_money(zone)) + int(CONFIG.nikkei_result(zone)))
             return self.result_settlement_money
-        if (CONFIG.miraie_main(zone) == "負け" and CONFIG.miraie_main_buy_result(zone) == "売り") or (CONFIG.miraie_main(zone) == "勝ち" and CONFIG.miraie_main_buy_result(zone) == "買い"):
+        if (CONFIG.miraie_main(zone) == "勝ち" and CONFIG.miraie_main_buy_result(zone) == "売り") or (CONFIG.miraie_main(zone) == "負け" and CONFIG.miraie_main_buy_result(zone) == "買い"):
             self.result_settlement_money = str(int(CONFIG.miraie_result_trade_money(zone)) - int(CONFIG.nikkei_result(zone)))
+            return self.result_settlement_money
+        else:
+            self.result_settlement_money = str(int(CONFIG.miraie_result_trade_money(zone)))
             return self.result_settlement_money
             
     def __init__(self,driver):

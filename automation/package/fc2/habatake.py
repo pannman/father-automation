@@ -42,17 +42,17 @@ class Habatake(Fc2):
 
     def get_main_result(self,zone):
         if CONFIG.habatake_main(zone) == "勝ち":
-            self.main_total+= int(CONFIG.nikkei_mini_result(zone))
+            self.main_total+= int(CONFIG.nikkei_result(zone))
             self.main_total = "+" + str(self.main_total) if self.main_total > 0 else "±" + str(self.main_total) if self.main_total == 0 else str(self.main_total)
-            return "+" + CONFIG.nikkei_mini_result(zone)
+            return "+" + CONFIG.nikkei_result(zone)
         if CONFIG.habatake_main(zone) == "負け":
-            self.main_total-= int(CONFIG.nikkei_mini_result(zone))
+            self.main_total-= int(CONFIG.nikkei_result(zone))
             self.main_total = "+" + str(self.main_total) if self.main_total > 0 else "±" + str(self.main_total) if self.main_total == 0 else str(self.main_total)
-            return "-" + CONFIG.nikkei_mini_result(zone)
+            return "-" + CONFIG.nikkei_result(zone)
         if CONFIG.habatake_main(zone) == "引き分け":
-            self.main_total+= int(CONFIG.nikkei_mini_result(zone))
+            self.main_total+= int(CONFIG.nikkei_result(zone))
             self.main_total = "+" + str(self.main_total) if self.main_total > 0 else "±" + str(self.main_total) if self.main_total == 0 else str(self.main_total)
-            return "±" + CONFIG.nikkei_mini_result(zone)
+            return "±" + CONFIG.nikkei_result(zone)
 
     def get_total_file(self,zone):
         if zone == "日中":

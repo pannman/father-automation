@@ -60,25 +60,25 @@ class Investing(Fc2):
             self.win_total = int(open('other_txt/investing/investing_before_win_total.txt', 'r').read())
             self.lose_total = int(open('other_txt/investing/investing_before_lose_total.txt', 'r').read())
             self.draw_total = int(open('other_txt/investing/investing_before_draw_total.txt', 'r').read())
-            self.main_total = 0 if self.main_total == "±0" else int(self.main_total)
+            self.main_total = 0 if self.main_total == '±0' else int(self.main_total)
         if zone == "後場":
             self.main_total = open('other_txt/investing/investing_after_main_total.txt', 'r').read()
             self.win_total = int(open('other_txt/investing/investing_after_win_total.txt', 'r').read())
             self.lose_total = int(open('other_txt/investing/investing_after_lose_total.txt', 'r').read())
             self.draw_total = int(open('other_txt/investing/investing_after_draw_total.txt', 'r').read())
-            self.main_total = 0 if self.main_total == "±0" else int(self.main_total)
+            self.main_total = 0 if self.main_total == '±0' else int(self.main_total)
         if zone == "c":
             self.main_total = open('other_txt/investing/investing_c_main_total.txt', 'r').read()
             self.win_total = int(open('other_txt/investing/investing_c_win_total.txt', 'r').read())
             self.lose_total = int(open('other_txt/investing/investing_c_lose_total.txt', 'r').read())
             self.draw_total = int(open('other_txt/investing/investing_c_draw_total.txt', 'r').read())
-            self.main_total = 0 if self.main_total == "±0" else int(self.main_total)
+            self.main_total = 0 if self.main_total == '±0' else int(self.main_total)
         if zone == "d":
             self.main_total = open('other_txt/investing/investing_d_main_total.txt', 'r').read()
             self.win_total = int(open('other_txt/investing/investing_d_win_total.txt', 'r').read())
             self.lose_total = int(open('other_txt/investing/investing_d_lose_total.txt', 'r').read())
             self.draw_total = int(open('other_txt/investing/investing_d_draw_total.txt', 'r').read())
-            self.main_total = 0 if self.main_total == "±0" else int(self.main_total)
+            self.main_total = 0 if self.main_total == '±0' else int(self.main_total)
 
     def save_total_file(self,zone):
         if zone == "前場":
@@ -145,35 +145,43 @@ class Investing(Fc2):
             self.all_draw_total = str(a_draw_total + b_draw_total + c_draw_total + self.draw_total)
 
     def set_all_main_total(self):
+        a_main_total = open('other_txt/investing/investing_before_main_total.txt', 'r').read()
+        b_main_total = open('other_txt/investing/investing_after_main_total.txt', 'r').read()
+        c_main_total = open('other_txt/investing/investing_c_main_total.txt', 'r').read()
+        d_main_total = open('other_txt/investing/investing_d_main_total.txt', 'r').read()
+        a_main_total = 0 if a_main_total == '±0' else int(a_main_total)
+        b_main_total = 0 if b_main_total == '±0' else int(b_main_total)
+        c_main_total = 0 if c_main_total == '±0' else int(c_main_total)
+        d_main_total = 0 if d_main_total == '±0' else int(d_main_total)
         if self.zone == "前場":
-            b_main_total = int(open('other_txt/investing/investing_after_main_total.txt', 'r').read())
-            c_main_total = int(open('other_txt/investing/investing_c_main_total.txt', 'r').read())
-            d_main_total = int(open('other_txt/investing/investing_d_main_total.txt', 'r').read())
-            self.all_main_total = str(int(self.main_total) + b_main_total + c_main_total + d_main_total)
+            if self.main_total == '±0':
+                self.all_main_total = str(b_main_total + c_main_total + d_main_total)
+            else :
+                self.all_main_total = str(int(self.main_total) + b_main_total + c_main_total + d_main_total)
             if int(self.all_main_total) > 0:
                 self.all_main_total = "+" + self.all_main_total
             return self.all_main_total
         if self.zone == "後場":
-            a_main_total = int(open('other_txt/investing/investing_before_main_total.txt', 'r').read())
-            c_main_total = int(open('other_txt/investing/investing_c_main_total.txt', 'r').read())
-            d_main_total = int(open('other_txt/investing/investing_d_main_total.txt', 'r').read())
-            self.all_main_total = str(a_main_total + int(self.main_total) + c_main_total + d_main_total)
+            if self.main_total == '±0':
+                self.all_main_total = str(a_main_total +  c_main_total + d_main_total)
+            else :
+                self.all_main_total = str(a_main_total + int(self.main_total) + c_main_total + d_main_total)
             if int(self.all_main_total) > 0:
                 self.all_main_total = "+" + self.all_main_total
             return self.all_main_total
         if self.zone == "c":
-            a_main_total = int(open('other_txt/investing/investing_before_main_total.txt', 'r').read())
-            b_main_total = int(open('other_txt/investing/investing_after_main_total.txt', 'r').read())
-            d_main_total = int(open('other_txt/investing/investing_d_main_total.txt', 'r').read())
-            self.all_main_total = str(a_main_total +  b_main_total + int(self.main_total) + d_main_total)
+            if self.main_total == '±0':
+                self.all_main_total = str(a_main_total +  b_main_total + d_main_total)
+            else :
+                self.all_main_total = str(a_main_total +  b_main_total + int(self.main_total) + d_main_total)
             if int(self.all_main_total) > 0:
                 self.all_main_total = "+" + self.all_main_total
             return self.all_main_total
         if self.zone == "d":
-            a_main_total = int(open('other_txt/investing/investing_before_main_total.txt', 'r').read())
-            b_main_total = int(open('other_txt/investing/investing_after_main_total.txt', 'r').read())
-            c_main_total = int(open('other_txt/investing/investing_c_main_total.txt', 'r').read())
-            self.all_main_total = str(a_main_total + b_main_total + c_main_total + int(self.main_total) )
+            if self.main_total == '±0':
+                self.all_main_total = str(a_main_total + b_main_total + c_main_total )
+            else: 
+                self.all_main_total = str(a_main_total + b_main_total + c_main_total + int(self.main_total) )
             if int(self.all_main_total) > 0:
                 self.all_main_total = "+" + self.all_main_total
             return self.all_main_total

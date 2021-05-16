@@ -23,6 +23,8 @@ class SubarashikiText():
     def blog_title(self):
         return "売買シグナル "+self.zone_name
     def blog_text(self):
+        print("2")
+        print()
         return  '売買シグナルは、08：45までにメールさせて頂きました。\n\n'\
                 '' + str(CONFIG.result_month()) + '/' + str(CONFIG.result_day()) + '　' + self.zone + 'の結果　08：45　→　11：30\n\n'\
                 '売買シグナル   ' + self.buy + '\n\n'\

@@ -15,9 +15,9 @@ class HabatakeText():
         if self.zone == "ナイトセッション":
             self.zone_name = "ナイト"
         if self.zone == "オーバーナイト1":
-            self.zone_name = "オーバーナイトＢ"
-        if self.zone == "オーバーナイト2":
             self.zone_name = "オーバーナイトＡ"
+        if self.zone == "オーバーナイト2":
+            self.zone_name = "オーバーナイトＢ"
         print("メイン   "+main_sign+"   "+ str(CONFIG.result_month()) + "月累計   " + main_total)
     def blog_title(self):
         return ""+self.zone_name+"の配信と前営業日の"+self.zone_name+"結果"
