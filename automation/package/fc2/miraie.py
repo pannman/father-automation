@@ -12,6 +12,13 @@ class Miraie(Fc2):
     def login_pass(self):
         return LOGIN.MIRAIE_LOGIN['PASS']
     
+    def get_category_num(self,zone):
+        if zone == "日中":
+            self.category_num = 1
+        if zone == "ナイトセッション":
+            self.category_num = 2
+
+    
     def return_will_hour(self,zone):
         if zone == "日中":
             return self.day_will_hour
@@ -101,9 +108,10 @@ class Miraie(Fc2):
             self.login_fc2()
             zone = "日中"
             print(zone)
+            self.get_category_num(zone)
             self.get_total_file(zone)
             miraie_text = MiraieText(zone,CONFIG.miraie_main_buy_result(zone),self.get_main_result(zone),self.main_total,CONFIG.miraie_result_trade_money(zone),self.get_miraie_result_settlement_money(zone),self.get_all_main_total(zone))
-            self.blog_post(miraie_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+            self.blog_post(self.category_num,miraie_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_total_file(zone)
 
         if num == 5:
@@ -111,7 +119,8 @@ class Miraie(Fc2):
             self.login_fc2()
             zone = "ナイトセッション"
             print(zone)
+            self.get_category_num(zone)
             self.get_total_file(zone)
             miraie_text = MiraieText(zone,CONFIG.miraie_main_buy_result(zone),self.get_main_result(zone),self.main_total,CONFIG.miraie_result_trade_money(zone),self.get_miraie_result_settlement_money(zone),self.get_all_main_total(zone))
-            self.blog_post(miraie_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+            self.blog_post(self.category_num,miraie_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_total_file(zone)

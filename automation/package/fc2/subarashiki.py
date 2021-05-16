@@ -12,6 +12,18 @@ class Subarashiki(Fc2):
     def login_pass(self):
         return LOGIN.SUBARASHIKI_LOGIN['PASS']
     
+    def get_category_num(self,zone):
+        if zone == "日中":
+            self.category_num = 0
+        if zone == "前場":
+            self.category_num = 0
+        if zone == "後場":
+            self.category_num = 0
+        if zone == "ナイトセッション":
+            self.category_num = 0
+        if zone == "オーバーナイト1":
+            self.category_num = 0
+    
     def return_will_hour(self,zone):
         if zone == "日中":
             return self.day_will_hour
@@ -120,9 +132,10 @@ class Subarashiki(Fc2):
             zones = ["日中","前場","後場"]
             for zone in zones:
                 print(zone)
+                self.get_category_num(zone)
                 self.get_total_file(zone)
                 subarashiki_text = SubarashikiText(zone,CONFIG.subarashiki_main_buy_result(zone),self.get_main_result(zone),self.main_total,CONFIG.subarashiki_result_trade_money(zone),self.get_subarashiki_result_settlement_money(zone))
-                self.blog_post(subarashiki_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+                self.blog_post(self.category_num,subarashiki_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
                 self.save_total_file(zone)
 
         if num == 5:
@@ -130,16 +143,18 @@ class Subarashiki(Fc2):
             self.login_fc2()
             zone = "ナイトセッション"
             print(zone)
+            self.get_category_num(zone)
             self.get_total_file(zone)
             subarashiki_text = SubarashikiText(zone,CONFIG.subarashiki_main_buy_result(zone),self.get_main_result(zone),self.main_total,CONFIG.subarashiki_result_trade_money(zone),self.get_subarashiki_result_settlement_money(zone))
-            self.blog_post(subarashiki_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+            self.blog_post(self.category_num,subarashiki_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_total_file(zone)
         if num == 9:
             print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()
             zone = "オーバーナイト1"
             print(zone)
+            self.get_category_num(zone)
             self.get_total_file(zone)
             subarashiki_text = SubarashikiText(zone,CONFIG.subarashiki_main_buy_result(zone),self.get_main_result(zone),self.main_total,CONFIG.subarashiki_result_trade_money(zone),self.get_subarashiki_result_settlement_money(zone))
-            self.blog_post(subarashiki_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+            self.blog_post(self.category_num,subarashiki_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_total_file(zone)

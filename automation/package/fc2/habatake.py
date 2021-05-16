@@ -11,6 +11,20 @@ class Habatake(Fc2):
 
     def login_pass(self):
         return LOGIN.HABATAKE_LOGIN['PASS']
+
+    def get_category_num(self,zone):
+        if zone == "日中":
+            self.category_num = 0
+        if zone == "前場":
+            self.category_num = 0
+        if zone == "後場":
+            self.category_num = 0
+        if zone == "ナイトセッション":
+            self.category_num = 0
+        if zone == "オーバーナイト1":
+            self.category_num = 0
+        if zone == "オーバーナイト2":
+            self.category_num = 0
     
     def return_will_hour(self,zone):
         if zone == "日中":
@@ -119,6 +133,7 @@ class Habatake(Fc2):
             zones = ["日中","前場","後場"]
             for zone in zones:
                 print(zone)
+                self.get_category_num(zone)
                 self.get_total_file(zone)
                 habatake_text = HabatakeText(zone,CONFIG.habatake_main_buy_result(zone),self.get_main_result(zone),self.main_total)
                 self.blog_post(habatake_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
@@ -129,9 +144,10 @@ class Habatake(Fc2):
             self.login_fc2()
             zone = "ナイトセッション"
             print(zone)
+            self.get_category_num(zone)
             self.get_total_file(zone)
             habatake_text = HabatakeText(zone,CONFIG.habatake_main_buy_result(zone),self.get_main_result(zone),self.main_total)
-            self.blog_post(habatake_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+            self.blog_post(self.category_num,habatake_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_total_file(zone)
         if num == 9:
             print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
@@ -139,7 +155,8 @@ class Habatake(Fc2):
             zones = ["オーバーナイト1","オーバーナイト2"]
             for zone in zones:
                 print(zone)
+                self.get_category_num(zone)
                 self.get_total_file(zone)
                 habatake_text = HabatakeText(zone,CONFIG.habatake_main_buy_result(zone),self.get_main_result(zone),self.main_total)
-                self.blog_post(habatake_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+                self.blog_post(self.category_num,habatake_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
                 self.save_total_file(zone)

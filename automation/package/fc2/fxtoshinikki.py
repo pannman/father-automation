@@ -54,6 +54,7 @@ class Fxtoshinikki(Fc2):
         if CONFIG.fxtoshinikki_main_buy_result(zone) == "売り":
             self.zone_settlement = float(Decimal(str(CONFIG.fx_zone_dollar(self.settlement_time)+0.002)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
         if CONFIG.fxtoshinikki_main_buy_result(zone) == "買い":
+            self.zone_dollar = float(Decimal(str(self.zone_dollar+0.02)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
             self.zone_settlement = CONFIG.fx_zone_dollar(self.settlement_time)
         self.main_sign = float(Decimal(str(self.zone_settlement - self.zone_dollar)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
         self.main_sign = "+" + str(self.main_sign) if self.main_sign > 0 else "±0" if self.main_sign == 0 else str(self.main_sign)
@@ -61,7 +62,7 @@ class Fxtoshinikki(Fc2):
     def get_main_total(self):
         if self.main_sign == "±0":
             self.main_sign = "0"
-        self.main_total = Decimal(str(self.main_total + float(self.main_sign))).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP)
+        self.main_total = Decimal(str(self.main_total + float(self.main_sign))).quantize(Decimal('0.1'), rounding=ROUND_HALF_UP)
         self.main_total = "+" + str(self.main_total) if self.main_total > 0 else "±0" if self.main_total == 0 else str(self.main_total)
 
     def get_all_main_total(self,zone):
@@ -69,10 +70,10 @@ class Fxtoshinikki(Fc2):
             self.main_total = "0"
         if zone == "FX投資日記1":
             fxtoshinikki2_main_total = open('other_txt/fxtoshinikki/fxtoshinikki_fxtoshinikki2_main_total.txt', 'r').read()
-            self.all_main_total = float(Decimal(float(self.main_total) + float(fxtoshinikki2_main_total)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+            self.all_main_total = float(Decimal(float(self.main_total) + float(fxtoshinikki2_main_total)).quantize(Decimal('0.1'), rounding=ROUND_HALF_UP))
         if zone == "FX投資日記2":
             fxtoshinikki1_main_total = open('other_txt/fxtoshinikki/fxtoshinikki_fxtoshinikki1_main_total.txt', 'r').read()
-            self.all_main_total = float(Decimal(float(self.main_total) + float(fxtoshinikki1_main_total)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+            self.all_main_total = float(Decimal(float(self.main_total) + float(fxtoshinikki1_main_total)).quantize(Decimal('0.1'), rounding=ROUND_HALF_UP))
         self.all_main_total = "+" + str(self.all_main_total) if self.all_main_total > 0 else "±0" if self.all_main_total == 0 else str(self.all_main_total)
     
     def save_total_file(self,zone):

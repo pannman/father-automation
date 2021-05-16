@@ -11,6 +11,16 @@ class Bara(Fc2):
 
     def login_pass(self):
         return LOGIN.BARA_LOGIN['PASS']
+
+    def get_category_num(self,zone):
+        if zone == "前場":
+            self.category_num = 1
+        if zone == "後場":
+            self.category_num = 1
+        if zone == "ナイトセッション":
+            self.category_num = 1
+        if zone == "オーバーナイト2":
+            self.category_num = 1
     
     def return_will_hour(self,zone):
         return self.will_hour
@@ -116,9 +126,10 @@ class Bara(Fc2):
         self.login_fc2()
         zones = ["前場","後場","ナイトセッション","オーバーナイト2"]
         for zone in zones:
+            self.get_category_num(zone)
             self.get_total_file(zone)
         bara_text = BaraText(CONFIG.bara_main_buy_result(zones[0]),self.get_main_result(zones[0]),self.before_main_total,CONFIG.bara_main_buy_result(zones[1]),self.get_main_result(zones[1]),self.after_main_total,CONFIG.bara_main_buy_result(zones[2]),self.get_main_result(zones[2]),self.nightsession_main_total,CONFIG.bara_main_buy_result(zones[3]),self.get_main_result(zones[3]),self.overnight2_main_total)
         for zone in zones:
-            self.blog_post(bara_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+            self.blog_post(self.category_num,bara_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_total_file(zone)
             

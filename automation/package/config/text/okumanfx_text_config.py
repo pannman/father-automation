@@ -27,4 +27,4 @@ class OkumanfxText():
                 "" + self.zone+ "\n"\
                 "成行き"+self.buy +"売買　"+str(self.zone_dollar) +"\n\n"\
                 "成行き"+self.settlement_buy +"売買　"+str(self.zone_settlement)  +"\n\n"\
-                "結果　　"+self.main_sign +"pips　" + str(CONFIG.result_month()) + "月累計" +self.main_total +"pips"
+                "結果　　"+self.main_sign +"pips　" + str(CONFIG.result_month()) + "月累計　" +self.main_total +"pips"

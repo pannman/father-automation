@@ -32,9 +32,9 @@ class SararimanfxText():
                 "有料配信Ｃのシグナルは今日の"+self.info_time +"に配信済です。 \n\n"\
                 "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "の" + self.zone + "の結果\n"\
                 "(" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "　"+self.buy_time +"）\n"\
-                "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "の"+self.zone +"の結果は　"+str(self.zone_dollar)+"USD/JPY)で"+self.buy+"でした。\n\n"\
+                "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "の"+self.zone +"の結果は　"+str(self.zone_dollar)+"(USD/JPY)で"+self.buy+"でした。\n\n"\
                 "(" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "　"+self.settlement_time +"）\n"\
-                ""+str(self.zone_settlement)+"の決済で、結果は "+self.main_sign+"でした。\n"\
+                ""+str(self.zone_settlement)+"の決済で、結果は "+self.main_sign+"pipsでした。\n"\
                 "注）成行注文の為、読者様が実際の取引をされる場合、若干の誤差が生じます。\n\n"\
                 "" + str(CONFIG.result_month()) + "月度の累計結果\n"\
                 "A　  "+self.signalA_main_total+"pips　 Ｂ　  "+self.signalB_main_total+"pips　 C 　 "+self.signalC_main_total+"pips"

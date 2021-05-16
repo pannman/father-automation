@@ -12,6 +12,14 @@ class Yuga(Fc2):
     def login_pass(self):
         return LOGIN.YUGA_LOGIN['PASS']
     
+    def get_category_num(self,zone):
+        if zone == "日中":
+            self.category_num = 0
+        if zone == "ナイトセッション":
+            self.category_num = 0
+        if zone == "オーバーナイト2":
+            self.category_num = 0
+    
     def return_will_hour(self,zone):
         if zone == "日中":
             return self.day_will_hour
@@ -118,10 +126,11 @@ class Yuga(Fc2):
             self.login_fc2()
             zone = "日中"
             print(zone)
+            self.get_category_num(zone)
             self.get_main_total_file(zone)
             self.get_self_money_total_file(zone)
             yuga_text = YugaText(zone,CONFIG.yuga_main_buy_result(zone),self.get_main_result(zone),self.main_total,self.get_self_money(zone),self.self_money_total)
-            self.blog_post(yuga_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+            self.blog_post(self.category_num,yuga_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_main_total_file(zone)
             self.save_self_money__total_file(zone)
         if num == 5:
@@ -129,10 +138,11 @@ class Yuga(Fc2):
             self.login_fc2()
             zone = "ナイトセッション"
             print(zone)
+            self.get_category_num(zone)
             self.get_main_total_file(zone)
             self.get_self_money_total_file(zone)
             yuga_text = YugaText(zone,CONFIG.yuga_main_buy_result(zone),self.get_main_result(zone),self.main_total,self.get_self_money(zone),self.self_money_total)
-            self.blog_post(yuga_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+            self.blog_post(self.category_num,yuga_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_main_total_file(zone)
             self.save_self_money__total_file(zone)
         if num == 9:
@@ -140,9 +150,10 @@ class Yuga(Fc2):
             self.login_fc2()
             zone = "オーバーナイト2"
             print(zone)
+            self.get_category_num(zone)
             self.get_main_total_file(zone)
             self.get_self_money_total_file(zone)
             yuga_text = YugaText(zone,CONFIG.yuga_main_buy_result(zone),self.get_main_result(zone),self.main_total,self.get_self_money(zone),self.self_money_total)
-            self.blog_post(yuga_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+            self.blog_post(self.category_num,yuga_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_main_total_file(zone)
             self.save_self_money__total_file(zone)

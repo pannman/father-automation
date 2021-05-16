@@ -24,7 +24,7 @@ class FxtoshinikkiText():
                 "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "　"+self.buy_time +"成行きで"+self.buy +"\n"\
                 ""+ str(self.zone_dollar)+" \n\n"\
                 "" + str(CONFIG.reserve_month()) + "/" + str(CONFIG.reserve_day()) + "　"+self.settlement_time +"成行き決済\n"\
-                ""+ str(self.zone_dollar)+" \n\n"\
+                ""+ str(self.zone_settlement)+" \n\n"\
                 "結果　　"+self.main_sign +"pips\n\n"\
-                "" + str(CONFIG.result_month()) + "月累計" +self.main_total +"pips\n\n"\
+                "" + str(CONFIG.result_month()) + "月累計 " +self.main_total +"pips\n\n"\
                 '<a href="//fx.blogmura.com/fxsignal/ranking.html"><img src="//fx.blogmura.com/fxsignal/img/fxsignal88_31.gif" width="88" height="31" border="0" alt="にほんブログ村 為替ブログ FX 売買シグナル配信へ" /></a><br /><a href="//fx.blogmura.com/fxsignal/ranking.html"></a>'

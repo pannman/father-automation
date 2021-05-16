@@ -10,6 +10,14 @@ class Okuman(Fc2):
 
     def login_pass(self):
         return LOGIN.OKUMAN_LOGIN['PASS']
+
+    def get_category_num(self,zone):
+        if zone == "日中":
+            self.category_num = 0
+        if zone == "ナイトセッション":
+            self.category_num = 0
+        if zone == "オーバーナイト2":
+            self.category_num = 0
     
     def return_will_hour(self,zone):
         if zone == "日中":
@@ -130,10 +138,11 @@ class Okuman(Fc2):
             self.login_fc2()
             zone = "日中"
             print(zone)
+            self.get_category_num(zone)
             self.get_main_total_file(zone)
             self.get_total_profit(zone)
             okuman_text = OkumanText(zone,CONFIG.okuman_main_buy_result(zone),self.get_main_result(zone),self.main_total,self.get_other_main_total("ナイトセッション"),self.get_other_main_total("オーバーナイト2"),self.total_profit,self.day_main_sign(),CONFIG.okuman_main_buy_result("日中"),self.nightsession_main_sign(),CONFIG.okuman_main_buy_result("ナイトセッション"))
-            self.blog_post(okuman_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+            self.blog_post(self.category_num,okuman_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_main_total_file(zone)
             self.save_total_profit()
         if num == 5:
@@ -141,10 +150,11 @@ class Okuman(Fc2):
             self.login_fc2()
             zone = "ナイトセッション"
             print(zone)
+            self.get_category_num(zone)
             self.get_main_total_file(zone)
             self.get_total_profit(zone)
             okuman_text = OkumanText(zone,CONFIG.okuman_main_buy_result(zone),self.get_main_result(zone),self.get_other_main_total("日中"),self.main_total,self.get_other_main_total("オーバーナイト2"),self.total_profit,self.day_main_sign(),CONFIG.okuman_main_buy_result("日中"),self.nightsession_main_sign(),CONFIG.okuman_main_buy_result("ナイトセッション"))
-            self.blog_post(okuman_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+            self.blog_post(self.category_num,okuman_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_main_total_file(zone)
             self.save_total_profit()
         if num == 9:
@@ -152,9 +162,10 @@ class Okuman(Fc2):
             self.login_fc2()
             zone = "オーバーナイト2"
             print(zone)
+            self.get_category_num(zone)
             self.get_main_total_file(zone)
             self.get_total_profit(zone)
             okuman_text = OkumanText(zone,CONFIG.okuman_main_buy_result(zone),self.get_main_result(zone),self.get_other_main_total("日中"),self.get_other_main_total("ナイトセッション"),self.main_total,self.total_profit,self.day_main_sign(),CONFIG.okuman_main_buy_result("日中"),self.nightsession_main_sign(),CONFIG.okuman_main_buy_result("ナイトセッション"))
-            self.blog_post(okuman_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+            self.blog_post(self.category_num,okuman_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_main_total_file(zone)
             self.save_total_profit()
