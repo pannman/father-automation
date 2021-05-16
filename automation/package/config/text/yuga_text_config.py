@@ -12,7 +12,7 @@ class YugaText():
         print("自己投資   "+self_money+"万円   " + str(CONFIG.result_month()) + "月累計   " + self_money_total + "万円")
     def blog_title(self):
         if self.zone == "日中":
-            self.zone_name = ""
+            self.zone_name = "日中"
         if self.zone == "ナイトセッション":
             self.zone_name = "夕場"
         if self.zone == "オーバーナイト2":

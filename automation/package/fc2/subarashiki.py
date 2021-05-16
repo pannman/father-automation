@@ -21,7 +21,7 @@ class Subarashiki(Fc2):
             return self.after_will_hour
         if zone == "ナイトセッション":
             return self.nightsession_will_hour
-        if zone == "オーバーナイト":
+        if zone == "オーバーナイト1":
             return self.overnight1_will_hour
 
     def return_will_minute(self,zone):
@@ -38,17 +38,17 @@ class Subarashiki(Fc2):
 
     def get_main_result(self,zone):
         if CONFIG.subarashiki_main(zone) == "勝ち":
-            self.main_total+= int(CONFIG.nikkei_mini_result(zone))
+            self.main_total+= int(CONFIG.nikkei_result(zone))
             self.main_total = "+" + str(self.main_total) if self.main_total > 0 else "±" + str(self.main_total) if self.main_total == 0 else str(self.main_total)
-            return "+" + CONFIG.nikkei_mini_result(zone)
+            return "+" + CONFIG.nikkei_result(zone)
         if CONFIG.subarashiki_main(zone) == "負け":
-            self.main_total-= int(CONFIG.nikkei_mini_result(zone))
+            self.main_total-= int(CONFIG.nikkei_result(zone))
             self.main_total = "+" + str(self.main_total) if self.main_total > 0 else "±" + str(self.main_total) if self.main_total == 0 else str(self.main_total)
-            return "-" + CONFIG.nikkei_mini_result(zone)
+            return "-" + CONFIG.nikkei_result(zone)
         if CONFIG.subarashiki_main(zone) == "引き分け":
-            self.main_total+= int(CONFIG.nikkei_mini_result(zone))
+            self.main_total+= int(CONFIG.nikkei_result(zone))
             self.main_total = "+" + str(self.main_total) if self.main_total > 0 else "±" + str(self.main_total) if self.main_total == 0 else str(self.main_total)
-            return "±" + CONFIG.nikkei_mini_result(zone)
+            return "±" + CONFIG.nikkei_result(zone)
 
     def get_total_file(self,zone):
         if zone == "日中":
@@ -86,6 +86,10 @@ class Subarashiki(Fc2):
         if (CONFIG.subarashiki_main(zone) == "勝ち" and CONFIG.subarashiki_main_buy_result(zone) == "売り") or (CONFIG.subarashiki_main(zone) == "負け" and CONFIG.subarashiki_main_buy_result(zone) == "買い"):
             self.result_settlement_money = str(int(CONFIG.subarashiki_result_trade_money(zone)) - int(CONFIG.nikkei_result(zone)))
             return self.result_settlement_money
+        else:
+            self.result_settlement_money = str(int(CONFIG.subarashiki_result_trade_money(zone)))
+            return self.result_settlement_money
+
             
     def __init__(self,driver):
         super().__init__(driver)

@@ -21,56 +21,56 @@ class Bara(Fc2):
     def get_main_result(self,zone):
         if zone == "前場":
             if CONFIG.bara_main(zone) == "勝ち":
-                self.before_main_total+= int(CONFIG.nikkei_mini_result(zone))
+                self.before_main_total+= int(CONFIG.nikkei_result(zone))
                 self.before_main_total = "+" + str(self.before_main_total) if self.before_main_total > 0 else "±" + str(self.before_main_total) if self.before_main_total == 0 else str(self.before_main_total)
-                return "+" + CONFIG.nikkei_mini_result(zone)
+                return "+" + CONFIG.nikkei_result(zone)
             if CONFIG.bara_main(zone) == "負け":
-                self.before_main_total-= int(CONFIG.nikkei_mini_result(zone))
+                self.before_main_total-= int(CONFIG.nikkei_result(zone))
                 self.before_main_total = "+" + str(self.before_main_total) if self.before_main_total > 0 else "±" + str(self.before_main_total) if self.before_main_total == 0 else str(self.before_main_total)
-                return "-" + CONFIG.nikkei_mini_result(zone)
+                return "-" + CONFIG.nikkei_result(zone)
             if CONFIG.bara_main(zone) == "引き分け":
-                self.before_main_total+= int(CONFIG.nikkei_mini_result(zone))
+                self.before_main_total+= int(CONFIG.nikkei_result(zone))
                 self.before_main_total = "+" + str(self.before_main_total) if self.before_main_total > 0 else "±" + str(self.before_main_total) if self.before_main_total == 0 else str(self.before_main_total)
-                return "±" + CONFIG.nikkei_mini_result(zone)
+                return "±" + CONFIG.nikkei_result(zone)
         if zone == "後場":
             if CONFIG.bara_main(zone) == "勝ち":
-                self.after_main_total+= int(CONFIG.nikkei_mini_result(zone))
+                self.after_main_total+= int(CONFIG.nikkei_result(zone))
                 self.after_main_total = "+" + str(self.after_main_total) if self.after_main_total > 0 else "±" + str(self.after_main_total) if self.after_main_total == 0 else str(self.after_main_total)
-                return "+" + CONFIG.nikkei_mini_result(zone)
+                return "+" + CONFIG.nikkei_result(zone)
             if CONFIG.bara_main(zone) == "負け":
-                self.after_main_total-= int(CONFIG.nikkei_mini_result(zone))
+                self.after_main_total-= int(CONFIG.nikkei_result(zone))
                 self.after_main_total = "+" + str(self.after_main_total) if self.after_main_total > 0 else "±" + str(self.after_main_total) if self.after_main_total == 0 else str(self.after_main_total)
-                return "-" + CONFIG.nikkei_mini_result(zone)
+                return "-" + CONFIG.nikkei_result(zone)
             if CONFIG.bara_main(zone) == "引き分け":
-                self.after_main_total+= int(CONFIG.nikkei_mini_result(zone))
+                self.after_main_total+= int(CONFIG.nikkei_result(zone))
                 self.after_main_total = "+" + str(self.after_main_total) if self.after_main_total > 0 else "±" + str(self.after_main_total) if self.after_main_total == 0 else str(self.after_main_total)
-                return "±" + CONFIG.nikkei_mini_result(zone)
+                return "±" + CONFIG.nikkei_result(zone)
         if zone == "ナイトセッション":
             if CONFIG.bara_main(zone) == "勝ち":
-                self.nightsession_main_total+= int(CONFIG.nikkei_mini_result(zone))
+                self.nightsession_main_total+= int(CONFIG.nikkei_result(zone))
                 self.nightsession_main_total = "+" + str(self.nightsession_main_total) if self.nightsession_main_total > 0 else "±" + str(self.nightsession_main_total) if self.nightsession_main_total == 0 else str(self.nightsession_main_total)
-                return "+" + CONFIG.nikkei_mini_result(zone)
+                return "+" + CONFIG.nikkei_result(zone)
             if CONFIG.bara_main(zone) == "負け":
-                self.nightsession_main_total-= int(CONFIG.nikkei_mini_result(zone))
+                self.nightsession_main_total-= int(CONFIG.nikkei_result(zone))
                 self.nightsession_main_total = "+" + str(self.nightsession_main_total) if self.nightsession_main_total > 0 else "±" + str(self.nightsession_main_total) if self.nightsession_main_total == 0 else str(self.nightsession_main_total)
-                return "-" + CONFIG.nikkei_mini_result(zone)
+                return "-" + CONFIG.nikkei_result(zone)
             if CONFIG.bara_main(zone) == "引き分け":
-                self.nightsession_main_total+= int(CONFIG.nikkei_mini_result(zone))
+                self.nightsession_main_total+= int(CONFIG.nikkei_result(zone))
                 self.nightsession_main_total = "+" + str(self.nightsession_main_total) if self.nightsession_main_total > 0 else "±" + str(self.nightsession_main_total) if self.nightsession_main_total == 0 else str(self.nightsession_main_total)
-                return "±" + CONFIG.nikkei_mini_result(zone)
+                return "±" + CONFIG.nikkei_result(zone)
         if zone == "オーバーナイト2":
             if CONFIG.bara_main(zone) == "勝ち":
-                self.overnight2_main_total+= int(CONFIG.nikkei_mini_result(zone))
+                self.overnight2_main_total+= int(CONFIG.nikkei_result(zone))
                 self.overnight2_main_total = "+" + str(self.overnight2_main_total) if self.overnight2_main_total > 0 else "±" + str(self.overnight2_main_total) if self.overnight2_main_total == 0 else str(self.overnight2_main_total)
-                return "+" + CONFIG.nikkei_mini_result(zone)
+                return "+" + CONFIG.nikkei_result(zone)
             if CONFIG.bara_main(zone) == "負け":
-                self.overnight2_main_total-= int(CONFIG.nikkei_mini_result(zone))
+                self.overnight2_main_total-= int(CONFIG.nikkei_result(zone))
                 self.overnight2_main_total = "+" + str(self.overnight2_main_total) if self.overnight2_main_total > 0 else "±" + str(self.overnight2_main_total) if self.overnight2_main_total == 0 else str(self.overnight2_main_total)
-                return "-" + CONFIG.nikkei_mini_result(zone)
+                return "-" + CONFIG.nikkei_result(zone)
             if CONFIG.bara_main(zone) == "引き分け":
-                self.overnight2_main_total+= int(CONFIG.nikkei_mini_result(zone))
+                self.overnight2_main_total+= int(CONFIG.nikkei_result(zone))
                 self.overnight2_main_total = "+" + str(self.overnight2_main_total) if self.overnight2_main_total > 0 else "±" + str(self.overnight2_main_total) if self.overnight2_main_total == 0 else str(self.overnight2_main_total)
-                return "±" + CONFIG.nikkei_mini_result(zone)
+                return "±" + CONFIG.nikkei_result(zone)
 
     def get_total_file(self,zone):
         if zone == "前場":
