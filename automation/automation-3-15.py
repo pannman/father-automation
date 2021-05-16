@@ -12,6 +12,7 @@ from package.fc2.toshi import Toshi
 from package.fc2.okuman import Okuman
 from package.fc2.miraie import Miraie
 from package.fc2.habatake import Habatake
+from package.fc2.kyoifx import Kyoifx
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -72,8 +73,12 @@ try:
     # miraie.automation(3)
 
     #はばたけ未来へ
-    habatake = Habatake(driver)
-    habatake.automation(3)
+    # habatake = Habatake(driver)
+    # habatake.automation(3)
+
+    #脅威のFXトレード
+    kyoifx = Kyoifx(driver)
+    kyoifx.automation(3)
 
 except Exception as e:
     print(e)

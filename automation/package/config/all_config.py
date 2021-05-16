@@ -191,10 +191,6 @@ def nikkei_result(zone):
         return "40"
     if zone == "オーバーナイト2":
         return "40"
-    if zone == "c":
-        return "20"
-    if zone == "d":
-        return "20"
 
 #勝ち組
 #サブサイン売買
@@ -317,9 +313,7 @@ def subarashiki_main(zone):
         return "負け"
 #売買結果金額
 def subarashiki_result_trade_money(zone):
-    if zone == "日中":
-        return "29000"
-    if zone == "前場":
+    if zone == "日中" or zone == "前場":
         return "29000"
     if zone == "後場":
         return "29000"

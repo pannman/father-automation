@@ -12,6 +12,10 @@ from package.fc2.toshi import Toshi
 from package.fc2.okuman import Okuman
 from package.fc2.miraie import Miraie
 from package.fc2.habatake import Habatake
+from package.fc2.sararimanfx import Sararimanfx
+from package.fc2.toshijutufx import Toshijutufx
+from package.fc2.fxtoshinikki import Fxtoshinikki
+from package.fc2.okumanfx import Okumanfx
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -72,8 +76,24 @@ try:
     # miraie.automation(5)
 
     #はばたけ未来へ
-    habatake = Habatake(driver)
-    habatake.automation(5)
+    # habatake = Habatake(driver)
+    # habatake.automation(5)
+
+    #サラリーマンFX
+    # sararimanfx = Sararimanfx(driver)
+    # sararimanfx.automation(5)
+
+    #世界の市場時間にあわせたFX投資術
+    # toshijutufx = Toshijutufx(driver)
+    # toshijutufx.automation(5)
+
+    #FX投資日記
+    # fxtoshinikki = Fxtoshinikki(driver)
+    # fxtoshinikki.automation(5)
+
+    #億万FX
+    okumanfx = Okumanfx(driver)
+    okumanfx.automation(5)
 
 
 except Exception as e:
