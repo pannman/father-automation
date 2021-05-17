@@ -53,10 +53,11 @@ class Okumanfx(Fc2):
         self.zone_dollar = CONFIG.fx_zone_dollar(self.buy_time)
         if CONFIG.okumanfx_main_buy_result(zone) == "売り":
             self.zone_settlement = float(Decimal(str(CONFIG.fx_zone_dollar(self.settlement_time)+0.002)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+            self.main_sign = float(Decimal(str(self.zone_dollar - self.zone_settlement)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
         if CONFIG.okumanfx_main_buy_result(zone) == "買い":
-            self.zone_dollar = float(Decimal(str(self.zone_dollar+0.02)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+            self.zone_dollar = float(Decimal(str(self.zone_dollar+0.002)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
             self.zone_settlement = CONFIG.fx_zone_dollar(self.settlement_time)
-        self.main_sign = float(Decimal(str(self.zone_settlement - self.zone_dollar)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
+            self.main_sign = float(Decimal(str(self.zone_settlement - self.zone_dollar)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
         self.main_sign = "+" + str(self.main_sign) if self.main_sign > 0 else "±0" if self.main_sign == 0 else str(self.main_sign)
 
     def get_main_total(self):

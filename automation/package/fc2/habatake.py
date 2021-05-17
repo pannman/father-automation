@@ -136,7 +136,7 @@ class Habatake(Fc2):
                 self.get_category_num(zone)
                 self.get_total_file(zone)
                 habatake_text = HabatakeText(zone,CONFIG.habatake_main_buy_result(zone),self.get_main_result(zone),self.main_total)
-                self.blog_post(habatake_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
+                self.blog_post(self.category_num,habatake_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
                 self.save_total_file(zone)
 
         if num == 5:
