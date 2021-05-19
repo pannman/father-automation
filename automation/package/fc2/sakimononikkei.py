@@ -203,7 +203,7 @@ class Sakimononikkei(Fc2):
             self.zone = "ナイトセッション"
             self.login_fc2()
             print(self.zone)
-            self.get_category_num(zone)
+            self.get_category_num(self.zone)
             self.get_main_total_file(self.zone)
             self.get_sub_total_file(self.zone)
             sakimononikkei_text = SakimononikkeiText(self.zone,CONFIG.sakimononikkei_sub_buy_result(self.zone),self.get_sub_result(self.zone),self.get_main_result(self.zone),self.sub_total,self.main_total)
