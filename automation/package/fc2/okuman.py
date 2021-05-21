@@ -71,16 +71,13 @@ class Okuman(Fc2):
     def get_other_main_total(self,zone):
         if zone == "日中":
             main_total = open('other_txt/okuman/okuman_day_main_total.txt', 'r').read()
-            main_total = 0 if main_total == "±0" else int(main_total)
-            return str(main_total)
         if zone == "ナイトセッション":
             main_total = open('other_txt/okuman/okuman_nightsession_main_total.txt', 'r').read()
-            main_total = 0 if main_total == "±0" else int(main_total)
-            return str(main_total)
         if zone == "オーバーナイト2":
             main_total = open('other_txt/okuman/okuman_overnight2_main_total.txt', 'r').read()
-            main_total = 0 if main_total == "±0" else int(main_total)
-            return str(main_total)
+        main_total = 0 if main_total == "±0" else int(main_total)
+        main_total = "+" + str(main_total) if main_total > 0 else "±" + str(main_total) if main_total == 0 else str(main_total)
+        return main_total
 
     def get_total_profit(self,zone):
         if CONFIG.okuman_main(zone) == "勝ち":
