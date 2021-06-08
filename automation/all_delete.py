@@ -149,3 +149,7 @@ open('other_txt/fxtoshinikki/fxtoshinikki_fxtoshinikki2_main_total.txt', 'w').wr
 #億万FX
 open('other_txt/okumanfx/okumanfx_okumanfx1_main_total.txt', 'w').write("±0")
 open('other_txt/okumanfx/okumanfx_okumanfx2_main_total.txt', 'w').write("±0")
+
+#未来への挑戦FX
+open('other_txt/miraienotyousennfx/miraienotyousennfx_miraienotyousennfx1_main_total.txt', 'w').write("±0")
+open('other_txt/miraienotyousennfx/miraienotyousennfx_miraienotyousennfx2_main_total.txt', 'w').write("±0")

@@ -90,3 +90,7 @@ OKUMANFX_LOGIN = {
 	'ID': 'abillionaire_fx@yahoo.co.jp',
 	'PASS': 'k20011018'
 }
+MIRAIENOTYOUSENNFX_LOGIN = {
+	'ID': 'miraienotyousennfx@yahoo.co.jp',
+	'PASS': 'k20011018'
+}

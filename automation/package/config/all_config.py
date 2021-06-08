@@ -2,7 +2,7 @@
 def result_year():
     return 2021
 def result_month():
-    return 5
+    return 7
 def result_day():
     return 27
 
@@ -10,7 +10,7 @@ def result_day():
 def reserve_year():
     return 2021
 def reserve_month():
-    return 5
+    return 7
 def reserve_day():
     return 28
 
@@ -564,6 +564,13 @@ def okumanfx_main_buy_result(zone):
     if zone == "09：00　→　16：30":
         return "買い"
     if zone == "16：30　→　09：00":
+        return "売り"
+
+#未来への挑戦FX
+def miraienotyousennfx_main_buy_result(zone):
+    if zone == "09：00→21：00":
+        return "買い"
+    if zone == "21：00→09：00":
         return "売り"
 
 # fx
