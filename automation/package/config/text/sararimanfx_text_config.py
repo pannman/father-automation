@@ -15,10 +15,13 @@ class SararimanfxText():
         self.signalC_main_total = signalC_main_total
         if self.zone == "シグナルA":
             self.info_time = "7：30"
+            self.zone_name = "A"
         if self.zone == "シグナルB":
             self.info_time = "16：10"
+            self.zone_name = "B"
         if self.zone == "シグナルC":
             self.info_time = "20：10"
+            self.zone_name = "C"
         if self.settlement_time == "y07:00":
             self.settlement_time = "07:00"
         if self.main_sign == "0":
@@ -29,7 +32,7 @@ class SararimanfxText():
         return "今日の" + self.zone
     def blog_text(self):
         return  "今日の"+self.zone+"（"+self.buy_time +"~"+self.settlement_time+"）サイン\n\n"\
-                "有料配信Ｃのシグナルは今日の"+self.info_time +"に配信済です。 \n\n"\
+                "有料配信"+self.zone_name+"のシグナルは今日の"+self.info_time +"に配信済です。 \n\n"\
                 "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "の" + self.zone + "の結果\n"\
                 "(" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "　"+self.buy_time +"）\n"\
                 "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "の"+self.zone +"の結果は　"+str(self.zone_dollar)+"(USD/JPY)で"+self.buy+"でした。\n\n"\
