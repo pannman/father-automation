@@ -14,15 +14,15 @@ class Subarashiki(Fc2):
     
     def get_category_num(self,zone):
         if zone == "日中":
-            self.category_num = 0
+            self.category_num = 2
         if zone == "前場":
-            self.category_num = 0
+            self.category_num = 2
         if zone == "後場":
-            self.category_num = 0
+            self.category_num = 2
         if zone == "ナイトセッション":
-            self.category_num = 0
+            self.category_num = 2
         if zone == "オーバーナイト1":
-            self.category_num = 0
+            self.category_num = 2
     
     def return_will_hour(self,zone):
         if zone == "日中":

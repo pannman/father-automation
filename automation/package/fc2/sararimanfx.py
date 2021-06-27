@@ -121,7 +121,7 @@ class Sararimanfx(Fc2):
     
     def automation(self,num):
         print("サラリーマンの副業に最適なＦＸ投資")
-        if num == 5:
+        if num == 3:
             print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()
             zone = "シグナルA"

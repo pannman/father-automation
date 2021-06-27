@@ -124,7 +124,7 @@ class Toshijutufx(Fc2):
     
     def automation(self,num):
         print("世界の市場時間にあわせたFX投資術")
-        if num == 5:
+        if num == 3:
             print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()
             zone = "（8：30　⇒　15：30）"
