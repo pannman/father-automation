@@ -102,7 +102,7 @@ class Okumanfx(Fc2):
     
     def automation(self,num):
         print("億万FX")
-        if num == 5:
+        if num == 3:
             print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()
             zone = "09：00　→　16：30"

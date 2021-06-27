@@ -11,7 +11,7 @@ class FxtoshinikkiText():
         self.buy_time = buy_time
         self.settlement_time = settlement_time
         if self.settlement_time == "y09:00":
-            self.settlement_time = "09：30"
+            self.settlement_time = "09：00"
         if self.main_sign == "0":
             self.main_sign = "±0"
         print(self.buy + "   "+str(self.zone_dollar)+"   決済    "+ str(self.zone_settlement) +"")

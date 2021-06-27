@@ -20,6 +20,7 @@ class Fc2:
     def login_fc2(self):
         wait = WebDriverWait(self.driver, 10)
         self.driver.get(LOGIN.FC2_URL['LOGIN'])
+        print(self.driver.current_url)
         mail = wait.until(EC.presence_of_element_located((By.ID, "id")))
         password = wait.until(EC.presence_of_element_located((By.ID, "pass")))
         login_btn = wait.until(EC.presence_of_element_located((By.NAME, "image")))
@@ -30,7 +31,7 @@ class Fc2:
     #ブログ投稿
     def blog_post(self,category_num,blog_name,zone,will_year,will_month,will_day,will_second):
         wait = WebDriverWait(self.driver, 10)
-
+        time.sleep(2)
         self.driver.get(LOGIN.FC2_URL['BLOG'])
 
         #簡易モード解除
