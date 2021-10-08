@@ -12,92 +12,74 @@ from package.fc2.toshi import Toshi
 from package.fc2.okuman import Okuman
 from package.fc2.miraie import Miraie
 from package.fc2.habatake import Habatake
-from package.fc2.sararimanfx import Sararimanfx
-from package.fc2.toshijutufx import Toshijutufx
-from package.fc2.fxtoshinikki import Fxtoshinikki
-from package.fc2.okumanfx import Okumanfx
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 try:
-    #設定
-    options = webdriver.ChromeOptions()
-    # Selenium Server に接続する
-    driver = webdriver.Remote(
-        command_executor='http://localhost:4444/wd/hub',
-        options=options,
-    )
+    # #設定
+    # options = webdriver.ChromeOptions()
+    # # Selenium Server に接続する
+    # driver = webdriver.Remote(
+    #     command_executor='http://localhost:4444/wd/hub',
+    #     options=options,
+    # )
+    driver = webdriver.Chrome(executable_path="./chromedriver")
     wait = WebDriverWait(driver, 10)
     driver.implicitly_wait(10)
     driver.set_window_size('300', '300')
 
     #先物日経
-    # sakimononikkei = Sakimononikkei(driver)
-    # sakimononikkei.automation(5)
+    sakimononikkei = Sakimononikkei(driver)
+    sakimononikkei.automation(5)
 
     #夢を現実に
-    # yumewogenzituni = Yumewogenzituni(driver)
-    # yumewogenzituni.automation(5)
+    yumewogenzituni = Yumewogenzituni(driver)
+    yumewogenzituni.automation(5)
 
     #サクセス
-    # sakusesunikki = Sakusesunikki(driver)
-    # sakusesunikki.automation(5)
+    sakusesunikki = Sakusesunikki(driver)
+    sakusesunikki.automation(5)
 
     #ミニ投資法
-    # investing = Investing(driver)
-    # investing.automation(5)
+    investing = Investing(driver)
+    investing.automation(5)
 
     #勝ち組
-    # katigumi = Katigumi(driver)
-    # katigumi.automation(5)
+    katigumi = Katigumi(driver)
+    katigumi.automation(5)
 
     #幸運の女神
-    # megami = Megami(driver)
-    # megami.automation(5)
+    megami = Megami(driver)
+    megami.automation(5)
 
     #優雅な生活
-    # yuga = Yuga(driver)
-    # yuga.automation(5)
+    yuga = Yuga(driver)
+    yuga.automation(5)
 
     #素晴らしき人生
-    # subarashiki = Subarashiki(driver)
-    # subarashiki.automation(5)
+    subarashiki = Subarashiki(driver)
+    subarashiki.automation(5)
 
     #投資日記
-    # toshi = Toshi(driver)
-    # toshi.automation(5)
+    toshi = Toshi(driver)
+    toshi.automation(5)
 
     #億万長者
-    # okuman = Okuman(driver)
-    # okuman.automation(5)
+    okuman = Okuman(driver)
+    okuman.automation(5)
 
     #未来への挑戦
-    # miraie = Miraie(driver)
-    # miraie.automation(5)
+    miraie = Miraie(driver)
+    miraie.automation(5)
 
     #はばたけ未来へ
-    # habatake = Habatake(driver)
-    # habatake.automation(5)
-
-    #サラリーマンFX
-    # sararimanfx = Sararimanfx(driver)
-    # sararimanfx.automation(5)
-
-    #世界の市場時間にあわせたFX投資術
-    # toshijutufx = Toshijutufx(driver)
-    # toshijutufx.automation(5)
-
-    #FX投資日記
-    # fxtoshinikki = Fxtoshinikki(driver)
-    # fxtoshinikki.automation(5)
-
-    #億万FX
-    okumanfx = Okumanfx(driver)
-    okumanfx.automation(5)
+    habatake = Habatake(driver)
+    habatake.automation(5)
 
 
 except Exception as e:
     print(e)
-    driver.quit()
+    # driver.quit()
 finally:
-    driver.quit()
+    # driver.quit()
+    print("e")

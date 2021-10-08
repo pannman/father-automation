@@ -32,8 +32,12 @@ class Fc2:
     def blog_post(self,category_num,blog_name,zone,will_year,will_month,will_day,will_second):
         wait = WebDriverWait(self.driver, 10)
         time.sleep(2)
-        self.driver.get(LOGIN.FC2_URL['BLOG'])
 
+        while True:
+            if(self.driver.current_url != LOGIN.FC2_URL['LOGIN']):
+                self.driver.get(LOGIN.FC2_URL['BLOG'])
+                break
+        
         #簡易モード解除
         if len(self.driver.find_elements_by_id('change_normal_link')) > 0:
             self.driver.execute_script("document.getElementById('menu_simple_normal_block').style.display = 'block';")
@@ -69,12 +73,19 @@ class Fc2:
         dates = [input_year, input_month, input_day, input_hour, input_minute, input_second]
         for date in dates:
             all_delete(date)
+        input_year.clear()
+        input_month.clear()
+        input_day.clear()
+        input_hour.clear()
+        input_minute.clear()
+        input_second.clear()
         input_year.send_keys(will_year)
         input_month.send_keys(will_month)
         input_day.send_keys(will_day)
         input_hour.send_keys(self.return_will_hour(zone))
         input_minute.send_keys(self.return_will_minute(zone))
         input_second.send_keys(will_second)
+
         
         buttun = self.driver.find_element_by_class_name("admin_common_positive_btn").click()
         time.sleep(2)
