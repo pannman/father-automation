@@ -1,18 +1,18 @@
 #結果日(昨日)
 def result_year():
-    return 2021
+    return 2022
 def result_month():
-    return 10
+    return 1
 def result_day():
-    return 7
+    return 1
 
 #投稿日
 def reserve_year():
-    return 2021
+    return 2022
 def reserve_month():
-    return 10
+    return 1
 def reserve_day():
-    return 8
+    return 1
 
 
 #日経ミニ
@@ -464,65 +464,65 @@ def fx_zone_dollar(zone):
     if zone == "y09:00":
         return 111.663    
 
-#fxユーロ(売り)
-# def fx_zone_euro(zone):
-#     if zone == "08:00":
-#         return 108.905
-#     if zone == "08:30":
-#         return 108.905
-#     if zone == "09:00":
-#         return 108.905
-#     if zone == "15:00":
-#         return 108.905
-#     if zone == "15:30":
-#         return 108.905
-#     if zone == "16:00":
-#         return 108.905
-#     if zone == "16:30":
-#         return 108.905
-#     if zone == "20:00":
-#         return 108.905
-#     if zone == "21:00":
-#         return 108.905
-#      #翌日
-#     if zone == "y07:00":
-#         return 108.905
-#     if zone == "y07:30":
-#         return 108.905
-#     if zone == "y08:30":
-#         return 108.905
-#     if zone == "y09:00":
-#         return 108.905   
+# fxユーロ(売り)
+def fx_zone_euro(zone):
+    # if zone == "08:00":
+    #     return 108.905
+    # if zone == "08:30":
+    #     return 108.905
+    if zone == "09:00":
+        return 108.905
+    # if zone == "15:00":
+    #     return 108.905
+    # if zone == "15:30":
+    #     return 108.905
+    # if zone == "16:00":
+    #     return 108.905
+    if zone == "16:30":
+        return 108.905
+    # if zone == "20:00":
+    #     return 108.905
+    # if zone == "21:00":
+    #     return 108.905
+     #翌日
+    # if zone == "y07:00":
+    #     return 108.905
+    # if zone == "y07:30":
+    #     return 108.905
+    # if zone == "y08:30":
+    #     return 108.905
+    if zone == "y09:00":
+        return 108.905   
 
-# #fxポンド(売り)
-# def fx_zone_lb(zone):
-#     if zone == "08:00":
-#         return 108.905
-#     if zone == "08:30":
-#         return 108.905
-#     if zone == "09:00":
-#         return 108.905
-#     if zone == "15:00":
-#         return 109.338
-#     if zone == "15:30":
-#         return 108.905
-#     if zone == "16:00":
-#         return 108.905
-#     if zone == "16:30":
-#         return 108.905
-#     if zone == "20:00":
-#         return 108.905
-#     if zone == "21:00":
-#         return 108.905
-#      #翌日
-#     if zone == "y07:00":
-#         return 108.905
-#     if zone == "y07:30":
-#         return 108.905
-#     if zone == "y08:30":
-#         return 108.905
-#     if zone == "y09:00":
-#         return 108.905   
+#fxポンド(売り)
+def fx_zone_lb(zone):
+    # if zone == "08:00":
+    #     return 108.905
+    # if zone == "08:30":
+    #     return 108.905
+    if zone == "09:00":
+        return 108.905
+    # if zone == "15:00":
+    #     return 109.338
+    # if zone == "15:30":
+    #     return 108.905
+    # if zone == "16:00":
+    #     return 108.905
+    if zone == "16:30":
+        return 108.905
+    # if zone == "20:00":
+    #     return 108.905
+    # if zone == "21:00":
+    #     return 108.905
+    #  #翌日
+    # if zone == "y07:00":
+    #     return 108.905
+    # if zone == "y07:30":
+    #     return 108.905
+    # if zone == "y08:30":
+    #     return 108.905
+    if zone == "y09:00":
+        return 108.905   
 
 #脅威のFXトレード
 def kyoifx_main_buy_result(zone):
@@ -570,6 +570,13 @@ def miraienotyousennfx_main_buy_result(zone):
     if zone == "09：00→21：00":
         return "買い"
     if zone == "21：00→09：00":
+        return "買い"
+
+#成功のfx
+def seikoufx_main_buy_result(zone):
+    if zone == "09:00成行き売買→16：30成行き決済":
+        return "買い"
+    if zone == "16:30成行き売買→09：00成行き決済":
         return "買い"
 
 # fx

@@ -94,3 +94,7 @@ MIRAIENOTYOUSENNFX_LOGIN = {
 	'ID': 'miraienotyousennfx@yahoo.co.jp',
 	'PASS': 'k20011018'
 }
+SEIKOUFX_LOGIN = {
+	'ID': 'a_bridge8fx@yahoo.co.jp',
+	'PASS': 'f20011018'
+}
