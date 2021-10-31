@@ -12,6 +12,7 @@ from package.fc2.toshi import Toshi
 from package.fc2.okuman import Okuman
 from package.fc2.miraie import Miraie
 from package.fc2.habatake import Habatake
+from package.fc2.seikoufx import Seikoufx
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -76,10 +77,9 @@ try:
     habatake = Habatake(driver)
     habatake.automation(5)
 
+    #成功のfx
+    seikoufx = Seikoufx(driver)
+    seikoufx.automation(5)
 
-except Exception as e:
-    print(e)
-    # driver.quit()
 finally:
-    # driver.quit()
-    print("e")
+    driver.quit()

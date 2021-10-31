@@ -17,6 +17,7 @@ from package.fc2.toshijutufx import Toshijutufx
 from package.fc2.fxtoshinikki import Fxtoshinikki
 from package.fc2.okumanfx import Okumanfx
 from package.fc2.miraienotyousennfx import Miraienotyousennfx
+from package.fc2.seikoufx import Seikoufx
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -100,6 +101,10 @@ try:
     #未来への挑戦FX
     miraienotyousennfx = Miraienotyousennfx(driver)
     miraienotyousennfx.automation(9)
+
+    #成功のfx
+    seikoufx = Seikoufx(driver)
+    seikoufx.automation(5)
 
 
 except Exception as e:
