@@ -102,25 +102,34 @@ class Seikoufx(Fc2):
         self.zone_dollar = CONFIG.fx_zone_dollar(self.buy_time)
         self.zone_euro = CONFIG.fx_zone_euro(self.buy_time)
         self.zone_lb = CONFIG.fx_zone_lb(self.buy_time)
-        if CONFIG.seikoufx_main_buy_result(zone) == "売り":
-
+        self.zone_state,self.zone_state_euro,self.zone_state_lb  = CONFIG.seikoufx_main_buy_result(zone)
+        if self.zone_state == "売り":
             #ポンドユーロごとに売りか買い換えているのかan毎回一緒、ASKは買いBID売り、ポンドは0.01ユーロは0．005計算方法
             self.zone_settlement = float(Decimal(str(CONFIG.fx_zone_dollar(self.settlement_time)+0.002)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
             self.main_sign = float(Decimal(str(self.zone_dollar - self.zone_settlement)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
-            self.zone_settlement_euro = float(Decimal(str(CONFIG.fx_zone__euro(self.settlement_time)+0.005)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
-            self.main_sign_euro = float(Decimal(str(self.zone_euro - self.zone_settlement_euro)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
-            self.zone_settlement_lb = float(Decimal(str(CONFIG.fx_zone__lb(self.settlement_time)+0.01)).quantize(Decimal('0.01'), rounding=ROUND_HALF_UP))
-            self.main_sign_lb = float(Decimal(str(self.zone_lb - self.zone_settlement_lb)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
-        if CONFIG.seikoufx_main_buy_result(zone) == "買い":
+        if self.zone_state == "買い":
             self.zone_dollar = float(Decimal(str(self.zone_dollar+0.002)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
             self.zone_settlement = CONFIG.fx_zone_dollar(self.settlement_time)
             self.main_sign = float(Decimal(str(self.zone_settlement - self.zone_dollar)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
+        
+        if self.zone_state_euro == "売り":
+
+            #ポンドユーロごとに売りか買い換えているのかan毎回一緒、ASKは買いBID売り、ポンドは0.01ユーロは0．005計算方法
+            self.zone_settlement_euro = float(Decimal(str(CONFIG.fx_zone_euro(self.settlement_time)+0.005)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+            self.main_sign_euro = float(Decimal(str(self.zone_euro - self.zone_settlement_euro)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
+        if self.zone_state_euro == "買い":
             self.zone_euro = float(Decimal(str(self.zone_euro+0.005)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
             self.zone_settlement_euro = CONFIG.fx_zone_euro(self.settlement_time)
             self.main_sign_euro = float(Decimal(str(self.zone_settlement_euro - self.zone_euro)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
-            self.zone_lb = float(Decimal(str(self.zone_lb+0.01)).quantize(Decimal('0.01'), rounding=ROUND_HALF_UP))
-            self.zone_settlement_lb = CONFIG.fx_zone_dollar(self.settlement_time)
-            self.main_sign_lb = float(Decimal(str(self.zone_settlement_lb - self.zone_lb)).quantize(Decimal('0.01'), rounding=ROUND_HALF_UP))*100
+
+        if self.zone_state_lb == "売り":
+            #ポンドユーロごとに売りか買い換えているのかan毎回一緒、ASKは買いBID売り、ポンドは0.01ユーロは0．005計算方法
+            self.zone_settlement_lb = float(Decimal(str(CONFIG.fx_zone_lb(self.settlement_time)+0.01)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+            self.main_sign_lb = float(Decimal(str(self.zone_lb - self.zone_settlement_lb)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
+        if self.zone_state_lb == "買い":
+            self.zone_lb = float(Decimal(str(self.zone_lb+0.01)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+            self.zone_settlement_lb = CONFIG.fx_zone_lb(self.settlement_time)
+            self.main_sign_lb = float(Decimal(str(self.zone_settlement_lb - self.zone_lb)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
         self.main_sign = "+" + str(self.main_sign) if self.main_sign > 0 else "±0" if self.main_sign == 0 else str(self.main_sign)
         self.main_sign_euro = "+" + str(self.main_sign_euro) if self.main_sign_euro > 0 else "±0" if self.main_sign_euro == 0 else str(self.main_sign_euro)
         self.main_sign_lb = "+" + str(self.main_sign_lb) if self.main_sign_lb > 0 else "±0" if self.main_sign_lb == 0 else str(self.main_sign_lb)
@@ -148,19 +157,19 @@ class Seikoufx(Fc2):
             self.win_total+=1
         if float(self.main_sign) < 0:
             self.lose_total += 1
-        if float(self.main_sign) < 0:
+        if float(self.main_sign) == 0:
             self.draw_total +=1
         if float(self.main_sign_euro) > 0:
             self.win_total_euro += 1
         if float(self.main_sign_euro) < 0:
             self.lose_total_euro += 1
-        if float(self.main_sign_euro) < 0:
+        if float(self.main_sign_euro) == 0:
             self.draw_total_euro += 1
         if float(self.main_sign_lb) > 0:
             self.win_total_lb += 1
         if float(self.main_sign_lb) < 0:
             self.lose_total_lb += 1
-        if float(self.main_sign_lb) < 0:
+        if float(self.main_sign_lb) == 0:
             self.draw_total_lb += 1
 
     # def get_all_main_total(self,zone):
@@ -232,11 +241,11 @@ class Seikoufx(Fc2):
         self.will_month = CONFIG.reserve_month()
         self.will_day = CONFIG.reserve_day()
 
-        self.seikoufx1_will_hour = "9"
-        self.seikoufx2_will_hour = "17"
+        self.seikoufx1_will_hour = "7"
+        self.seikoufx2_will_hour = "16"
 
-        self.seikoufx1_will_minute = "05"
-        self.seikoufx2_will_minute = "25"
+        self.seikoufx1_will_minute = "55"
+        self.seikoufx2_will_minute = "45"
 
         self.will_second = "00"
 
@@ -244,7 +253,7 @@ class Seikoufx(Fc2):
     
     def automation(self,num):
         print("成功fx")
-        if num == 5:
+        if num == 3:
             print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()
             zone = "09:00成行き売買→16：30成行き決済"
@@ -263,7 +272,7 @@ class Seikoufx(Fc2):
 
             self.count_win_or_lose_total()
 
-            seikoufx_text = SeikoufxText(zone,CONFIG.seikoufx_main_buy_result(zone),self.main_sign,self.main_sign_euro,self.main_sign_lb,self.main_total,self.main_total_euro,self.main_total_lb,self.zone_dollar,self.zone_euro,self.zone_lb,self.zone_settlement,self.zone_settlement_euro,self.zone_settlement_lb,self.buy_time,self.settlement_time,self.win_total,self.win_total_euro,self.win_total_lb,self.lose_total,self.lose_total_euro,self.lose_total_lb,self.draw_total,self.draw_total_euro,self.draw_total_lb)
+            seikoufx_text = SeikoufxText(zone,self.zone_state,self.zone_state_euro,self.zone_state_lb,self.main_sign,self.main_sign_euro,self.main_sign_lb,self.main_total,self.main_total_euro,self.main_total_lb,self.zone_dollar,self.zone_euro,self.zone_lb,self.zone_settlement,self.zone_settlement_euro,self.zone_settlement_lb,self.buy_time,self.settlement_time,self.win_total,self.win_total_euro,self.win_total_lb,self.lose_total,self.lose_total_euro,self.lose_total_lb,self.draw_total,self.draw_total_euro,self.draw_total_lb)
             self.blog_post(self.category_num,seikoufx_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_total_file(zone)
 
@@ -287,7 +296,7 @@ class Seikoufx(Fc2):
 
             self.count_win_or_lose_total()
 
-            seikoufx_text = SeikoufxText(zone,CONFIG.seikoufx_main_buy_result(zone),self.main_sign,self.main_sign_euro,self.main_sign_lb,self.main_total,self.main_total_euro,self.main_total_lb,self.zone_dollar,self.zone_euro,self.zone_lb,self.zone_settlement,self.zone_settlement_euro,self.zone_settlement_lb,self.buy_time,self.settlement_time,self.win_total,self.win_total_euro,self.win_total_lb,self.lose_total,self.lose_total_euro,self.lose_total_lb,self.draw_total,self.draw_total_euro,self.draw_total_lb)
+            seikoufx_text = SeikoufxText(zone,self.zone_state,self.zone_state_euro,self.zone_state_lb,self.main_sign,self.main_sign_euro,self.main_sign_lb,self.main_total,self.main_total_euro,self.main_total_lb,self.zone_dollar,self.zone_euro,self.zone_lb,self.zone_settlement,self.zone_settlement_euro,self.zone_settlement_lb,self.buy_time,self.settlement_time,self.win_total,self.win_total_euro,self.win_total_lb,self.lose_total,self.lose_total_euro,self.lose_total_lb,self.draw_total,self.draw_total_euro,self.draw_total_lb)
             self.blog_post(self.category_num,seikoufx_text,zone,self.will_year,self.will_month,self.will_day,self.will_second)
             self.save_total_file(zone)
 

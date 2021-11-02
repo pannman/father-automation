@@ -77,9 +77,5 @@ try:
     habatake = Habatake(driver)
     habatake.automation(5)
 
-    #成功のfx
-    seikoufx = Seikoufx(driver)
-    seikoufx.automation(5)
-
 finally:
     driver.quit()
