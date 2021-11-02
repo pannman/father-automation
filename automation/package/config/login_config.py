@@ -98,3 +98,7 @@ SEIKOUFX_LOGIN = {
 	'ID': 'a_bridge8fx@yahoo.co.jp',
 	'PASS': 'f20011018'
 }
+HABATAKEFX_LOGIN = {
+	'ID': 'it_can_flutter_fx@yahoo.co.jp',
+	'PASS': 'f20011018'
+}

@@ -2,7 +2,7 @@
 def result_year():
     return 2021
 def result_month():
-    return 11
+    return 12
 def result_day():
     return 1
 
@@ -10,7 +10,7 @@ def result_day():
 def reserve_year():
     return 2021
 def reserve_month():
-    return 11
+    return 12
 def reserve_day():
     return 2
 
@@ -578,7 +578,17 @@ def seikoufx_main_buy_result(zone):
         # ドル、ユーロ、ポンドの順番
         return "買い","買い","買い"
     if zone == "16:30成行き売買→09：00成行き決済":
+        # ドル、ユーロ、ポンドの順番
         return "買い","売り","売り"
+    
+#はばたけfx
+def habatakefx_main_buy_result(zone):
+    if zone == "09：00→21：00":
+        # ドル、ユーロ、ポンドの順番
+        return "買い", "売り", "売り"
+    if zone == "21：00→09：00":
+        # ドル、ユーロ、ポンドの順番
+        return "買い", "買い", "買い"
     
         
 # fx

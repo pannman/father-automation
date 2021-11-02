@@ -179,3 +179,11 @@ open('other_txt/seikoufx/seikoufx_seikoufx2_lose_total_lb.txt', 'w').write("0")
 open('other_txt/seikoufx/seikoufx_seikoufx2_draw_total.txt', 'w').write("0")
 open('other_txt/seikoufx/seikoufx_seikoufx2_draw_total_euro.txt', 'w').write("0")
 open('other_txt/seikoufx/seikoufx_seikoufx2_draw_total_lb.txt', 'w').write("0")
+
+#はばたけfx
+open('other_txt/habatakefx/habatakefx_habatakefx1_main_total.txt', 'w').write("±0")
+open('other_txt/habatakefx/habatakefx_habatakefx1_main_total_euro.txt', 'w').write("±0")
+open('other_txt/habatakefx/habatakefx_habatakefx1_main_total_lb.txt', 'w').write("±0")
+open('other_txt/habatakefx/habatakefx_habatakefx2_main_total.txt', 'w').write("±0")
+open('other_txt/habatakefx/habatakefx_habatakefx2_main_total_euro.txt', 'w').write("±0")
+open('other_txt/habatakefx/habatakefx_habatakefx2_main_total_lb.txt', 'w').write("±0")
