@@ -187,3 +187,15 @@ open('other_txt/habatakefx/habatakefx_habatakefx1_main_total_lb.txt', 'w').write
 open('other_txt/habatakefx/habatakefx_habatakefx2_main_total.txt', 'w').write("±0")
 open('other_txt/habatakefx/habatakefx_habatakefx2_main_total_euro.txt', 'w').write("±0")
 open('other_txt/habatakefx/habatakefx_habatakefx2_main_total_lb.txt', 'w').write("±0")
+
+# ゆうがfx
+open('other_txt/yugafx/yugafx_yugafx1_main_total.txt','w').write("±0")
+open('other_txt/yugafx/yugafx_yugafx1_main_total_euro.txt', 'w').write("±0")
+open('other_txt/yugafx/yugafx_yugafx1_main_total_lb.txt', 'w').write("±0")
+open('other_txt/yugafx/yugafx_yugafx1_main_total_euro_dol.txt', 'w').write("±0")
+open('other_txt/yugafx/yugafx_yugafx1_main_total_lb_dol.txt', 'w').write("±0")
+open('other_txt/yugafx/yugafx_yugafx2_main_total.txt', 'w').write("±0")
+open('other_txt/yugafx/yugafx_yugafx2_main_total_euro.txt', 'w').write("±0")
+open('other_txt/yugafx/yugafx_yugafx2_main_total_lb.txt', 'w').write("±0")
+open('other_txt/yugafx/yugafx_yugafx2_main_total_euro_dol.txt', 'w').write("±0")
+open('other_txt/yugafx/yugafx_yugafx2_main_total_lb_dol.txt', 'w').write("±0")

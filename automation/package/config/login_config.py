@@ -102,3 +102,7 @@ HABATAKEFX_LOGIN = {
 	'ID': 'it_can_flutter_fx@yahoo.co.jp',
 	'PASS': 'f20011018'
 }
+YUGAFX_LOGIN = {
+	'ID': 'easytimefx@gmail.com',
+	'PASS': 'f20011018'
+}
