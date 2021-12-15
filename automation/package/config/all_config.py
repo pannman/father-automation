@@ -1,18 +1,28 @@
 #結果日(昨日)
 def result_year():
-    return 2021
+    return 2022
 def result_month():
     return 12
 def result_day():
     return 12
 
+#結果日(翌日)
+def y_result_year():
+    return 2022
+def y_result_month():
+    return 12
+def y_result_day():
+    return 12
+
+
 #投稿日
 def reserve_year():
-    return 2021
+    return 2022
 def reserve_month():
     return 12
 def reserve_day():
-    return 2
+    return 12
+
 
 
 #日経ミニ
@@ -491,8 +501,8 @@ def fx_zone_euro(zone):
     #     return 108.905
     if zone == "y07:30":
         return 108.905
-    # if zone == "y08:30":
-    #     return 108.905
+    if zone == "y08:30":
+        return 108.905
     if zone == "y09:00":
         return 132.019   
 
@@ -523,8 +533,8 @@ def fx_zone_lb(zone):
     #     return 108.905
     if zone == "y07:30":
         return 108.905
-    # if zone == "y08:30":
-    #     return 108.905
+    if zone == "y08:30":
+        return 108.905
     if zone == "y09:00":
         return 156.305   
 
@@ -555,8 +565,8 @@ def fx_zone_euro_dol(zone):
     #     return 108.905
     if zone == "y07:30":
         return 108.905
-    # if zone == "y08:30":
-    #     return 108.905
+    if zone == "y08:30":
+        return 108.905
     if zone == "y09:00":
         return 132.019
 
@@ -587,8 +597,8 @@ def fx_zone_lb_dol(zone):
     #     return 108.905
     if zone == "y07:30":
         return 108.905
-    # if zone == "y08:30":
-    #     return 108.905
+    if zone == "y08:30":
+        return 108.905
     if zone == "y09:00":
         return 156.305
 
@@ -667,8 +677,11 @@ def yugafx_main_buy_result(zone):
         # ドル/円、ユーロ/円、ポンド/円,ユーロ/ドル,ポンド/ドルの順番
         return "買い", "買い", "買い", "売り", "売り"
     
-        
-# fx
+#fx投資ブログ
+def fxtoshiburogu_main_buy_result(zone):
+    if zone == "09：00　→　08：30":
+        # ドル/円、ユーロ/円、ポンド/円,ユーロ/ドル,ポンド/ドルの順番
+        return "買い", "売り", "売り", "売り", "売り"
 
 # 仮想通貨
 # 先物

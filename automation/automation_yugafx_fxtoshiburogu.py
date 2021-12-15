@@ -5,6 +5,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from package.fc2.yugafx import Yugafx
+from package.fc2.fxtoshiburogu import Fxtoshiburogu
+
 
 try:
     #設定
@@ -20,8 +22,12 @@ try:
     driver.set_window_size('300', '300')
 
     # ゆうがfx
-    yugafx = Yugafx(driver)
-    yugafx.automation()
+    # yugafx = Yugafx(driver)
+    # yugafx.automation()
+
+    # fx投資ブログ
+    fxtoshiburogu = Fxtoshiburogu(driver)
+    fxtoshiburogu.automation()
 
 except Exception as e:
     print(e)

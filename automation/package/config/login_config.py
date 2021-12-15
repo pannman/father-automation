@@ -106,3 +106,7 @@ YUGAFX_LOGIN = {
 	'ID': 'easytimefx@gmail.com',
 	'PASS': 'f20011018'
 }
+FXTOSHIBUROGU_LOGIN = {
+	'ID': 'fxtoshiburogu@gmail.com',
+	'PASS': 'f20011018'
+}
