@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from package.fc2.fxtecunikarudoru import Fxtecunikarudoru
 from package.fc2.fxtecunikaruyuro import Fxtecunikaruyuro
+from package.fc2.fxtecunikaruponndo import Fxtecunikaruponndo
 
 
 try:
@@ -29,13 +30,21 @@ try:
     # fxtecunikarudoru = Fxtecunikarudoru(driver)
     # fxtecunikarudoru.automation(3)
     
-    # fxテクニカルユーロ1
-    fxtecunikaruyuro = Fxtecunikaruyuro(driver)
-    fxtecunikaruyuro.automation(1)
+    # # fxテクニカルユーロ1
+    # fxtecunikaruyuro = Fxtecunikaruyuro(driver)
+    # fxtecunikaruyuro.automation(1)
     
-    # fxテクニカルユーロ３
-    fxtecunikaruyuro = Fxtecunikaruyuro(driver)
-    fxtecunikaruyuro.automation(3)
+    # # fxテクニカルユーロ３
+    # fxtecunikaruyuro = Fxtecunikaruyuro(driver)
+    # fxtecunikaruyuro.automation(3)
+    
+    # fxテクニカルポンド1
+    fxtecunikaruponndo = Fxtecunikaruponndo(driver)
+    fxtecunikaruponndo.automation(1)
+
+    # fxテクニカルポンド３
+    fxtecunikaruponndo = Fxtecunikaruponndo(driver)
+    fxtecunikaruponndo.automation(3)
 
 except Exception as e:
     print(e)

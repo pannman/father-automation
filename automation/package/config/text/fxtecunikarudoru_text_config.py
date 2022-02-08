@@ -38,6 +38,6 @@ class FxtecunikarudoruText():
             ""+str(CONFIG.result_month()) + "年"+str(CONFIG.result_month()) + "月の月間結果　" + self.main_total+"　（"+self.buy_time+"　→　"+self.settlement_time+"）　\n\n\n"\
             "今日の予想！！\n\n"\
             "↓　↓　↓\n\n"\
-            '<a href = "http://fxtechnicalanalysisu.blog.fc2.com/blog-entry-3.html" title = "ブログ内容と申込みの詳細" > ブログ内容と申込みの詳細 < /a >\n\n'\
+            '<a href = "http://fxtechnicalanalysisu.blog.fc2.com/blog-entry-3.html" title = "ブログ内容と申込みの詳細" > ブログ内容と申込みの詳細 </a>\n\n'\
             "ポチっとご協力お願いします！！！\n\n"\
             '<a href = "http://fx.blogmura.com/fxsignal/"><img src = "http://fx.blogmura.com/fxsignal/img/fxsignal88_31.gif" width = "88" height = "31" border = "0" alt = "にほんブログ村 為替ブログ FX 売買シグナル配信へ" /></a><br/><a href = "http://fx.blogmura.com/fxsignal/"> </a>\n'

@@ -115,6 +115,10 @@ FXTECUNIKARUDORU_LOGIN = {
 	'PASS': 'f20011018'
 }
 FXTECUNIKARUYURO_LOGIN = {
-	'ID': 'fx_technical_analysis@yahoo.co.jp ',
+	'ID': 'fx_technical_analysis@yahoo.co.jp',
+	'PASS': 'f20011018'
+}
+FXTECUNIKARUPONNDO_LOGIN = {
+	'ID': 'fx_technical_analysis_bygbp@yahoo.co.jp',
 	'PASS': 'f20011018'
 }
