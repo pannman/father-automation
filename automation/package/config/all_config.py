@@ -462,6 +462,8 @@ def fx_zone_dollar(zone):
         return 114.348
     if zone == "20:00":
         return 114.245
+    if zone == "20:30":
+        return 114.245
     if zone == "21:00":
         return 114.237
     if zone == "22:00":
@@ -498,8 +500,8 @@ def fx_zone_euro(zone):
         return 108.905
     if zone == "20:30":
         return 108.905
-    # if zone == "21:00":
-    #     return 108.905
+    if zone == "21:00":
+        return 108.905
     if zone == "22:00":
         return 114.237
      #翌日
@@ -534,8 +536,8 @@ def fx_zone_lb(zone):
         return 108.905
     if zone == "20:30":
         return 108.905
-    # if zone == "21:00":
-    #     return 108.905
+    if zone == "21:00":
+        return 108.905
     if zone == "22:00":
         return 114.237
     #  #翌日
@@ -564,8 +566,8 @@ def fx_zone_euro_dol(zone):
     #     return 108.905
     # if zone == "16:00":
     #     return 108.905
-    if zone == "16:30":
-        return 132.151
+    # if zone == "16:30":
+    #     return 132.151
     if zone == "20:00":
         return 108.905
     if zone == "20:30":
@@ -579,8 +581,8 @@ def fx_zone_euro_dol(zone):
         return 108.905
     if zone == "y08:30":
         return 108.905
-    if zone == "y09:00":
-        return 132.019
+    # if zone == "y09:00":
+    #     return 132.019
 
 #fxポンド/ドル(売り)
 def fx_zone_lb_dol(zone):
@@ -595,9 +597,9 @@ def fx_zone_lb_dol(zone):
     # if zone == "15:30":
     #     return 108.905
     # if zone == "16:00":
-    #     return 108.905
-    if zone == "16:30":
-        return 156.165
+    # #     return 108.905
+    # if zone == "16:30":
+    #     return 156.165
     if zone == "20:00":
         return 108.905
     if zone == "20:30":
@@ -611,8 +613,8 @@ def fx_zone_lb_dol(zone):
         return 108.905
     if zone == "y08:30":
         return 108.905
-    if zone == "y09:00":
-        return 156.305
+    # if zone == "y09:00":
+    #     return 156.305
 
 #脅威のFXトレード
 def kyoifx_main_buy_result(zone):
