@@ -211,3 +211,8 @@ open('other_txt/fxtoshiburogu/fxtoshiburogu_main_total_lb_dol.txt', 'w').write("
 open('other_txt/fxtecunikarudoru/fxtecunikarudoru_fxtecunikarudoru1_main_total.txt', 'w').write("±0")
 open('other_txt/fxtecunikarudoru/fxtecunikarudoru_fxtecunikarudoru2_main_total.txt','w').write("±0")
 open('other_txt/fxtecunikarudoru/fxtecunikarudoru_fxtecunikarudoru3_main_total.txt','w').write("±0")
+
+#fxテクニカルユーロ
+open('other_txt/fxtecunikaruyuro/fxtecunikaruyuro_fxtecunikaruyuro1_main_total.txt', 'w').write("±0")
+open('other_txt/fxtecunikaruyuro/fxtecunikaruyuro_fxtecunikaruyuro2_main_total.txt', 'w').write("±0")
+open('other_txt/fxtecunikaruyuro/fxtecunikaruyuro_fxtecunikaruyuro3_main_total.txt', 'w').write("±0")

@@ -5,7 +5,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from package.fc2.fxtecunikarudoru import Fxtecunikarudoru
-from package.fc2.fxtoshiburogu import Fxtoshiburogu
+from package.fc2.fxtecunikaruyuro import Fxtecunikaruyuro
+
 
 
 try:
@@ -24,6 +25,10 @@ try:
     # fxテクニカルドル2
     fxtecunikarudoru = Fxtecunikarudoru(driver)
     fxtecunikarudoru.automation(2)
+    
+    # # fxテクニカルユーロ2
+    # fxtecunikaruyuro = Fxtecunikaruyuro(driver)
+    # fxtecunikaruyuro.automation(2)
 
 except Exception as e:
     print(e)

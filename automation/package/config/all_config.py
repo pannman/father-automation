@@ -500,6 +500,8 @@ def fx_zone_euro(zone):
         return 108.905
     # if zone == "21:00":
     #     return 108.905
+    if zone == "22:00":
+        return 114.237
      #翌日
     # if zone == "y07:00":
     #     return 108.905
@@ -508,7 +510,9 @@ def fx_zone_euro(zone):
     if zone == "y08:30":
         return 108.905
     if zone == "y09:00":
-        return 132.019   
+        return 132.019  
+    if zone == "y15:30":
+        return 114.237
 
 #fxポンド/円(売り)
 def fx_zone_lb(zone):
@@ -694,6 +698,15 @@ def fxtecunikarudoru_main_buy_result(zone):
     if zone == "次の予想も頑張ります！！byドル":
         return "買い"
     if zone == "ラストスパート！！ｂｙドル":
+        return "買い"
+    
+#fxテクニカルユーロ
+def fxtecunikaruyuro_main_buy_result(zone):
+    if zone == "今日もがんばります！！ｂｙユーロ":
+        return "買い"
+    if zone == "次の予想も頑張ります！！byユーロ":
+        return "買い"
+    if zone == "ラストスパート！！ｂｙユーロ":
         return "買い"
 
 # 仮想通貨
