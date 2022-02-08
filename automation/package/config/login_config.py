@@ -110,3 +110,7 @@ FXTOSHIBUROGU_LOGIN = {
 	'ID': 'fxtoshiburogu@gmail.com',
 	'PASS': 'f20011018'
 }
+FXTECUNIKARUDORU_LOGIN = {
+	'ID': 'fx_technical_analysis_byusd@yahoo.co.jp',
+	'PASS': 'f20011018'
+}
