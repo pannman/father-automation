@@ -122,3 +122,7 @@ FXTECUNIKARUPONNDO_LOGIN = {
 	'ID': 'fx_technical_analysis_bygbp@yahoo.co.jp',
 	'PASS': 'f20011018'
 }
+VICTORIOUSFX_LOGIN = {
+	'ID': 'victorious_tradefx@yahoo.co.jp',
+	'PASS': 'f20011018'
+}

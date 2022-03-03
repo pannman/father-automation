@@ -446,6 +446,8 @@ def habatake_main(zone):
 
 #fxドル(売り)
 def fx_zone_dollar(zone):
+    if zone == "05:30":
+        return 114.150
     if zone == "08:00":
         return 114.150
     if zone == "08:30":
@@ -469,6 +471,8 @@ def fx_zone_dollar(zone):
     if zone == "22:00":
         return 114.237
     #翌日
+    if zone == "y05:30":
+        return 114.097
     if zone == "y07:00":
         return 114.097
     if zone == "y07:30":
@@ -482,6 +486,8 @@ def fx_zone_dollar(zone):
 
 # fxユーロ/円(売り)
 def fx_zone_euro(zone):
+    if zone == "05:30":
+        return 114.150
     if zone == "08:00":
         return 108.905
     # if zone == "08:30":
@@ -505,6 +511,8 @@ def fx_zone_euro(zone):
     if zone == "22:00":
         return 114.237
      #翌日
+    if zone == "y05:30":
+        return 114.097
     # if zone == "y07:00":
     #     return 108.905
     if zone == "y07:30":
@@ -518,6 +526,8 @@ def fx_zone_euro(zone):
 
 #fxポンド/円(売り)
 def fx_zone_lb(zone):
+    if zone == "05:30":
+        return 114.150
     if zone == "08:00":
         return 108.905
     # if zone == "08:30":
@@ -541,6 +551,8 @@ def fx_zone_lb(zone):
     if zone == "22:00":
         return 114.237
     #  #翌日
+    if zone == "y05:30":
+        return 114.097
     # if zone == "y07:00":
     #     return 108.905
     if zone == "y07:30":
@@ -724,7 +736,18 @@ def fxtecunikaruponndo_main_buy_result(zone):
     if zone == "ラストスパート！！ｂｙポンド":
         return "買い"
 
-
+#ビクトリアスfx
+def victoriousfx_main_buy_result(zone):
+    if zone == "5：30→9：00":
+        # ドル、ユーロ、ポンドの順番
+        return "買い", "買い", "買い"
+    if zone == "9：00→16：30":
+        # ドル、ユーロ、ポンドの順番
+        return "買い", "買い", "買い"
+    if zone == "16：30→5：30":
+        # ドル、ユーロ、ポンドの順番
+        return "買い", "売り", "売り"
+    
 # 仮想通貨
 # 先物
 

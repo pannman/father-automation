@@ -221,3 +221,14 @@ open('other_txt/fxtecunikaruyuro/fxtecunikaruyuro_fxtecunikaruyuro3_main_total.t
 open('other_txt/fxtecunikaruponndo/fxtecunikaruponndo_fxtecunikaruponndo1_main_total.txt', 'w').write("±0")
 open('other_txt/fxtecunikaruponndo/fxtecunikaruponndo_fxtecunikaruponndo2_main_total.txt', 'w').write("±0")
 open('other_txt/fxtecunikaruponndo/fxtecunikaruponndo_fxtecunikaruponndo3_main_total.txt', 'w').write("±0")
+
+#ビクトリアスfx
+open('other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total.txt', 'w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total_euro.txt', 'w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total_lb.txt', 'w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total.txt', 'w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total_euro.txt', 'w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total_lb.txt', 'w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total.txt', 'w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total_euro.txt', 'w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total_lb.txt', 'w').write("±0")
