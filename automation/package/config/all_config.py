@@ -748,6 +748,15 @@ def victoriousfx_main_buy_result(zone):
         # ドル、ユーロ、ポンドの順番
         return "買い", "売り", "売り"
     
+#fxシステムトレード
+def fxsisutemutorade_main_buy_result(zone):
+    if zone == "トレード結果（09：00→16：30）":
+        # ドル、ユーロ、ポンドの順番
+        return "買い", "買い", "買い"
+    if zone == "トレード結果（16：30→09：00）":
+        # ドル、ユーロ、ポンドの順番
+        return "買い", "買い", "買い"
+    
 # 仮想通貨
 # 先物
 

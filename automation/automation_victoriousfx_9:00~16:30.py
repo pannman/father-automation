@@ -20,10 +20,6 @@ try:
     driver.implicitly_wait(10)
     driver.set_window_size('300', '300')
 
-    # ゆうがfx
-    # yugafx = Yugafx(driver)
-    # yugafx.automation()
-
     # ビクトリアスfx9:00~16:30
     victoriousfx = Victoriousfx(driver)
     victoriousfx.automation(2)

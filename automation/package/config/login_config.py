@@ -126,3 +126,7 @@ VICTORIOUSFX_LOGIN = {
 	'ID': 'victorious_tradefx@yahoo.co.jp',
 	'PASS': 'f20011018'
 }
+FXSISUTEMUTORADE_LOGIN = {
+	'ID': 'f_c_2_fx_system_trade@yahoo.co.jp',
+	'PASS': 'f20011018'
+}

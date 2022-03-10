@@ -232,3 +232,12 @@ open('other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total_lb.txt', 'w')
 open('other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total.txt', 'w').write("±0")
 open('other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total_euro.txt', 'w').write("±0")
 open('other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total_lb.txt', 'w').write("±0")
+
+
+#fxシステムトレード
+open('other_txt/fxsisutemutorade/fxsisutemutorade_fxsisutemutorade1_main_total.txt', 'w').write("±0")
+open('other_txt/fxsisutemutorade/fxsisutemutorade_fxsisutemutorade1_main_total_euro.txt', 'w').write("±0")
+open('other_txt/fxsisutemutorade/fxsisutemutorade_fxsisutemutorade1_main_total_lb.txt', 'w').write("±0")
+open('other_txt/fxsisutemutorade/fxsisutemutorade_fxsisutemutorade2_main_total.txt', 'w').write("±0")
+open('other_txt/fxsisutemutorade/fxsisutemutorade_fxsisutemutorade2_main_total_euro.txt', 'w').write("±0")
+open('other_txt/fxsisutemutorade/fxsisutemutorade_fxsisutemutorade2_main_total_lb.txt', 'w').write("±0")

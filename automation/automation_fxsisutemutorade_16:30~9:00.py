@@ -4,7 +4,7 @@ import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from package.fc2.victoriousfx import Victoriousfx
+from package.fc2.fxsisutemutorade import Fxsisutemutorade
 
 
 try:
@@ -19,10 +19,10 @@ try:
     wait = WebDriverWait(driver, 10)
     driver.implicitly_wait(10)
     driver.set_window_size('300', '300')
-    
-    # ビクトリアスfx5:30~9:00
-    victoriousfx = Victoriousfx(driver)
-    victoriousfx.automation(1)
+
+    # fxシステムトレード16:30~9:00
+    fxsisutemutorade = Fxsisutemutorade(driver)
+    fxsisutemutorade.automation(2)
 
 except Exception as e:
     print(e)
