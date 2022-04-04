@@ -130,3 +130,8 @@ FXSISUTEMUTORADE_LOGIN = {
 	'ID': 'f_c_2_fx_system_trade@yahoo.co.jp',
 	'PASS': 'f20011018'
 }
+OKUMANSAKIMONO_LOGIN = {
+	'ID': 'abillionaire_sakimono@yahoo.co.jp',
+	'PASS': 'f20011018'
+}
+

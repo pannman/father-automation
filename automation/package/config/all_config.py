@@ -756,6 +756,45 @@ def fxsisutemutorade_main_buy_result(zone):
     if zone == "トレード結果（16：30→09：00）":
         # ドル、ユーロ、ポンドの順番
         return "買い", "買い", "買い"
+#金
+def gold_sakimono(zone):
+    if zone == "08:45":
+        return 7417
+    if zone == "15:15":
+        return 3333
+    if zone == "16:30":
+        return 1111
+    if zone == "y06:00":
+        return 5555
+    if zone == "y15:15":
+        return 4444
+
+#白金
+def platinum_sakimono(zone):
+    if zone == "08:45":
+        return 7417
+    if zone == "15:15":
+        return 3333
+    if zone == "16:30":
+        return 1111
+    if zone == "y06:00":
+        return 5555
+    if zone == "y15:15":
+        return 4444
+    
+#億万先物(金)
+def okumansakimono_main_buy_result_gold(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "夜間":
+        return "買い"
+
+# (白金)
+def okumansakimono_main_buy_result_platinum(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "夜間":
+        return "買い"
     
 # 仮想通貨
 # 先物

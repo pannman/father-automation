@@ -241,3 +241,9 @@ open('other_txt/fxsisutemutorade/fxsisutemutorade_fxsisutemutorade1_main_total_l
 open('other_txt/fxsisutemutorade/fxsisutemutorade_fxsisutemutorade2_main_total.txt', 'w').write("±0")
 open('other_txt/fxsisutemutorade/fxsisutemutorade_fxsisutemutorade2_main_total_euro.txt', 'w').write("±0")
 open('other_txt/fxsisutemutorade/fxsisutemutorade_fxsisutemutorade2_main_total_lb.txt', 'w').write("±0")
+
+#奥万先物
+open('other_txt/okumansakimono/okumansakimono_day_main_total_gold.txt','w').write("±0")
+open('other_txt/okumansakimono/okumansakimono_yakan_main_total_gold.txt','w').write("±0")
+open('other_txt/okumansakimono/okumansakimono_day_main_total_platinum.txt','w').write("±0")
+open('other_txt/okumansakimono/okumansakimono_yakan_main_total_platinum.txt','w').write("±0")
