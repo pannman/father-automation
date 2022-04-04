@@ -247,3 +247,9 @@ open('other_txt/okumansakimono/okumansakimono_day_main_total_gold.txt','w').writ
 open('other_txt/okumansakimono/okumansakimono_yakan_main_total_gold.txt','w').write("±0")
 open('other_txt/okumansakimono/okumansakimono_day_main_total_platinum.txt','w').write("±0")
 open('other_txt/okumansakimono/okumansakimono_yakan_main_total_platinum.txt','w').write("±0")
+
+#システム先物
+open('other_txt/sisutemusakimono/sisutemusakimono_day_main_total_gold.txt','w').write("±0")
+open('other_txt/sisutemusakimono/sisutemusakimono_yakan_main_total_gold.txt','w').write("±0")
+open('other_txt/sisutemusakimono/sisutemusakimono_day_main_total_platinum.txt','w').write("±0")
+open('other_txt/sisutemusakimono/sisutemusakimono_yakan_main_total_platinum.txt','w').write("±0")

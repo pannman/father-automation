@@ -134,4 +134,9 @@ OKUMANSAKIMONO_LOGIN = {
 	'ID': 'abillionaire_sakimono@yahoo.co.jp',
 	'PASS': 'f20011018'
 }
+SISUTEMUSAKIMONO_LOGIN = {
+	'ID': 'tradesisutemusakimono@yahoo.co.jp',
+	'PASS': 'f20011018'
+}
+
 

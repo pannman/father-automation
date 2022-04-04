@@ -796,6 +796,20 @@ def okumansakimono_main_buy_result_platinum(zone):
     if zone == "夜間":
         return "買い"
     
+#システム先物(金)
+def sisutemusakimono_main_buy_result_gold(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "夜間":
+        return "買い"
+
+# (白金)
+def sisutemusakimono_main_buy_result_platinum(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "夜間":
+        return "買い"
+    
 # 仮想通貨
 # 先物
 
