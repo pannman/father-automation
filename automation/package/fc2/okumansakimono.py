@@ -14,9 +14,9 @@ class  Okumansakimono(Fc2):
 
     def get_category_num(self, zone):
         if zone == "日中":
-            self.category_num = 1
+            self.category_num = 0
         if zone == "夜間":
-            self.category_num = 2
+            self.category_num = 0
 
     def return_will_hour(self, zone):
         if zone == "日中":

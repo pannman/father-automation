@@ -25,11 +25,11 @@ class Yugafx(Fc2):
 
     def get_time(self, zone):
         if zone == "08：00（成行売買）～20：00（成行決済）":
-            self.buy_time = "09:00"
-            self.settlement_time = "16:30"
+            self.buy_time = "08:00"
+            self.settlement_time = "20:00"
         if zone == "20：30（成行売買）～07：30（成行決済）":
-            self.buy_time = "16:30"
-            self.settlement_time = "y09:00"
+            self.buy_time = "20:30"
+            self.settlement_time = "y07:30"
 
     def get_total_file(self, zone):
         if zone == "08：00（成行売買）～20：00（成行決済）":
@@ -70,12 +70,12 @@ class Yugafx(Fc2):
                 self.main_total_lb)
 
             self.main_total_euro_dol = open(
-                'other_txt/yugafx/yugafx_yugafx1_main_total_euro_dol.txt', 'r').read()
+                'other_txt/yugafx/yugafx_yugafx2_main_total_euro_dol.txt', 'r').read()
             self.main_total_euro_dol = 0 if self.main_total_euro_dol == "±0" else float(
                 self.main_total_euro_dol)
 
             self.main_total_lb_dol = open(
-                'other_txt/yugafx/yugafx_yugafx1_main_total_lb_dol.txt', 'r').read()
+                'other_txt/yugafx/yugafx_yugafx2_main_total_lb_dol.txt', 'r').read()
             self.main_total_lb_dol = 0 if self.main_total_lb_dol == "±0" else float(
                 self.main_total_lb_dol)
 
@@ -128,28 +128,28 @@ class Yugafx(Fc2):
 
         if self.zone_state_euro_dol == "売り":
             self.zone_settlement_euro_dol = float(Decimal(str(CONFIG.fx_zone_euro_dol(
-                self.settlement_time)+0.004)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+                self.settlement_time)+0.00004)).quantize(Decimal('0.00001'), rounding=ROUND_HALF_UP))
             self.main_sign_euro_dol = float(Decimal(str(
-                self.zone_euro_dol - self.zone_settlement_euro_dol)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
+                self.zone_euro_dol - self.zone_settlement_euro_dol)).quantize(Decimal('0.00001'), rounding=ROUND_HALF_UP))*10000
         if self.zone_state_euro_dol == "買い":
             self.zone_euro_dol = float(Decimal(
-                str(self.zone_euro_dol+0.004)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+                str(self.zone_euro_dol+0.00004)).quantize(Decimal('0.00001'), rounding=ROUND_HALF_UP))
             self.zone_settlement_euro_dol = CONFIG.fx_zone_euro_dol(
                 self.settlement_time)
             self.main_sign_euro_dol = float(Decimal(str(
-                self.zone_settlement_euro_dol - self.zone_euro_dol)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
+                self.zone_settlement_euro_dol - self.zone_euro_dol)).quantize(Decimal('0.00001'), rounding=ROUND_HALF_UP))*10000
 
         if self.zone_state_lb_dol == "売り":
             self.zone_settlement_lb_dol = float(Decimal(str(CONFIG.fx_zone_lb_dol(
-                self.settlement_time)+0.01)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+                self.settlement_time)+0.0001)).quantize(Decimal('0.00001'), rounding=ROUND_HALF_UP))
             self.main_sign_lb_dol = float(Decimal(str(
-                self.zone_lb_dol - self.zone_settlement_lb_dol)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
+                self.zone_lb_dol - self.zone_settlement_lb_dol)).quantize(Decimal('0.00001'), rounding=ROUND_HALF_UP))*10000
         if self.zone_state_lb_dol == "買い":
             self.zone_lb_dol = float(Decimal(
-                str(self.zone_lb_dol+0.01)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+                str(self.zone_lb_dol+0.0001)).quantize(Decimal('0.00001'), rounding=ROUND_HALF_UP))
             self.zone_settlement_lb_dol = CONFIG.fx_zone_lb_dol(self.settlement_time)
             self.main_sign_lb_dol = float(Decimal(str(
-                self.zone_settlement_lb_dol - self.zone_lb_dol)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
+                self.zone_settlement_lb_dol - self.zone_lb_dol)).quantize(Decimal('0.00001'), rounding=ROUND_HALF_UP))*10000
 
         self.main_sign = "+" + \
             str(self.main_sign) if self.main_sign > 0 else "±0" if self.main_sign == 0 else str(
@@ -245,9 +245,9 @@ class Yugafx(Fc2):
         self.will_month = CONFIG.reserve_month()
         self.will_day = CONFIG.reserve_day()
 
-        self.yugafx_will_hour = "7"
+        self.yugafx_will_hour = "9"
 
-        self.yugafx_will_minute = "15"
+        self.yugafx_will_minute = "25"
 
         self.will_second = "00"
 

@@ -169,14 +169,14 @@ class Sakimononikkei(Fc2):
         self.day_will_hour = "6"
         self.before_will_hour = "6"
         self.after_will_hour = "12"
-        self.nightsession_will_hour = "12"
+        self.nightsession_will_hour = "15"
         self.overnight1_will_hour = "15"
         self.overnight2_will_hour = "22"
 
         self.day_will_minute = "30"
         self.before_will_minute = "35"
         self.after_will_minute = "00"
-        self.nightsession_will_minute = "12"
+        self.nightsession_will_minute = "15"
         self.overnight1_will_minute = "55"
         self.overnight2_will_minute = "55"
 

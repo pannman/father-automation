@@ -15,9 +15,9 @@ class Miraienotyousennfx(Fc2):
 
     def get_category_num(self,zone):
         if zone == "09：00→21：00":
-            self.category_num = 0
+            self.category_num = 3
         if zone == "21：00→09：00":
-            self.category_num = 0
+            self.category_num = 3
     
     def return_will_hour(self,zone):
         if zone == "09：00→21：00":

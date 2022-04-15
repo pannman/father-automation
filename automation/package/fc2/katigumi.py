@@ -109,11 +109,11 @@ class Katigumi(Fc2):
         self.will_day = CONFIG.reserve_day()
 
         self.day_will_hour = "7"
-        self.nightsession_will_hour = "16"
+        self.nightsession_will_hour = "15"
         self.overnight2_will_hour = "22"
 
-        self.day_will_minute = "45"
-        self.nightsession_will_minute = "15"
+        self.day_will_minute = "55"
+        self.nightsession_will_minute = "55"
         self.overnight2_will_minute = "55"
 
         self.will_second = "00"

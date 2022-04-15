@@ -14,9 +14,9 @@ class Miraie(Fc2):
     
     def get_category_num(self,zone):
         if zone == "日中":
-            self.category_num = 1
-        if zone == "ナイトセッション":
             self.category_num = 2
+        if zone == "ナイトセッション":
+            self.category_num = 3
 
     
     def return_will_hour(self,zone):

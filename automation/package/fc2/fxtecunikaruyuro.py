@@ -15,11 +15,11 @@ class Fxtecunikaruyuro(Fc2):
 
     def get_category_num(self, zone):
         if zone == "今日もがんばります！！ｂｙユーロ":
-            self.category_num = 0
+            self.category_num = 8
         if zone == "次の予想も頑張ります！！byユーロ":
-            self.category_num = 0
+            self.category_num = 9
         if zone == "ラストスパート！！ｂｙユーロ":
-            self.category_num = 0
+            self.category_num = 4
 
     def return_will_hour(self, zone):
         if zone == "今日もがんばります！！ｂｙユーロ":
@@ -42,7 +42,7 @@ class Fxtecunikaruyuro(Fc2):
             self.buy_time = "09:00"
             self.settlement_time = "y08:30"
         if zone == "次の予想も頑張ります！！byユーロ":
-            self.buy_time = "16:30"
+            self.buy_time = "16:00"
             self.settlement_time = "y15:30"
         if zone == "ラストスパート！！ｂｙユーロ":
             self.buy_time = "22:00"
@@ -69,12 +69,12 @@ class Fxtecunikaruyuro(Fc2):
         self.zone_euro = CONFIG.fx_zone_euro(self.buy_time)
         if CONFIG.fxtecunikaruyuro_main_buy_result(zone) == "売り":
             self.zone_settlement = float(Decimal(str(CONFIG.fx_zone_euro(
-                self.settlement_time)+0.002)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+                self.settlement_time)+0.005)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
             self.main_sign = float(Decimal(str(self.zone_euro - self.zone_settlement)
                                            ).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
         if CONFIG.fxtecunikaruyuro_main_buy_result(zone) == "買い":
             self.zone_euro = float(Decimal(
-                str(self.zone_euro+0.002)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+                str(self.zone_euro+0.005)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
             self.zone_settlement = CONFIG.fx_zone_euro(self.settlement_time)
             self.main_sign = float(Decimal(str(self.zone_settlement - self.zone_euro)
                                            ).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
@@ -120,7 +120,7 @@ class Fxtecunikaruyuro(Fc2):
         self.will_second = "00"
 
     def automation(self, num):
-        print("億万FX")
+        print("fxテクニカルユーロ")
         if num == 1:
             print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()

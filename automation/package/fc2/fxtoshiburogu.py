@@ -19,7 +19,7 @@ class Fxtoshiburogu(Fc2):
         return LOGIN.FXTOSHIBUROGU_LOGIN['PASS']
 
     def get_category_num(self):
-        self.category_num = 0
+        self.category_num = 2
 
     def return_will_hour(self, zone):
         if zone == "09：00　→　08：30":
@@ -127,8 +127,7 @@ class Fxtoshiburogu(Fc2):
         if self.zone_state_lb_dol == "買い":
             self.zone_lb_dol = float(Decimal(
                 str(self.zone_lb_dol+0.0001)).quantize(Decimal('0.00001'), rounding=ROUND_HALF_UP))
-            self.zone_settlement_lb_dol = CONFIG.fx_zone_lb_dol(
-                self.settlement_time)
+            self.zone_settlement_lb_dol = CONFIG.fx_zone_lb_dol(self.settlement_time)
             self.main_sign_lb_dol = float(Decimal(str(
                 self.zone_settlement_lb_dol - self.zone_lb_dol)).quantize(Decimal('0.00001'), rounding=ROUND_HALF_UP))*10000
 
@@ -254,7 +253,8 @@ class Fxtoshiburogu(Fc2):
                        self.will_year, self.will_month, self.will_day, self.will_second)
                     
         time.sleep(5)
-        self.blog_post(self.category_num, fxtoshiburogu_omake_text, zone,
-                       self.will_year, self.will_month, self.will_day, self.will_second)
+        zone1 = "おまけ"
+        self.blog_post(self.category_num, fxtoshiburogu_omake_text, zone1,
+                       self.will_year, self.will_month, self.will_day + 1, self.will_second)
 
         self.save_total_file(zone)

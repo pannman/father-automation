@@ -13,6 +13,8 @@ from package.fc2.okuman import Okuman
 from package.fc2.miraie import Miraie
 from package.fc2.habatake import Habatake
 from package.fc2.seikoufx import Seikoufx
+from package.fc2.okumansakimono import Okumansakimono
+from package.fc2.sisutemusakimono import Sisutemusakimono
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -76,6 +78,14 @@ try:
     #はばたけ未来へ
     habatake = Habatake(driver)
     habatake.automation(5)
+
+    # 億万先物夜間
+    okumansakimono = Okumansakimono(driver)
+    okumansakimono.automation(5)
+
+    # システム先物夜間
+    sisutemusakimono = Sisutemusakimono(driver)
+    sisutemusakimono.automation(5)
 
 finally:
     driver.quit()

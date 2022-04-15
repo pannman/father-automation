@@ -38,25 +38,31 @@ class SisutemusakimonoText():
             self.settlement_buy_platinum = "買い"
             self.start_price_platinum = self.zone_settlement_platinum
             self.end_price_platinum = self.zone_platinum
+        if self.zone == "夜間":
+            self.month = CONFIG.y_result_month()
+            self.day = CONFIG.y_result_day()
+        else:
+            self.month = CONFIG.result_month()
+            self.day = CONFIG.result_day()
         print(self.buy_gold + "   "+str(self.zone_gold) +
               "   決済    " + str(self.zone_settlement_gold) + "")
         print("メイン   " + self.main_sign_gold+"    " +
-              str(CONFIG.result_month()) + "月累計   " + self.main_total_gold)
+              str(self.month) + "月累計   " + self.main_total_gold)
         print(self.buy_platinum + "   "+str(self.zone_platinum) +
               "   決済    " + str(self.zone_settlement_platinum) + "")
         print("メイン   " + self.main_sign_platinum+"    " +
-              str(CONFIG.result_month()) + "月累計   " + self.main_total_platinum)
+              str(self.month) + "月累計   " + self.main_total_platinum)
 
     def blog_title(self):
-        return "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "　"+self.zone + "取引結果"
+        return "" + str(self.month) + "/" + str(self.day) + "　"+self.zone + "取引結果"
 
     def blog_text(self):
-        return "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "　"+self.zone + "取引結果\n\n"\
+        return "" + str(self.month) + "/" + str(self.day) + "　"+self.zone + "取引結果\n\n"\
             "（金　限月2023/2）　\n\n"\
             ""+self.buy_gold+" 　 \n\n"\
-            "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "結果" + self.main_sign_gold + "\n\n"\
-            "" + str(CONFIG.result_month()) + "月結果　"+self.main_total_gold + "\n\n\n"\
+            "" + str(self.month) + "/" + str(self.day) + "結果" + self.main_sign_gold + "\n\n"\
+            "" + str(self.month) + "月結果　"+self.main_total_gold + "\n\n\n"\
             "（白金　限月2023/2）　\n\n"\
             ""+self.buy_platinum+" 　 \n\n"\
-            "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "結果" + self.main_sign_platinum + "\n\n"\
-            "" + str(CONFIG.result_month()) + "月結果　"+self.main_total_platinum + ""
+            "" + str(self.month) + "/" + str(self.day) + "結果" + self.main_sign_platinum + "\n\n"\
+            "" + str(self.month) + "月結果　"+self.main_total_platinum + ""

@@ -26,7 +26,7 @@ class InvestingText():
             self.zone_title = "" + self.zone_name + " 16:30 ～ 20:00 （売買サイン"
         if self.zone == "d":
             self.zone_name = "Ｄ"
-            self.zone_title = "" + self.zone_name + " 21:00 ～ 05:30 （売買サイン"
+            self.zone_title = "" + self.zone_name + " 21:00 ～ 06:00 （売買サイン"
         print("メイン   "+main_sign+"   " + str(CONFIG.result_month()) + "月累計   " + main_total)
         print('メイン   ' + str(self.win_total) + '勝' + str(self.lose_total) +'敗'+ str(self.draw_total) + '分')
     def blog_title(self):

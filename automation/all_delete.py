@@ -80,7 +80,7 @@ open('other_txt/megami/megami_nightsession_main_total.txt', 'w').write("±0")
 open('other_txt/megami/megami_overnight2_main_total.txt', 'w').write("±0")
 open('other_txt/megami/megami_day_sub_total.txt', 'w').write("±0")
 open('other_txt/megami/megami_nightsession_sub_total.txt', 'w').write("±0")
-open('other_txt/megami/megami_overnight1_sub_total.txt', 'w').write("±0")
+open('other_txt/megami/megami_overnight2_sub_total.txt', 'w').write("±0")
 
 #優雅な生活
 open('other_txt/yuga/yuga_day_main_total.txt', 'w').write("±0")
@@ -128,9 +128,9 @@ open('other_txt/habatake/habatake_overnight1_main_total.txt', 'w').write("±0")
 open('other_txt/habatake/habatake_overnight2_main_total.txt', 'w').write("±0")
 
 #脅威のFXトレード
-open('other_txt/kyoifx/kyoifx_pattern1_main_total.txt', 'w').write("±0")
-open('other_txt/kyoifx/kyoifx_pattern2_main_total.txt', 'w').write("±0")
-open('other_txt/kyoifx/kyoifx_pattern3_main_total.txt', 'w').write("±0")
+open('other_txt/kyoifx/kyoifx_pattern1_main_total.txt', 'w').write("0")
+open('other_txt/kyoifx/kyoifx_pattern2_main_total.txt', 'w').write("0")
+open('other_txt/kyoifx/kyoifx_pattern3_main_total.txt', 'w').write("0")
             
 #サラリーマンFX
 open('other_txt/sararimanfx/sararimanfx_signalA_main_total.txt', 'w').write("±0")
@@ -138,21 +138,21 @@ open('other_txt/sararimanfx/sararimanfx_signalB_main_total.txt', 'w').write("±0
 open('other_txt/sararimanfx/sararimanfx_signalC_main_total.txt', 'w').write("±0")
 
 #世界の市場時間にあわせたFX投資術
-open('other_txt/toshijutufx/toshijutufx_timeA_main_total.txt', 'w').write("±0")
-open('other_txt/toshijutufx/toshijutufx_timeB_main_total.txt', 'w').write("±0")
-open('other_txt/toshijutufx/toshijutufx_timeC_main_total.txt', 'w').write("±0")
+open('other_txt/toshijutufx/toshijutufx_timeA_main_total.txt', 'w').write("0")
+open('other_txt/toshijutufx/toshijutufx_timeB_main_total.txt', 'w').write("0")
+open('other_txt/toshijutufx/toshijutufx_timeC_main_total.txt', 'w').write("0")
 
 #FX投資日記
-open('other_txt/fxtoshinikki/fxtoshinikki_fxtoshinikki1_main_total.txt', 'w').write("±0")
-open('other_txt/fxtoshinikki/fxtoshinikki_fxtoshinikki2_main_total.txt', 'w').write("±0")
+open('other_txt/fxtoshinikki/fxtoshinikki_fxtoshinikki1_main_total.txt', 'w').write("0")
+open('other_txt/fxtoshinikki/fxtoshinikki_fxtoshinikki2_main_total.txt', 'w').write("0")
 
 #億万FX
-open('other_txt/okumanfx/okumanfx_okumanfx1_main_total.txt', 'w').write("±0")
-open('other_txt/okumanfx/okumanfx_okumanfx2_main_total.txt', 'w').write("±0")
+open('other_txt/okumanfx/okumanfx_okumanfx1_main_total.txt', 'w').write("0")
+open('other_txt/okumanfx/okumanfx_okumanfx2_main_total.txt', 'w').write("0")
 
 #未来への挑戦FX
-open('other_txt/miraienotyousennfx/miraienotyousennfx_miraienotyousennfx1_main_total.txt', 'w').write("±0")
-open('other_txt/miraienotyousennfx/miraienotyousennfx_miraienotyousennfx2_main_total.txt', 'w').write("±0")
+open('other_txt/miraienotyousennfx/miraienotyousennfx_miraienotyousennfx1_main_total.txt', 'w').write("0")
+open('other_txt/miraienotyousennfx/miraienotyousennfx_miraienotyousennfx2_main_total.txt', 'w').write("0")
 
 #成功のfx
 open('other_txt/seikoufx/seikoufx_seikoufx1_main_total.txt', 'w').write("±0")

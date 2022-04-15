@@ -14,15 +14,15 @@ class Toshi(Fc2):
     
     def get_category_num(self,zone):
         if zone == "日中":
-            self.category_num = 0
+            self.category_num = 1
         if zone == "前場":
-            self.category_num = 0
+            self.category_num = 1
         if zone == "後場":
-            self.category_num = 0
+            self.category_num = 1
         if zone == "ナイトセッション":
-            self.category_num = 0
+            self.category_num = 1
         if zone == "オーバーナイト2":
-            self.category_num = 0
+            self.category_num = 1
     
     def return_will_hour(self,zone):
         if zone == "日中":

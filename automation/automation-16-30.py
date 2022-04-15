@@ -4,8 +4,9 @@ import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from package.fc2.yugafx import Yugafx
-from package.fc2.fxtoshiburogu import Fxtoshiburogu
+from package.fc2.fxsisutemutorade import Fxsisutemutorade
+from package.fc2.victoriousfx import Victoriousfx
+
 
 
 try:
@@ -25,9 +26,13 @@ try:
     # yugafx = Yugafx(driver)
     # yugafx.automation()
 
-    # fx投資ブログ
-    fxtoshiburogu = Fxtoshiburogu(driver)
-    fxtoshiburogu.automation()
+    # fxシステムトレード9:00~16:30
+    fxsisutemutorade = Fxsisutemutorade(driver)
+    fxsisutemutorade.automation(1)
+
+    # ビクトリアスfx9:00~16:30
+    victoriousfx = Victoriousfx(driver)
+    victoriousfx.automation(2)
 
 except Exception as e:
     print(e)

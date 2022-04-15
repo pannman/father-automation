@@ -110,11 +110,11 @@ class Megami(Fc2):
 
         self.day_will_hour = "7"
         self.nightsession_will_hour = "16"
-        self.overnight2_will_hour = "22"
+        self.overnight2_will_hour = "23"
 
-        self.day_will_minute = "45"
-        self.nightsession_will_minute = "15"
-        self.overnight2_will_minute = "55"
+        self.day_will_minute = "20"
+        self.nightsession_will_minute = "20"
+        self.overnight2_will_minute = "20"
 
         self.will_second = "00"
     

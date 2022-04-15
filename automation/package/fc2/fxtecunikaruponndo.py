@@ -15,11 +15,11 @@ class Fxtecunikaruponndo(Fc2):
 
     def get_category_num(self, zone):
         if zone == "今日もがんばります！！ｂｙポンド":
-            self.category_num = 0
+            self.category_num = 5
         if zone == "次の予想も頑張ります！！byポンド":
-            self.category_num = 0
+            self.category_num = 6
         if zone == "ラストスパート！！ｂｙポンド":
-            self.category_num = 0
+            self.category_num = 4
 
     def return_will_hour(self, zone):
         if zone == "今日もがんばります！！ｂｙポンド":
@@ -42,7 +42,7 @@ class Fxtecunikaruponndo(Fc2):
             self.buy_time = "09:00"
             self.settlement_time = "y08:30"
         if zone == "次の予想も頑張ります！！byポンド":
-            self.buy_time = "16:30"
+            self.buy_time = "16:00"
             self.settlement_time = "y15:30"
         if zone == "ラストスパート！！ｂｙポンド":
             self.buy_time = "22:00"
@@ -69,12 +69,12 @@ class Fxtecunikaruponndo(Fc2):
         self.zone_lb = CONFIG.fx_zone_lb(self.buy_time)
         if CONFIG.fxtecunikaruponndo_main_buy_result(zone) == "売り":
             self.zone_settlement = float(Decimal(str(CONFIG.fx_zone_lb(
-                self.settlement_time)+0.002)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+                self.settlement_time)+0.01)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
             self.main_sign = float(Decimal(str(self.zone_lb - self.zone_settlement)
                                            ).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
         if CONFIG.fxtecunikaruponndo_main_buy_result(zone) == "買い":
             self.zone_lb = float(Decimal(
-                str(self.zone_lb+0.002)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
+                str(self.zone_lb+0.01)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
             self.zone_settlement = CONFIG.fx_zone_lb(self.settlement_time)
             self.main_sign = float(Decimal(str(self.zone_settlement - self.zone_lb)
                                            ).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
@@ -113,14 +113,14 @@ class Fxtecunikaruponndo(Fc2):
         self.fxtecunikaruponndo2_will_hour = "15"
         self.fxtecunikaruponndo3_will_hour = "21"
 
-        self.fxtecunikaruponndo1_will_minute = "45"
-        self.fxtecunikaruponndo2_will_minute = "45"
-        self.fxtecunikaruponndo3_will_minute = "45"
+        self.fxtecunikaruponndo1_will_minute = "50"
+        self.fxtecunikaruponndo2_will_minute = "50"
+        self.fxtecunikaruponndo3_will_minute = "50"
 
         self.will_second = "00"
 
     def automation(self, num):
-        print("億万FX")
+        print("fxテクニカルポンド")
         if num == 1:
             print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()

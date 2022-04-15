@@ -34,9 +34,9 @@ class Habatakefx(Fc2):
     def get_time(self, zone):
         if zone == "09：00→21：00":
             self.buy_time = "09:00"
-            self.settlement_time = "16:30"
+            self.settlement_time = "21:00"
         if zone == "21：00→09：00":
-            self.buy_time = "16:30"
+            self.buy_time = "21:00"
             self.settlement_time = "y09:00"
 
     def get_total_file(self, zone):
@@ -77,6 +77,7 @@ class Habatakefx(Fc2):
         self.zone_lb = CONFIG.fx_zone_lb(self.buy_time)
         self.zone_state, self.zone_state_euro, self.zone_state_lb = CONFIG.habatakefx_main_buy_result(
             zone)
+        print(self.zone_dollar,self.zone_euro,self.zone_lb,self.zone_state, self.zone_state_euro, self.zone_state_lb)
         if self.zone_state == "売り":
             #ポンドユーロごとに売りか買い換えているのかan毎回一緒、ASKは買いBID売り、ポンドは0.01ユーロは0．005計算方法
             self.zone_settlement = float(Decimal(str(CONFIG.fx_zone_dollar(
@@ -89,6 +90,7 @@ class Habatakefx(Fc2):
             self.zone_settlement = CONFIG.fx_zone_dollar(self.settlement_time)
             self.main_sign = float(Decimal(str(self.zone_settlement - self.zone_dollar)
                                            ).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
+            print(111)
 
         if self.zone_state_euro == "売り":
 
@@ -102,8 +104,11 @@ class Habatakefx(Fc2):
                 str(self.zone_euro+0.005)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))
             self.zone_settlement_euro = CONFIG.fx_zone_euro(
                 self.settlement_time)
+            print(self.settlement_time)
+            print(self.zone_settlement_euro)
             self.main_sign_euro = float(Decimal(str(
                 self.zone_settlement_euro - self.zone_euro)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
+            print(111)
 
         if self.zone_state_lb == "売り":
             #ポンドユーロごとに売りか買い換えているのかan毎回一緒、ASKは買いBID売り、ポンドは0.01ユーロは0．005計算方法
@@ -117,6 +122,7 @@ class Habatakefx(Fc2):
             self.zone_settlement_lb = CONFIG.fx_zone_lb(self.settlement_time)
             self.main_sign_lb = float(Decimal(str(
                 self.zone_settlement_lb - self.zone_lb)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP))*100
+            print(111)
         self.main_sign = "+" + \
             str(self.main_sign) if self.main_sign > 0 else "±0" if self.main_sign == 0 else str(
                 self.main_sign)
@@ -196,10 +202,13 @@ class Habatakefx(Fc2):
             print(zone)
 
             self.get_category_num(zone)
-
+            print(zone)
             self.get_time(zone)
+            print(zone)
             self.get_total_file(zone)
+            print(zone)
             self.get_main_sign(zone)
+            print(zone)
 
             self.get_main_total()
             self.get_main_total_euro()

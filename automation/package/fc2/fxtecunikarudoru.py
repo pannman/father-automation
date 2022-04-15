@@ -15,11 +15,11 @@ class Fxtecunikarudoru(Fc2):
 
     def get_category_num(self, zone):
         if zone == "今日もがんばります！！ｂｙドル":
-            self.category_num = 0
+            self.category_num = 5
         if zone == "次の予想も頑張ります！！byドル":
-            self.category_num = 0
+            self.category_num = 6
         if zone == "ラストスパート！！ｂｙドル":
-            self.category_num = 0
+            self.category_num = 4
 
     def return_will_hour(self, zone):
         if zone == "今日もがんばります！！ｂｙドル":
@@ -42,7 +42,7 @@ class Fxtecunikarudoru(Fc2):
             self.buy_time = "09:00"
             self.settlement_time = "y08:30"
         if zone == "次の予想も頑張ります！！byドル":
-            self.buy_time = "16:30"
+            self.buy_time = "16:00"
             self.settlement_time = "y15:30"
         if zone == "ラストスパート！！ｂｙドル":
             self.buy_time = "22:00"
@@ -122,7 +122,7 @@ class Fxtecunikarudoru(Fc2):
         self.will_second = "00"
 
     def automation(self, num):
-        print("億万FX")
+        print("fxテクニカルドル")
         if num == 1:
             print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
             self.login_fc2()

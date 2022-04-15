@@ -37,11 +37,11 @@ class Victoriousfx(Fc2):
 
     def get_time(self, zone):
         if zone == "5：30→9：00":
-            self.buy_time = "05:30"
-            self.settlement_time = "09:00"
+            self.buy_time = "y05:30"
+            self.settlement_time = "y09:00"
         if zone == "9：00→16：30":
-            self.buy_time = "09:00"
-            self.settlement_time = "16:30"
+            self.buy_time = "y09:00"
+            self.settlement_time = "y16:30"
         if zone == "16：30→5：30":
             self.buy_time = "16:30"
             self.settlement_time = "y05:30"
@@ -49,45 +49,45 @@ class Victoriousfx(Fc2):
     def get_total_file(self, zone):
         if zone == "5：30→9：00":
             self.main_total = open(
-                'other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total.txt', 'r').read()
+                'other_txt/victoriousfx/victoriousfx_victoriousfx5：30→9：00_main_total.txt', 'r').read()
             self.main_total = 0 if self.main_total == "±0" else float(
                 self.main_total)
 
             self.main_total_euro = open(
-                'other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total_euro.txt', 'r').read()
+                'other_txt/victoriousfx/victoriousfx_victoriousfx5：30→9：00_main_total_euro.txt', 'r').read()
             self.main_total_euro = 0 if self.main_total_euro == "±0" else float(
                 self.main_total_euro)
 
             self.main_total_lb = open(
-                'other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total_lb.txt', 'r').read()
+                'other_txt/victoriousfx/victoriousfx_victoriousfx5：30→9：00_main_total_lb.txt', 'r').read()
             self.main_total_lb = 0 if self.main_total_lb == "±0" else float(
                 self.main_total_lb)
         if zone == "9：00→16：30":
             self.main_total = open(
-                'other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total.txt', 'r').read()
+                'other_txt/victoriousfx/victoriousfx_victoriousfx9：00→16：30_main_total.txt', 'r').read()
             self.main_total = 0 if self.main_total == "±0" else float(
                 self.main_total)
 
             self.main_total_euro = open(
-                'other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total_euro.txt', 'r').read()
+                'other_txt/victoriousfx/victoriousfx_victoriousfx9：00→16：30_main_total_euro.txt', 'r').read()
             self.main_total_euro = 0 if self.main_total_euro == "±0" else float(
                 self.main_total_euro)
 
             self.main_total_lb = open(
-                'other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total_lb.txt', 'r').read()
+                'other_txt/victoriousfx/victoriousfx_victoriousfx9：00→16：30_main_total_lb.txt', 'r').read()
             self.main_total_lb = 0 if self.main_total_lb == "±0" else float(
                 self.main_total_lb)
         if zone == "16：30→5：30":
             self.main_total = open(
-                'other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total.txt', 'r').read()
+                'other_txt/victoriousfx/victoriousfx_victoriousfx16：30→5：30_main_total.txt', 'r').read()
             self.main_total = 0 if self.main_total == "±0" else float(
                 self.main_total)
             self.main_total_euro = open(
-                'other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total_euro.txt', 'r').read()
+                'other_txt/victoriousfx/victoriousfx_victoriousfx16：30→5：30_main_total_euro.txt', 'r').read()
             self.main_total_euro = 0 if self.main_total_euro == "±0" else float(
                 self.main_total_euro)
             self.main_total_lb = open(
-                'other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total_lb.txt', 'r').read()
+                'other_txt/victoriousfx/victoriousfx_victoriousfx16：30→5：30_main_total_lb.txt', 'r').read()
             self.main_total_lb = 0 if self.main_total_lb == "±0" else float(
                 self.main_total_lb)
 
@@ -176,63 +176,63 @@ class Victoriousfx(Fc2):
 
     def save_total_file(self, zone):
         if zone == "5：30→9：00":
-            open('other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total.txt',
+            open('other_txt/victoriousfx/victoriousfx_victoriousfx5：30→9：00_main_total.txt',
                  'w').write(str(self.main_total))
-            open('other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total_euro.txt',
+            open('other_txt/victoriousfx/victoriousfx_victoriousfx5：30→9：00_main_total_euro.txt',
                  'w').write(str(self.main_total_euro))
-            open('other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total_lb.txt',
+            open('other_txt/victoriousfx/victoriousfx_victoriousfx5：30→9：00_main_total_lb.txt',
                  'w').write(str(self.main_total_lb))
         if zone == "9：00→16：30":
-            open('other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total.txt',
+            open('other_txt/victoriousfx/victoriousfx_victoriousfx9：00→16：30_main_total.txt',
                  'w').write(str(self.main_total))
-            open('other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total_euro.txt',
+            open('other_txt/victoriousfx/victoriousfx_victoriousfx9：00→16：30_main_total_euro.txt',
                  'w').write(str(self.main_total_euro))
-            open('other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total_lb.txt',
+            open('other_txt/victoriousfx/victoriousfx_victoriousfx9：00→16：30_main_total_lb.txt',
                  'w').write(str(self.main_total_lb))
         if zone == "16：30→5：30":
-            open('other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total.txt',
+            open('other_txt/victoriousfx/victoriousfx_victoriousfx16：30→5：30_main_total.txt',
                  'w').write(str(self.main_total))
-            open('other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total_euro.txt',
+            open('other_txt/victoriousfx/victoriousfx_victoriousfx16：30→5：30_main_total_euro.txt',
                  'w').write(str(self.main_total_euro))
-            open('other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total_lb.txt',
+            open('other_txt/victoriousfx/victoriousfx_victoriousfx16：30→5：30_main_total_lb.txt',
                  'w').write(str(self.main_total_lb))
             
     def get_total(self,zone):
         self.main_total_1 = open(
-            'other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total.txt', 'r').read()
+            'other_txt/victoriousfx/victoriousfx_victoriousfx5：30→9：00_main_total.txt', 'r').read()
         self.main_total_1 = 0 if self.main_total_1 == "±0" else float(
             self.main_total_1)
         self.main_total_euro_1 = open(
-            'other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total_euro.txt', 'r').read()
+            'other_txt/victoriousfx/victoriousfx_victoriousfx5：30→9：00_main_total_euro.txt', 'r').read()
         self.main_total_euro_1 = 0 if self.main_total_euro_1 == "±0" else float(
             self.main_total_euro_1)
         self.main_total_lb_1 = open(
-            'other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total_lb.txt', 'r').read()
+            'other_txt/victoriousfx/victoriousfx_victoriousfx5：30→9：00_main_total_lb.txt', 'r').read()
         self.main_total_lb_1 = 0 if self.main_total_lb_1 == "±0" else float(
             self.main_total_lb_1)
         self.main_total_2 = open(
-            'other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total.txt', 'r').read()
+            'other_txt/victoriousfx/victoriousfx_victoriousfx9：00→16：30_main_total.txt', 'r').read()
         self.main_total_2 = 0 if self.main_total_2 == "±0" else float(
             self.main_total_2)
         self.main_total_euro_2 = open(
-            'other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total_euro.txt', 'r').read()
+            'other_txt/victoriousfx/victoriousfx_victoriousfx9：00→16：30_main_total_euro.txt', 'r').read()
         self.main_total_euro_2 = 0 if self.main_total_euro_2 == "±0" else float(
             self.main_total_euro_2)
         self.main_total_lb_2 = open(
-            'other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total_lb.txt', 'r').read()
+            'other_txt/victoriousfx/victoriousfx_victoriousfx9：00→16：30_main_total_lb.txt', 'r').read()
         self.main_total_lb_2 = 0 if self.main_total_lb_2 == "±0" else float(
             self.main_total_lb_2)
         self.main_total_3 = open(
-            'other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total.txt', 'r').read()
+            'other_txt/victoriousfx/victoriousfx_victoriousfx16：30→5：30_main_total.txt', 'r').read()
         self.main_total_3 = 0 if self.main_total_3 == "±0" else float(
             self.main_total_3)
         self.main_total_euro_3 = open(
-            'other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total_euro.txt', 'r').read()
+            'other_txt/victoriousfx/victoriousfx_victoriousfx16：30→5：30_main_total_euro.txt', 'r').read()
         self.main_total_euro_3 = 0 if self.main_total_euro_3 == "±0" else float(
             self.main_total_euro_3)
 
         self.main_total_lb_3 = open(
-            'other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total_lb.txt', 'r').read()
+            'other_txt/victoriousfx/victoriousfx_victoriousfx16：30→5：30_main_total_lb.txt', 'r').read()
         self.main_total_lb_3 = 0 if self.main_total_lb_3 == "±0" else float(
             self.main_total_lb_3)
         if zone == "5：30→9：00":
@@ -293,7 +293,7 @@ class Victoriousfx(Fc2):
             self.save_total_file(zone)
             
         if num == 2:
-            print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
+            print(str(CONFIG.reserve_month()) + "/" + str(CONFIG.reserve_day()))
             self.login_fc2()
             zone = "9：00→16：30"
             print(zone)

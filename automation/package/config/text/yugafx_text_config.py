@@ -123,10 +123,10 @@ class YugafxText():
               str(CONFIG.result_month()) + "月累計   " + self.main_total_lb_dol2)
 
     def blog_title(self):
-        return "投資結果 (" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "　08：00～20：00　・20: 30～　" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()+1) +"　07：30)"
+        return "投資結果 (" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "　08：00～20：00　・20: 30～　" + str(CONFIG.y_result_month()) + "/" + str(CONFIG.y_result_day()) +"　07：30)"
 
     def blog_text(self):
-        return "投資結果 (" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "　08：00～20：00　・20: 30～　" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()+1) + "　07：30)\n\n\n"\
+        return "投資結果 (" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "　08：00～20：00　・20: 30～　" + str(CONFIG.y_result_month()) + "/" + str(CONFIG.y_result_day()) + "　07：30)\n\n\n"\
             " 取引通貨＊USD/JPY＊\n\n"\
             "08：00（成行売買）～20：00（成行決済）\n"\
             ""+self.buy1+" "+ self.main_sign1+"pips　        今月合計　"+ self.main_total1 +"pips\n\n"\

@@ -22,10 +22,10 @@ class MiraienotyousennfxText():
         print(self.buy + "   "+str(self.zone_dollar)+"   決済    "+ str(self.zone_settlement) +"")
         print("メイン   " + self.main_sign+"    " + str(CONFIG.result_month()) + "月累計   " + self.main_total)
     def blog_title(self):
-        return "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) +"（　"+self.zone +")"
+        return "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) +"　("+self.zone +"）"
     def blog_text(self):
-        return  "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) +"（　"+self.zone +")の結果です。\n\n"\
-                "" + self.buy_time + "("+ self.buy + ")　" + str(self.zone_dollar) +"→　"+ self.settlement_time +"（決済）　"+ str(self.zone_settlement)+"\n\n"\
+        return  "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) +"　("+self.zone +"）の結果です。\n\n"\
+                "" + self.buy_time + "("+ self.buy + ")　" + str(self.zone_dollar) +"　→　"+ self.settlement_time +"（決済）　"+ str(self.zone_settlement)+"\n\n"\
                 "" + self.main_sign + "pips\n\n"\
                 "" + str(CONFIG.result_month())+"月 ("+ self.zone + ")累計損益 " + self.main_total+"pips\n"\
                 "" + str(CONFIG.result_month())+"月 （09：00→21：00・21：00→09：00）累計損益 " + self.all_main_total+"pips"

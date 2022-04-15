@@ -92,17 +92,17 @@ class  FxtoshiburoguText():
         return "" + str(CONFIG.result_year()) + "/" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "　09：00　→　" + str(CONFIG.y_result_year()) + "/" + str(CONFIG.y_result_month()) + "/" + str(CONFIG.y_result_day() ) + "　08：30　の結果\n\n"\
             "ドル/円\n\n"\
             ""+self.buy+"" + self.main_sign +"pips\n\n"\
-            "累計 　 " + self.main_total + "pips(" + str(CONFIG.reserve_year()) + "/" + str(CONFIG.reserve_month()) + "/" + str(CONFIG.reserve_day() - 1) + " ドル/円)\n\n"\
+            "累計 　 " + self.main_total + "pips(" + str(CONFIG.reserve_year()) + "/" + str(CONFIG.reserve_month()) + " ドル/円)\n\n"\
             "ユーロ/円\n\n"\
             ""+self.buy_euro+"" + self.main_sign_euro + "pips\n\n"\
-            "累計 　 " + self.main_total_euro + "pips(" + str(CONFIG.reserve_year()) + "/" + str(CONFIG.reserve_month()) + "/" + str(CONFIG.reserve_day() - 1) + " ユーロ/円)\n\n"\
+            "累計 　 " + self.main_total_euro + "pips(" + str(CONFIG.reserve_year()) + "/" + str(CONFIG.reserve_month()) + " ユーロ/円)\n\n"\
             "ユーロ/ドル\n\n"\
             ""+self.buy_euro_dol+"" + self.main_sign_euro_dol + "pips\n\n"\
-            "累計 　 " + self.main_total_euro_dol + "pips(" + str(CONFIG.reserve_year()) + "/" + str(CONFIG.reserve_month()) + "/" + str(CONFIG.reserve_day() - 1) + " ユーロ/ドル)\n\n"\
+            "累計 　 " + self.main_total_euro_dol + "pips(" + str(CONFIG.reserve_year()) + "/" + str(CONFIG.reserve_month()) + " ユーロ/ドル)\n\n"\
             "ポンド/円\n\n"\
             ""+self.buy_lb+"" + self.main_sign_lb + "pips\n\n"\
-            "累計 　 " + self.main_total_lb + "pips(" + str(CONFIG.reserve_year()) + "/" + str(CONFIG.reserve_month()) + "/" + str(CONFIG.reserve_day() - 1) + " ポンド/円)\n\n"\
+            "累計 　 " + self.main_total_lb + "pips(" + str(CONFIG.reserve_year()) + "/" + str(CONFIG.reserve_month()) + " ポンド/円)\n\n"\
             "ポンド/ドル\n\n"\
             ""+self.buy_lb_dol+"" + self.main_sign_lb_dol + "pips\n\n"\
-            "累計 　 " + self.main_total_lb_dol + "pips(" + str(CONFIG.reserve_year()) + "/" + str(CONFIG.reserve_month()) + "/" + str(CONFIG.reserve_day() - 1) + " ポンド/ドル)\n\n"\
+            "累計 　 " + self.main_total_lb_dol + "pips(" + str(CONFIG.reserve_year()) + "/" + str(CONFIG.reserve_month()) + " ポンド/ドル)\n\n"\
           

@@ -3,7 +3,11 @@ import time
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from package.fc2.sisutemusakimono import Sisutemusakimono
+
+from package.fc2.fxtecunikaruponndo import Fxtecunikaruponndo
+from package.fc2.fxtecunikarudoru import Fxtecunikarudoru
+from package.fc2.fxtecunikaruyuro import Fxtecunikaruyuro
+
 
 
 try:
@@ -19,9 +23,17 @@ try:
     driver.implicitly_wait(10)
     driver.set_window_size('300', '300')
 
-    # システム先物日中
-    sisutemusakimono = Sisutemusakimono(driver)
-    sisutemusakimono.automation(3)
+    # fxテクニカルドル2
+    fxtecunikarudoru = Fxtecunikarudoru(driver)
+    fxtecunikarudoru.automation(2)
+    
+    # fxテクニカルユーロ2
+    fxtecunikaruyuro = Fxtecunikaruyuro(driver)
+    fxtecunikaruyuro.automation(2)
+    
+    # fxテクニカルポンド2
+    fxtecunikaruponndo = Fxtecunikaruponndo(driver)
+    fxtecunikaruponndo.automation(2)
 
 except Exception as e:
     print(e)

@@ -13,6 +13,8 @@ class FxtecunikaruponndoText():
         self.settlement_time = settlement_time
         if self.settlement_time == "y08:30":
             self.settlement_time = "08:30"
+        if self.settlement_time == "y15:30":
+            self.settlement_time = "15:30"
         if self.main_sign == "0":
             self.main_sign = "±0"
         if self.buy == "買い":
@@ -35,7 +37,7 @@ class FxtecunikaruponndoText():
             "" + str(CONFIG.y_result_month()) + "/" + str(CONFIG.y_result_day()) + "\n"\
             ""+self.settlement_time+"　成行で決済しました。"+str(self.zone_settlement)+"pips by ポンド\n\n"\
             "結果　　"+self.main_sign + "pips　\n\n"\
-            ""+str(CONFIG.result_month()) + "年"+str(CONFIG.result_month()) + "月の月間結果　" + self.main_total+"　（"+self.buy_time+"　→　"+self.settlement_time+"）　\n\n\n"\
+            ""+str(CONFIG.result_year()) + "年"+str(CONFIG.result_month()) + "月の月間結果　" + self.main_total+"pips　（"+self.buy_time+"　→　"+self.settlement_time+"）　\n\n\n"\
             "今日の予想！！\n\n"\
             "↓　↓　↓\n\n"\
             '<a href = "http://fxtechnicalanalysisu.blog.fc2.com/blog-entry-3.html" title = "ブログ内容と申込みの詳細" > ブログ内容と申込みの詳細 </a>\n'

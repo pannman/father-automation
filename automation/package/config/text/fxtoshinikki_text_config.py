@@ -12,6 +12,9 @@ class FxtoshinikkiText():
         self.settlement_time = settlement_time
         if self.settlement_time == "y09:00":
             self.settlement_time = "09：00"
+            self.reserve_day = str(CONFIG.y_result_day())
+        else:
+            self.reserve_day = str(CONFIG.y_result_day()-1)
         if self.main_sign == "0":
             self.main_sign = "±0"
         print(self.buy + "   "+str(self.zone_dollar)+"   決済    "+ str(self.zone_settlement) +"")
@@ -23,7 +26,7 @@ class FxtoshinikkiText():
                 "通貨・・ドル円\n"\
                 "" + str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()) + "　"+self.buy_time +"成行きで"+self.buy +"\n"\
                 ""+ str(self.zone_dollar)+" \n\n"\
-                "" + str(CONFIG.reserve_month()) + "/" + str(CONFIG.reserve_day()) + "　"+self.settlement_time +"成行き決済\n"\
+                "" + str(CONFIG.reserve_month()) + "/" + self.reserve_day + "　"+self.settlement_time +"成行き決済\n"\
                 ""+ str(self.zone_settlement)+" \n\n"\
                 "結果　　"+self.main_sign +"pips\n\n"\
                 "" + str(CONFIG.result_month()) + "月累計 " +self.main_total +"pips\n\n"\

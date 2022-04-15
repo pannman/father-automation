@@ -33,8 +33,8 @@ class Fxsisutemutorade(Fc2):
 
     def get_time(self, zone):
         if zone == "トレード結果（09：00→16：30）":
-            self.buy_time = "09:00"
-            self.settlement_time = "16:30"
+            self.buy_time = "y09:00"
+            self.settlement_time = "y16:30"
         if zone == "トレード結果（16：30→09：00）":
             self.buy_time = "16:30"
             self.settlement_time = "y09:00"
@@ -186,7 +186,7 @@ class Fxsisutemutorade(Fc2):
     def automation(self, num):
         print("fxシステムトレード")
         if num == 1:
-            print(str(CONFIG.result_month()) + "/" + str(CONFIG.result_day()))
+            print(str(CONFIG.reserve_month()) + "/" + str(CONFIG.reserve_day()))
             self.login_fc2()
             zone = "トレード結果（09：00→16：30）"
             print(zone)
