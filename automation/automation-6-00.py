@@ -16,6 +16,7 @@ from package.fc2.seikoufx import Seikoufx
 from package.fc2.okumansakimono import Okumansakimono
 from package.fc2.sisutemusakimono import Sisutemusakimono
 from package.fc2.habatakesakimono import Habatakesakimono
+from package.fc2.syohinnsakimono import Syohinnsakimono
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -32,65 +33,69 @@ try:
     driver.implicitly_wait(10)
     driver.set_window_size('300', '300')
 
-    #先物日経
-    # sakimononikkei = Sakimononikkei(driver)
-    # sakimononikkei.automation(5)
+    先物日経
+    sakimononikkei = Sakimononikkei(driver)
+    sakimononikkei.automation(5)
 
-    # #夢を現実に
-    # yumewogenzituni = Yumewogenzituni(driver)
-    # yumewogenzituni.automation(5)
+    #夢を現実に
+    yumewogenzituni = Yumewogenzituni(driver)
+    yumewogenzituni.automation(5)
 
-    # #サクセス
-    # sakusesunikki = Sakusesunikki(driver)
-    # sakusesunikki.automation(5)
+    #サクセス
+    sakusesunikki = Sakusesunikki(driver)
+    sakusesunikki.automation(5)
 
-    # #ミニ投資法
-    # investing = Investing(driver)
-    # investing.automation(5)
+    #ミニ投資法
+    investing = Investing(driver)
+    investing.automation(5)
 
-    # #勝ち組
-    # katigumi = Katigumi(driver)
-    # katigumi.automation(5)
+    #勝ち組
+    katigumi = Katigumi(driver)
+    katigumi.automation(5)
 
-    # #幸運の女神
-    # megami = Megami(driver)
-    # megami.automation(5)
+    #幸運の女神
+    megami = Megami(driver)
+    megami.automation(5)
 
-    # #優雅な生活
-    # yuga = Yuga(driver)
-    # yuga.automation(5)
+    #優雅な生活
+    yuga = Yuga(driver)
+    yuga.automation(5)
 
-    # #素晴らしき人生
-    # subarashiki = Subarashiki(driver)
-    # subarashiki.automation(5)
+    #素晴らしき人生
+    subarashiki = Subarashiki(driver)
+    subarashiki.automation(5)
 
-    # #投資日記
-    # toshi = Toshi(driver)
-    # toshi.automation(5)
+    #投資日記
+    toshi = Toshi(driver)
+    toshi.automation(5)
 
-    # #億万長者
-    # okuman = Okuman(driver)
-    # okuman.automation(5)
+    #億万長者
+    okuman = Okuman(driver)
+    okuman.automation(5)
 
-    # #未来への挑戦
-    # miraie = Miraie(driver)
-    # miraie.automation(5)
+    #未来への挑戦
+    miraie = Miraie(driver)
+    miraie.automation(5)
 
-    # #はばたけ未来へ
-    # habatake = Habatake(driver)
-    # habatake.automation(5)
+    #はばたけ未来へ
+    habatake = Habatake(driver)
+    habatake.automation(5)
 
-    # # 億万先物夜間
-    # okumansakimono = Okumansakimono(driver)
-    # okumansakimono.automation(5)
+    # 億万先物夜間
+    okumansakimono = Okumansakimono(driver)
+    okumansakimono.automation(5)
 
-    # # システム先物夜間
-    # sisutemusakimono = Sisutemusakimono(driver)
-    # sisutemusakimono.automation(5)
+    # システム先物夜間
+    sisutemusakimono = Sisutemusakimono(driver)
+    sisutemusakimono.automation(5)
     
     # はばたけ先物夜間
     habatakesakimono = Habatakesakimono(driver)
     habatakesakimono.automation(5)
+    
+    # 商品先物夜間
+    syohinnsakimono = Syohinnsakimono(driver)
+    syohinnsakimono.automation(5)
 
 finally:
     driver.quit()

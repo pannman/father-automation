@@ -5,6 +5,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from package.fc2.habatakesakimono import Habatakesakimono
+from package.fc2.syohinnsakimono import Syohinnsakimono
+
 
 
 
@@ -24,6 +26,10 @@ try:
     # はばたけ先物日通し
     habatakesakimono = Habatakesakimono(driver)
     habatakesakimono.automation(2)
+    
+    # 商品先物日通し
+    syohinnsakimono = Syohinnsakimono(driver)
+    syohinnsakimono.automation(2)
 
 except Exception as e:
     print(e)

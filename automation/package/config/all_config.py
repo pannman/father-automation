@@ -803,14 +803,14 @@ def sisutemusakimono_main_buy_result_gold(zone):
     if zone == "夜間":
         return "買い"
 
-# (白金)
+# システム先物(白金)
 def sisutemusakimono_main_buy_result_platinum(zone):
     if zone == "日中":
         return "買い"
     if zone == "夜間":
         return "買い"
     
-#システム先物(金)
+#はばたけ先物(金)
 def habatakesakimono_main_buy_result_gold(zone):
     if zone == "日中":
         return "買い"
@@ -819,13 +819,31 @@ def habatakesakimono_main_buy_result_gold(zone):
     if zone == "日通し":
         return "買い"
 
-# (白金)
+# はばたけ先物(白金)
 def habatakesakimono_main_buy_result_platinum(zone):
     if zone == "日中":
         return "買い"
     if zone == "夜間":
         return "買い"
     if zone == "日通し":
+        return "買い"
+    
+#商品先物(金)
+def syohinnsakimono_main_buy_result_gold(zone):
+    if zone == "（08：45　→　15：15）":
+        return "買い"
+    if zone == "（16：30　→　06：00）":
+        return "買い"
+    if zone == "（16：30　→　15：15）":
+        return "買い"
+
+#商品先物(白金)
+def syohinnsakimono_main_buy_result_platinum(zone):
+    if zone == "（08：45　→　15：15）":
+        return "買い"
+    if zone == "（16：30　→　06：00）":
+        return "買い"
+    if zone == "（16：30　→　15：15）":
         return "買い"
     
 # 仮想通貨

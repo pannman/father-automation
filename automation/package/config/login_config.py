@@ -142,4 +142,7 @@ HABATAKESAKIMONO_LOGIN = {
 	'ID': 'It_can_flutter_sakimono@yahoo.co.jp',
 	'PASS': 'f20011018'
 }
-
+SYOHINNSAKIMONO_LOGIN = {
+	'ID': 'syohinnsakimono@gmail.com',
+	'PASS': 'f20011018'
+}
