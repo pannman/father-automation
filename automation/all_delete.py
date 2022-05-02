@@ -253,3 +253,11 @@ open('other_txt/sisutemusakimono/sisutemusakimono_day_main_total_gold.txt','w').
 open('other_txt/sisutemusakimono/sisutemusakimono_yakan_main_total_gold.txt','w').write("±0")
 open('other_txt/sisutemusakimono/sisutemusakimono_day_main_total_platinum.txt','w').write("±0")
 open('other_txt/sisutemusakimono/sisutemusakimono_yakan_main_total_platinum.txt','w').write("±0")
+
+#はばたけ先物
+open('other_txt/habatakesakimono/habatakesakimono_day_main_total_gold.txt', 'w').write("±0")
+open('other_txt/habatakesakimono/habatakesakimono_yakan_main_total_gold.txt', 'w').write("±0")
+open('other_txt/habatakesakimono/habatakesakimono_hitoshi_main_total_gold.txt', 'w').write("±0")
+open('other_txt/habatakesakimono/habatakesakimono_day_main_total_platinum.txt', 'w').write("±0")
+open('other_txt/habatakesakimono/habatakesakimono_yakan_main_total_platinum.txt', 'w').write("±0")
+open('other_txt/habatakesakimono/habatakesakimono_hitoshi_main_total_platinum.txt', 'w').write("±0")

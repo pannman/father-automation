@@ -138,5 +138,8 @@ SISUTEMUSAKIMONO_LOGIN = {
 	'ID': 'tradesisutemusakimono@yahoo.co.jp',
 	'PASS': 'f20011018'
 }
-
+HABATAKESAKIMONO_LOGIN = {
+	'ID': 'It_can_flutter_sakimono@yahoo.co.jp',
+	'PASS': 'f20011018'
+}
 
