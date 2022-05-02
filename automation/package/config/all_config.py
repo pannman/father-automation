@@ -25,7 +25,7 @@ def reserve_day():
 
 
 
-#日経ミニ
+    #日経ミニ
 def nikkei_mini_result(zone):
     if zone == "日中":
         return "135"
@@ -59,7 +59,7 @@ def sakimononikkei_sub_buy_result(zone):
     if zone == "オーバーナイト2":
         return "買い"
     
-     #メインサイン（サブ）
+    #メインサイン（サブ）
 def sakimononikkei_sub(zone):
     if zone == "日中":
         return "勝ち"
@@ -104,7 +104,7 @@ def sakimononikkei_main(zone):
     if zone == "オーバーナイト2":
         return "勝ち"
 
-#夢を現実に
+    #夢を現実に
 def yumewogenzituni_main_buy_result(zone):
     if zone == "日中":
         return "買"
@@ -116,7 +116,8 @@ def yumewogenzituni_main_buy_result(zone):
         return "売"
     if zone == "オーバーナイト2":
         return "売"
-#夢を現実に
+    
+    #夢を現実に
 def yumewogenzituni_main(zone):
     if zone == "日中":
         return "勝ち"
@@ -130,8 +131,7 @@ def yumewogenzituni_main(zone):
         return "負け"
 
 
-#サクセス日記
-#サブシグナル売買
+    #サクセス日記(サブ)
 def sakusesunikki_sub_buy_result(zone):
     if zone == "日中":
         return "買い"
@@ -139,7 +139,8 @@ def sakusesunikki_sub_buy_result(zone):
         return "買い"
     if zone == "オーバーナイト2":
         return "買い"
-# サブシグナル
+   
+    #サクセス日記(サブ)
 def sakusesunikki_sub(zone):
     if zone == "日中":
         return "勝ち"
@@ -148,8 +149,7 @@ def sakusesunikki_sub(zone):
     if zone == "オーバーナイト2":
         return "勝ち"
 
-#サクセス日記
-# メインシグナル売買
+    #サクセス日記（メイン）
 def sakusesunikki_main_buy_result(zone):
     if zone == "日中":
         return "買い"
@@ -157,7 +157,8 @@ def sakusesunikki_main_buy_result(zone):
         return "買い"
     if zone == "オーバーナイト2":
         return "買い"
-#　メインシグナル
+    
+    #サクセス日記（メイン）
 def sakusesunikki_main(zone):
     if zone == "日中":
         return "勝ち"
@@ -166,8 +167,7 @@ def sakusesunikki_main(zone):
     if zone == "オーバーナイト2":
         return "勝ち"
 
-#ミニ投資法
-# 売買
+    #ミニ投資法
 def investing_main_buy_result(zone):
     if zone == "前場":
         return "買い"
@@ -177,7 +177,8 @@ def investing_main_buy_result(zone):
         return "買い"
     if zone == "d":
         return "買い"
-#メインサイン
+    
+    #ミニ投資法
 def investing_main(zone):
     if zone == "前場":
         return "勝ち"
@@ -188,8 +189,7 @@ def investing_main(zone):
     if zone == "d":
         return "勝ち"
 
-
-#日経
+    #日経先物
 def nikkei_result(zone):
     if zone == "日中":
         return "140"
@@ -204,8 +204,7 @@ def nikkei_result(zone):
     if zone == "オーバーナイト2":
         return "350"
 
-#勝ち組
-#サブサイン売買
+    #勝ち組（サブ）
 def katigumi_sub_buy_result(zone):
     if zone == "日中":
         return "買い"
@@ -213,7 +212,8 @@ def katigumi_sub_buy_result(zone):
         return "買い"
     if zone == "オーバーナイト2":
         return "買い"
-# サブシグナル
+   
+    #勝ち組（サブ）
 def katigumi_sub(zone):
     if zone == "日中":
         return "勝ち"
@@ -221,8 +221,8 @@ def katigumi_sub(zone):
         return "勝ち"
     if zone == "オーバーナイト2":
         return "勝ち"
-#勝ち組
-# メインサイン売買
+    
+    #勝ち組（メイン）
 def katigumi_main_buy_result(zone):
     if zone == "日中":
         return "買い"
@@ -230,7 +230,8 @@ def katigumi_main_buy_result(zone):
         return "買い"
     if zone == "オーバーナイト2":
         return "買い"
-#　メインサイン
+
+    #勝ち組（メイン）
 def katigumi_main(zone):
     if zone == "日中":
         return "勝ち"
@@ -239,8 +240,7 @@ def katigumi_main(zone):
     if zone == "オーバーナイト2":
         return "勝ち"
 
-#幸運の女神
-#サブシグナル売買
+    #幸運の女神（サブ）
 def megami_sub_buy_result(zone):
     if zone == "日中":
         return "買い"
@@ -248,7 +248,8 @@ def megami_sub_buy_result(zone):
         return "買い"
     if zone == "オーバーナイト2":
         return "売り"
-# サブシグナル
+
+    #幸運の女神（サブ）
 def megami_sub(zone):
     if zone == "日中":
         return "負け"         
@@ -256,8 +257,8 @@ def megami_sub(zone):
         return "勝ち"
     if zone == "オーバーナイト2":
         return "負け"
-#幸運の女神
-# メインシグナル売買
+
+    #幸運の女神（メイン）
 def megami_main_buy_result(zone):
     if zone == "日中":
         return "売り"
@@ -265,7 +266,8 @@ def megami_main_buy_result(zone):
         return "買い"
     if zone == "オーバーナイト2":
         return "買い"
-#　メインシグナル
+    
+    #幸運の女神（メイン）
 def megami_main(zone):
     if zone == "日中":
         return "負け"
@@ -274,8 +276,7 @@ def megami_main(zone):
     if zone == "オーバーナイト2":
         return "勝ち"
 
-# 優雅な生活
-# メインシグナル売買
+    #優雅な生活
 def yuga_main_buy_result(zone):
     if zone == "日中":
         return "買い"
@@ -283,7 +284,8 @@ def yuga_main_buy_result(zone):
         return "買い"
     if zone == "オーバーナイト2":
         return "買い"
-#　メインシグナル
+    
+    #優雅な生活
 def yuga_main(zone):
     if zone == "日中":
         return "勝ち"
@@ -291,7 +293,8 @@ def yuga_main(zone):
         return "勝ち"
     if zone == "オーバーナイト2":
         return "勝ち"
-#自己結果の金額
+    
+    #自己結果の金額
 def yuga_self_money(zone):
     if zone == "日中":
         return "42"
@@ -300,7 +303,7 @@ def yuga_self_money(zone):
     if zone == "オーバーナイト2":
         return "105"
 
-# 素晴らしき人生
+    #素晴らしき人生
 def subarashiki_main_buy_result(zone):
     if zone == "日中":
         return "買い"
@@ -312,7 +315,8 @@ def subarashiki_main_buy_result(zone):
         return "買い"
     if zone == "オーバーナイト1":
         return "買い"
-#メインサイン
+    
+    #素晴らしき人生
 def subarashiki_main(zone):
     if zone == "日中":
         return "勝ち"
@@ -324,7 +328,8 @@ def subarashiki_main(zone):
         return "勝ち"
     if zone == "オーバーナイト1":
         return "勝ち"
-#売買結果金額
+    
+    #売買結果金額
 def subarashiki_result_trade_money(zone):
     if zone == "日中" or zone == "前場":
         return "29410"
@@ -334,7 +339,7 @@ def subarashiki_result_trade_money(zone):
         return "28810"
 
     
-# 投資日記
+   #投資日記
 def toshi_main_buy_result(zone):
     if zone == "日中":
         return "買い"
@@ -346,7 +351,8 @@ def toshi_main_buy_result(zone):
         return "買い"
     if zone == "オーバーナイト2":
         return "買い"
-#メインサイン
+   
+   #投資日記   
 def toshi_main(zone):
     if zone == "日中":
         return "勝ち"
@@ -359,8 +365,7 @@ def toshi_main(zone):
     if zone == "オーバーナイト2":
         return "勝ち"
 
-# 億万長者
-# メインシグナル売買
+    #億万長者
 def okuman_main_buy_result(zone):
     if zone == "日中":
         return "買い"
@@ -368,7 +373,8 @@ def okuman_main_buy_result(zone):
         return "売り"
     if zone == "オーバーナイト2":
         return "買い"
-#　メインシグナル
+   
+    #億万長者
 def okuman_main(zone):
     if zone == "日中":
         return "勝ち"
@@ -377,8 +383,7 @@ def okuman_main(zone):
     if zone == "オーバーナイト2":
         return "勝ち"
 
-# 薔薇の人生
-# 売買
+    #薔薇の人生
 def bara_main_buy_result(zone):
     if zone == "前場":
         return "買い"
@@ -388,7 +393,8 @@ def bara_main_buy_result(zone):
         return "売り"
     if zone == "オーバーナイト2":
         return "買い"
-#メインサイン
+    
+    #薔薇の人生
 def bara_main(zone):
     if zone == "前場":
         return "勝ち"
@@ -399,27 +405,28 @@ def bara_main(zone):
     if zone == "オーバーナイト2":
         return "勝ち"
 
-# 未来への挑戦
-#売買結果
+    #未来への挑戦
 def miraie_main_buy_result(zone):
     if zone == "日中":
         return "買い"
     if zone == "ナイトセッション":
         return "買い"
-#メインサイン
+
+    #未来への挑戦
 def miraie_main(zone):
     if zone == "日中":
         return "勝ち"
     if zone == "ナイトセッション":
         return "勝ち"
-#売買結果金額
+    
+    #売買結果金額
 def miraie_result_trade_money(zone):
     if zone == "日中":
         return "29410"
     if zone == "ナイトセッション":
         return "28810"
 
-#はばたけ未来へ
+    #はばたけ未来へ
 def habatake_main_buy_result(zone):
     if zone == "日中":
         return "買い"
@@ -433,7 +440,8 @@ def habatake_main_buy_result(zone):
         return "買い"
     if zone == "オーバーナイト2":
         return "買い"
-#メインサイン
+    
+    #はばたけ未来へ
 def habatake_main(zone):
     if zone == "日中":
         return "勝ち"
@@ -448,7 +456,7 @@ def habatake_main(zone):
     if zone == "オーバーナイト2":
         return "勝ち"
 
-#fxドル(売り)
+    #fxドル(売り)
 def fx_zone_dollar(zone):
     if zone == "08:00":
         return 114.150
@@ -473,7 +481,7 @@ def fx_zone_dollar(zone):
     if zone == "22:00":
         return 114.237
    
-#翌日fxドル(売り)
+    #翌日fxドル(売り)
     if zone == "y05:30":
         return 114.097
     if zone == "y07:00":
@@ -489,7 +497,7 @@ def fx_zone_dollar(zone):
     if zone == "y16:30":
         return 130.248
 
-# fxユーロ/円(売り)
+    #fxユーロ/円(売り)
 def fx_zone_euro(zone):
     if zone == "08:00":
         return 108.905
@@ -506,7 +514,7 @@ def fx_zone_euro(zone):
     if zone == "22:00":
         return 114.237
     
-#翌日fxユーロ/円(売り)
+    #翌日fxユーロ/円(売り)
     if zone == "y05:30":
         return 114.097
     if zone == "y07:30":
@@ -520,7 +528,7 @@ def fx_zone_euro(zone):
     if zone == "y16:30":
         return 137.394
 
-#fxポンド/円(売り)
+    #fxポンド/円(売り)
 def fx_zone_lb(zone):
     if zone == "05:30":
         return 114.150
@@ -539,7 +547,7 @@ def fx_zone_lb(zone):
     if zone == "22:00":
         return 114.237
     
-#翌日fxポンド/円(売り)
+    #翌日fxポンド/円(売り)
     if zone == "y05:30":
         return 114.097
     if zone == "y07:30":
@@ -553,7 +561,7 @@ def fx_zone_lb(zone):
     if zone == "y16:30":
         return 163.765
 
-# fxユーロ/ドル(売り)
+    #fxユーロ/ドル(売り)
 def fx_zone_euro_dol(zone):
     if zone == "08:00":
         return 108.905
@@ -564,13 +572,13 @@ def fx_zone_euro_dol(zone):
     if zone == "20:30":
         return 108.905
 
-#翌日 fxユーロ/ドル(売り)
+    #翌日fxユーロ/ドル(売り)
     if zone == "y07:30":
         return 108.905
     if zone == "y08:30":
         return 108.905
 
-#fxポンド/ドル(売り)
+    #fxポンド/ドル(売り)
 def fx_zone_lb_dol(zone):
     if zone == "08:00":
         return 108.905
@@ -581,13 +589,13 @@ def fx_zone_lb_dol(zone):
     if zone == "20:30":
         return 108.905
 
- #翌日fxポンド/ドル(売り)     
+    #翌日fxポンド/ドル(売り)     
     if zone == "y07:30":
         return 108.905
     if zone == "y08:30":
         return 108.905
 
-#脅威のFXトレード
+   #脅威のFXトレード
 def kyoifx_main_buy_result(zone):
     if zone == "パターン1":
         return "買い"
@@ -596,7 +604,7 @@ def kyoifx_main_buy_result(zone):
     if zone == "パターン3":
         return "売り"
 
-#サラリーマンの副業に最適なＦＸ投資
+   #サラリーマンの副業に最適なＦＸ投資
 def sararimanfx_main_buy_result(zone):
     if zone == "シグナルA":
         return "買い"
@@ -605,7 +613,7 @@ def sararimanfx_main_buy_result(zone):
     if zone == "シグナルC":
         return "売り"
 
-#世界の市場時間にあわせたFX投資術
+    #世界の市場時間にあわせたFX投資術
 def toshijutufx_main_buy_result(zone):
     if zone == "（8：30　⇒　15：30）":
         return "買い"
@@ -614,28 +622,28 @@ def toshijutufx_main_buy_result(zone):
     if zone == "（21：00　⇒　7：30）":
         return "売り"
 
-#FX投資日記
+    #FX投資日記
 def fxtoshinikki_main_buy_result(zone):
     if zone == "FX投資日記1":
         return "買い"
     if zone == "FX投資日記2":
         return "売り"
         
-#億万FX
+    #億万FX
 def okumanfx_main_buy_result(zone):
     if zone == "09：00　→　16：30":
         return "買い"
     if zone == "16：30　→　09：00":
         return "売り"
 
-#未来への挑戦FX
+    #未来への挑戦FX
 def miraienotyousennfx_main_buy_result(zone):
     if zone == "09：00→21：00":
         return "買い"
     if zone == "21：00→09：00":
         return "売り"
 
-#成功のfx
+    #成功のfx
 def seikoufx_main_buy_result(zone):
     if zone == "09:00成行き売買→16：30成行き決済":
         # ドル、ユーロ、ポンドの順番
@@ -644,7 +652,7 @@ def seikoufx_main_buy_result(zone):
         # ドル、ユーロ、ポンドの順番
         return "買い","売り","売り"
     
-#はばたけfx
+    #はばたけfx
 def habatakefx_main_buy_result(zone):
     if zone == "09：00→21：00":
         # ドル、ユーロ、ポンドの順番
@@ -653,7 +661,7 @@ def habatakefx_main_buy_result(zone):
         # ドル、ユーロ、ポンドの順番
         return "買い", "買い", "買い"
 
-#ゆうがfx
+    #優雅fx
 def yugafx_main_buy_result(zone):
     if zone == "08：00（成行売買）～20：00（成行決済）":
         # ドル/円、ユーロ/円、ポンド/円,ユーロ/ドル,ポンド/ドルの順番
@@ -662,13 +670,13 @@ def yugafx_main_buy_result(zone):
         # ドル/円、ユーロ/円、ポンド/円,ユーロ/ドル,ポンド/ドルの順番
         return "買い", "買い", "買い", "売り", "売り"
     
-#fx投資ブログ
+    #fx投資ブログ
 def fxtoshiburogu_main_buy_result(zone):
     if zone == "09：00　→　08：30":
         # ドル/円、ユーロ/円、ポンド/円,ユーロ/ドル,ポンド/ドルの順番
         return "買い", "売り", "売り", "売り", "売り"
     
-#fxテクニカルドル
+    #fxテクニカルドル
 def fxtecunikarudoru_main_buy_result(zone):
     if zone == "今日もがんばります！！ｂｙドル":
         return "買い"
@@ -677,7 +685,7 @@ def fxtecunikarudoru_main_buy_result(zone):
     if zone == "ラストスパート！！ｂｙドル":
         return "買い"
     
-#fxテクニカルユーロ
+    #fxテクニカルユーロ
 def fxtecunikaruyuro_main_buy_result(zone):
     if zone == "今日もがんばります！！ｂｙユーロ":
         return "買い"
@@ -686,7 +694,7 @@ def fxtecunikaruyuro_main_buy_result(zone):
     if zone == "ラストスパート！！ｂｙユーロ":
         return "買い"
     
-#fxテクニカルポンド
+    #fxテクニカルポンド
 def fxtecunikaruponndo_main_buy_result(zone):
     if zone == "今日もがんばります！！ｂｙポンド":
         return "買い"
@@ -695,7 +703,7 @@ def fxtecunikaruponndo_main_buy_result(zone):
     if zone == "ラストスパート！！ｂｙポンド":
         return "買い"
 
-#ビクトリアスfx
+    #ビクトリアスfx
 def victoriousfx_main_buy_result(zone):
     if zone == "5：30→9：00":
         # ドル、ユーロ、ポンドの順番
@@ -707,7 +715,7 @@ def victoriousfx_main_buy_result(zone):
         # ドル、ユーロ、ポンドの順番
         return "買い", "売り", "売り"
     
-#fxシステムトレード
+    #fxシステムトレード
 def fxsisutemutorade_main_buy_result(zone):
     if zone == "トレード結果（09：00→16：30）":
         # ドル、ユーロ、ポンドの順番
@@ -715,7 +723,8 @@ def fxsisutemutorade_main_buy_result(zone):
     if zone == "トレード結果（16：30→09：00）":
         # ドル、ユーロ、ポンドの順番
         return "買い", "買い", "買い"
-#金
+    
+    #金
 def gold_sakimono(zone):
     if zone == "08:45":
         return 7762
@@ -728,7 +737,7 @@ def gold_sakimono(zone):
     if zone == "y15:15":
         return 7879
 
-#白金
+    #白金
 def platinum_sakimono(zone):
     if zone == "08:45":
         return 3721
@@ -741,35 +750,35 @@ def platinum_sakimono(zone):
     if zone == "y15:15":
         return 3824
     
-#億万先物(金)
+    #億万先物(金)
 def okumansakimono_main_buy_result_gold(zone):
     if zone == "日中":
         return "買い"
     if zone == "夜間":
         return "買い"
 
-# (白金)
+    #億万先物(白金)
 def okumansakimono_main_buy_result_platinum(zone):
     if zone == "日中":
         return "売り"
     if zone == "夜間":
         return "売り"
     
-#システム先物(金)
+    #システム先物(金)
 def sisutemusakimono_main_buy_result_gold(zone):
     if zone == "日中":
         return "売り"
     if zone == "夜間":
         return "買い"
 
-# システム先物(白金)
+    #システム先物(白金)
 def sisutemusakimono_main_buy_result_platinum(zone):
     if zone == "日中":
         return "買い"
     if zone == "夜間":
         return "買い"
     
-#はばたけ先物(金)
+    #はばたけ先物(金)
 def habatakesakimono_main_buy_result_gold(zone):
     if zone == "日中":
         return "買い"
@@ -778,7 +787,7 @@ def habatakesakimono_main_buy_result_gold(zone):
     if zone == "日通し":
         return "買い"
 
-# はばたけ先物(白金)
+    #はばたけ先物(白金)
 def habatakesakimono_main_buy_result_platinum(zone):
     if zone == "日中":
         return "買い"
@@ -787,7 +796,7 @@ def habatakesakimono_main_buy_result_platinum(zone):
     if zone == "日通し":
         return "買い"
     
-#商品先物(金)
+    #商品先物(金)
 def syohinnsakimono_main_buy_result_gold(zone):
     if zone == "（08：45　→　15：15）":
         return "買い"
@@ -796,7 +805,7 @@ def syohinnsakimono_main_buy_result_gold(zone):
     if zone == "（16：30　→　15：15）":
         return "買い"
 
-#商品先物(白金)
+    #商品先物(白金)
 def syohinnsakimono_main_buy_result_platinum(zone):
     if zone == "（08：45　→　15：15）":
         return "買い"

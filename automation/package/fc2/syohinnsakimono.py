@@ -166,12 +166,12 @@ class Syohinnsakimono(Fc2):
         self.will_day = CONFIG.reserve_day()
 
         self.day_will_hour = "8"
-        self.yakan_will_hour = "15"
-        self.hitoshi_will_hour = "15"
+        self.yakan_will_hour = "16"
+        self.hitoshi_will_hour = "16"
 
-        self.day_will_minute = "15"
-        self.yakan_will_minute = "45"
-        self.hitoshi_will_minute = "50"
+        self.day_will_minute = "45"
+        self.yakan_will_minute = "50"
+        self.hitoshi_will_minute = "55"
 
         self.will_second = "00"
 

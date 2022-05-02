@@ -223,15 +223,15 @@ open('other_txt/fxtecunikaruponndo/fxtecunikaruponndo_fxtecunikaruponndo2_main_t
 open('other_txt/fxtecunikaruponndo/fxtecunikaruponndo_fxtecunikaruponndo3_main_total.txt', 'w').write("±0")
 
 #ビクトリアスfx
-open('other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total.txt', 'w').write("±0")
-open('other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total_euro.txt', 'w').write("±0")
-open('other_txt/victoriousfx/victoriousfx_victoriousfx1_main_total_lb.txt', 'w').write("±0")
-open('other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total.txt', 'w').write("±0")
-open('other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total_euro.txt', 'w').write("±0")
-open('other_txt/victoriousfx/victoriousfx_victoriousfx2_main_total_lb.txt', 'w').write("±0")
-open('other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total.txt', 'w').write("±0")
-open('other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total_euro.txt', 'w').write("±0")
-open('other_txt/victoriousfx/victoriousfx_victoriousfx3_main_total_lb.txt', 'w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx5：30→9：00_main_total.txt','w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx5：30→9：00_main_total_euro.txt','w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx5：30→9：00_main_total_lb.txt','w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx9：00→16：30_main_total.txt','w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx9：00→16：30_main_total_euro.txt','w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx9：00→16：30_main_total_lb.txt','w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx16：30→5：30_main_total.txt','w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx16：30→5：30_main_total_euro.txt','w').write("±0")
+open('other_txt/victoriousfx/victoriousfx_victoriousfx16：30→5：30_main_total_lb.txt','w').write("±0")
 
 
 #fxシステムトレード
