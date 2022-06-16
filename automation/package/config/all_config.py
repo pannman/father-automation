@@ -199,6 +199,8 @@ def nikkei_result(zone):
         return "10"
     if zone == "ナイトセッション":
         return "250"
+    if zone == "オーバーナイト":
+        return "600"
     if zone == "オーバーナイト1":
         return "600"
     if zone == "オーバーナイト2":
@@ -455,6 +457,33 @@ def habatake_main(zone):
         return "勝ち"
     if zone == "オーバーナイト2":
         return "勝ち"
+    
+#システムトレード
+def tradesisutemu_main_buy_result(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "ナイトセッション":
+        return "買い"
+    if zone == "オーバーナイト":
+        return "買い"
+
+#システムトレード
+def tradesisutemu_main(zone):
+    if zone == "日中":
+        return "勝ち"
+    if zone == "ナイトセッション":
+        return "勝ち"
+    if zone == "オーバーナイト":
+        return "勝ち"
+
+#システムトレード売買結果金額
+def tradesisutemu_result_trade_money(zone):
+    if zone == "日中":
+        return "29410"
+    if zone == "ナイトセッション":
+        return "28810"
+    if zone == "オーバーナイト":
+        return "28810"
 
     #fxドル(売り)
 def fx_zone_dollar(zone):

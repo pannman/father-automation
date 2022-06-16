@@ -150,4 +150,7 @@ KASOUSISUTEMU_LOGIN = {
 	'ID': 'kasousisutemu@yahoo.co.jp',
 	'PASS': 'k20011018'
 }
-
+TRADESISUTEMU_LOGIN = {
+	'ID': 'tradesisutemu@yahoo.co.jp',
+	'PASS': 'f20011018'
+}

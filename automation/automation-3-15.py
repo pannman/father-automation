@@ -130,10 +130,6 @@ try:
     # システム先物日中
     sisutemusakimono = Sisutemusakimono(driver)
     sisutemusakimono.automation(3)
-
-    # ビクトリアスfx116:30~5:30
-    victoriousfx = Victoriousfx(driver)
-    victoriousfx.automation(3)
     
     # はばたけ先物日中
     habatakesakimono = Habatakesakimono(driver)
