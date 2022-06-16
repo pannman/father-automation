@@ -1,6 +1,6 @@
 #結果日(昨日)
 def result_year():
-    return 2022
+    return 2023
 def result_month():
     return 4
 def result_day():
@@ -8,7 +8,7 @@ def result_day():
 
 #結果日(翌日)
 def y_result_year():
-    return 2022
+    return 2023
 def y_result_month():
     return 5
 def y_result_day():
@@ -17,7 +17,7 @@ def y_result_day():
 
 #投稿日
 def reserve_year():
-    return 2022
+    return 2023
 def reserve_month():
     return 5
 def reserve_day():
@@ -814,6 +814,23 @@ def syohinnsakimono_main_buy_result_platinum(zone):
     if zone == "（16：30　→　15：15）":
         return "買い"
     
+  #ビット/円(売り)
+def kasou_bit_en(zone):
+    if zone == "09:00":
+        return 2929105
+    if zone == "21:00":
+        return 2929105
+    #翌日ビット/円(売り)
+    if zone == "y09:00":
+        return 2921105
+
+    
+#仮想システム
+def kasousisutemu_main_buy_result(zone):
+    if zone == "9：00　→　21：00":
+        return "買い"
+    if zone == "21：00　→　09：00":
+        return "買い"
 # 仮想通貨
 # 先物
 

@@ -25,6 +25,7 @@ from package.fc2.sisutemusakimono import Sisutemusakimono
 from package.fc2.victoriousfx import Victoriousfx
 from package.fc2.habatakesakimono import Habatakesakimono
 from package.fc2.syohinnsakimono import Syohinnsakimono
+from package.fc2.kasousisutemu import Kasousisutemu
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -37,6 +38,7 @@ try:
     #     options=options,
     # )
     driver = webdriver.Chrome(executable_path="./chromedriver")
+    print(driver)
     wait = WebDriverWait(driver, 10)
     driver.implicitly_wait(10)
     driver.set_window_size('300', '300')
@@ -140,6 +142,10 @@ try:
     # 商品先物日中
     syohinnsakimono = Syohinnsakimono(driver)
     syohinnsakimono.automation(3)
+    
+    # 仮想システム日中
+    kasousisutemu = Kasousisutemu(driver)
+    kasousisutemu.automation(3)
 
 
 except Exception as e:

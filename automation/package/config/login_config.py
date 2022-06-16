@@ -146,3 +146,8 @@ SYOHINNSAKIMONO_LOGIN = {
 	'ID': 'syohinnsakimono@gmail.com',
 	'PASS': 'f20011018'
 }
+KASOUSISUTEMU_LOGIN = {
+	'ID': 'kasousisutemu@yahoo.co.jp',
+	'PASS': 'k20011018'
+}
+

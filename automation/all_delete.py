@@ -269,3 +269,7 @@ open('other_txt/syohinnsakimono/syohinnsakimono_hitoshi_main_total_gold.txt', 'w
 open('other_txt/syohinnsakimono/syohinnsakimono_day_main_total_platinum.txt', 'w').write("±0")
 open('other_txt/syohinnsakimono/syohinnsakimono_yakan_main_total_platinum.txt', 'w').write("±0")
 open('other_txt/syohinnsakimono/syohinnsakimono_hitoshi_main_total_platinum.txt', 'w').write("±0")
+
+#仮想システム
+open('other_txt/kasousisutemu/kasousisutemu_kasousisutemu1_main_total.txt', 'w').write("±0")
+open('other_txt/kasousisutemu/kasousisutemu_kasousisutemu2_main_total.txt', 'w').write("±0")

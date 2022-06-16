@@ -21,6 +21,7 @@ from package.fc2.miraienotyousennfx import Miraienotyousennfx
 from package.fc2.fxsisutemutorade import Fxsisutemutorade
 from package.fc2.seikoufx import Seikoufx
 from package.fc2.victoriousfx import Victoriousfx
+from package.fc2.kasousisutemu import Kasousisutemu
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -119,5 +120,9 @@ fxsisutemutorade.automation(2)
 # ビクトリアスfx5:30~9:00
 victoriousfx = Victoriousfx(driver)
 victoriousfx.automation(1)
+
+# 仮想システム21:00~9:00
+kasousisutemu = Kasousisutemu(driver)
+kasousisutemu.automation(9)
 
 
