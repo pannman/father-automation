@@ -1,4 +1,6 @@
 from selenium import webdriver
+from package.fc2.siawase import Siawase
+from package.fc2.victorious import Victorious
 from package.fc2.tradesisutemu import Tradesisutemu
 from package.fc2.victoriousfx import Victoriousfx
 from selenium.webdriver.support.ui import WebDriverWait
@@ -23,3 +25,11 @@ tradesisutemu.automation(5)
 # ビクトリアスfx16:30~5:30
 victoriousfx = Victoriousfx(driver)
 victoriousfx.automation(3)
+
+# ヴィクトリアス日中
+victorious = Victorious(driver)
+victorious.automation(5)
+
+#幸せ
+siawase = Siawase(driver)
+siawase.automation(5)

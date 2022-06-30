@@ -1,5 +1,7 @@
 from selenium import webdriver
 import time
+from package.fc2.siawase import Siawase
+from package.fc2.victorious import Victorious
 from package.fc2.sakimononikkei import Sakimononikkei
 from package.fc2.yumewogenzituni import Yumewogenzituni
 from package.fc2.sakusesunikki import Sakusesunikki
@@ -127,7 +129,13 @@ driver.set_window_size('300', '300')
 # kasousisutemu.automation(9)
 
 # システムトレードオーバーナイト
-tradesisutemu = Tradesisutemu(driver)
-tradesisutemu.automation(9)
+# tradesisutemu = Tradesisutemu(driver)
+# tradesisutemu.automation(9)
 
+# ヴィクトリアス日中
+victorious = Victorious(driver)
+victorious.automation(9)
 
+#幸せ
+siawase = Siawase(driver)
+siawase.automation(9)

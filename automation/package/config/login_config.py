@@ -154,3 +154,11 @@ TRADESISUTEMU_LOGIN = {
 	'ID': 'tradesisutemu@yahoo.co.jp',
 	'PASS': 'f20011018'
 }
+VICTORIOUS_LOGIN = {
+	'ID': 'victorious_trade@yahoo.co.jp',
+	'PASS': 'f20011018'
+}
+SIAWASE_LOGIN = {
+	'ID': 'happy_life_225@yahoo.co.jp',
+	'PASS': 'f20011018'
+}

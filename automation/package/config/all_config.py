@@ -484,6 +484,51 @@ def tradesisutemu_result_trade_money(zone):
         return "28810"
     if zone == "オーバーナイト":
         return "28810"
+    
+#ヴィクトリアス
+def victorious_main_buy_result(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "夜間立会":
+        return "買い"
+    if zone == "夜間立会引け":
+        return "買い"
+#ヴィクトリアス
+def victorious_main(zone):
+    if zone == "日中":
+        return "勝ち"
+    if zone == "夜間立会":
+        return "負け"
+    if zone == "夜間立会引け":
+        return "勝ち"
+
+    
+#幸せな人生
+def siawase_main_buy_result(zone):
+    if zone == "日中":
+        return "買い"
+    if zone == "ナイトセッション":
+        return "買い"
+    if zone == "オーバーナイト":
+        return "買い"
+#システムトレード
+def siawase_main(zone):
+    if zone == "日中":
+        return "勝ち"
+    if zone == "ナイトセッション":
+        return "勝ち"
+    if zone == "オーバーナイト":
+        return "勝ち"
+
+#幸せな人生売買結果金額
+def siawase_result_trade_money(zone):
+    if zone == "日中":
+        return "29410"
+    if zone == "ナイトセッション":
+        return "28810"
+    if zone == "オーバーナイト":
+        return "28810"
+
 
     #fxドル(売り)
 def fx_zone_dollar(zone):

@@ -278,3 +278,13 @@ open('other_txt/kasousisutemu/kasousisutemu_kasousisutemu2_main_total.txt', 'w')
 open('other_txt/tradesisutemu/tradesisutemu_day_main_total.txt','w').write("±0")
 open('other_txt/tradesisutemu/tradesisutemu_nightsession_main_total.txt','w').write("±0")
 open('other_txt/tradesisutemu/tradesisutemu_overnight_main_total.txt','w').write("±0")
+
+#ヴィクトリアス
+open('other_txt/victorious/victorious_day_main_total.txt','w').write("±0")
+open('other_txt/victorious/victorious_yakanrikkai_main_total.txt','w').write("±0")
+open('other_txt/victorious/victorious_yakanrikkaihike_main_total.txt', 'w').write("±0")
+
+#幸せ
+open('other_txt/siawase/siawase_day_main_total.txt','w').write("±0")
+open('other_txt/siawase/siawase_nightsession_main_total.txt','w').write("±0")
+open('other_txt/siawase/siawase_overnight_main_total.txt','w').write("±0")

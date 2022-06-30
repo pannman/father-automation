@@ -1,6 +1,8 @@
 from selenium import webdriver
+from package.fc2.siawase import Siawase
 from package.fc2.tradesisutemu import Tradesisutemu
-from package.fc2.victoriousfx import Victoriousfx
+from package.fc2.victorious import Victorious
+from package.fc2.siawase import Siawase
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -17,6 +19,13 @@ driver.implicitly_wait(10)
 driver.set_window_size('300', '300')
 
 # システムトレードオーバーナイト
-tradesisutemu = Tradesisutemu(driver)
-tradesisutemu.automation(3)
+# tradesisutemu = Tradesisutemu(driver)
+# tradesisutemu.automation(3)
 
+# ヴィクトリアス日中
+# victorious = Victorious(driver)
+# victorious.automation(3)
+
+#幸せ
+siawase = Siawase(driver)
+siawase.automation(3)
